@@ -100,6 +100,30 @@ input[type='submit']:enabled:active,input[type='submit'].kom-active:enabled,.kom
 .kom-col-1 {width:8.33333333%;}
 
 
+/* bar-nav */
+.kom-bar-nav {top:0;height:44px;-webkit-box-shadow:0 1px 6px #ccc;box-shadow:0 1px 6px #ccc;}
+.kom-bar-nav.kom-bar .kiconfont {margin-right:-10px;margin-left:-10px;padding-right:10px;padding-left:10px;}
+.kom-title {font-size:17px;font-weight:500;line-height:44px;position:absolute;display:block;width:100%;margin:0 -10px;padding:0;text-align:center;white-space:nowrap;color:#000;}
+.kom-title a {color:inherit; }
+
+.kom-bar-tab {bottom:0;display:table;width:100%;height:50px;padding:0;table-layout:fixed;border-top:0;border-bottom:0;-webkit-touch-callout:none;}
+.kom-bar-tab .kom-tab-item {display:table-cell;overflow:hidden;width:1%;height:50px;text-align:center;vertical-align:middle;white-space:nowrap;text-overflow:ellipsis;color:#929292;}
+.kom-bar-tab .kom-tab-item.kom-active {color:#007aff;}
+.kom-bar-tab .kom-tab-item .kiconfont {top:3px;width:24px;height:24px;padding-top:0;padding-bottom:0;}
+.kom-bar-tab .kom-tab-item .kiconfont ~ .kom-tab-label {font-size:11px;display:block;overflow:hidden;text-overflow:ellipsis;}
+.kom-bar-tab .kom-tab-item .kiconfont:active {background:none;}
+
+.kom-bar .kom-btn {font-weight:400;position:relative;z-index:20; line-height: 1; top:5px;margin-top:0;padding:6px 12px 7px;}
+.kom-bar .kom-btn.kom-pull-right {margin-right:10px;}
+.kom-bar .kom-btn.kom-pull-left {margin-left:10px;}
+.kom-bar .kom-btn-link {font-size:16px;line-height:44px;top:0;padding:0;color:#007aff;border:0;}
+.kom-bar .kom-btn-link:active,.kom-bar .kom-btn-link.kom-active {color:#0062cc;}
+.kom-bar .kiconfont {font-size:18px;position:relative;z-index:20;padding-top:10px;padding-bottom:10px;}
+.kom-bar .kiconfont:active {opacity:.3;}
+.kom-bar .kom-btn .kiconfont {top:1px;margin:0;padding:0;}
+.kom-bar .kom-title .kiconfont {margin:0;padding:0;}
+
+
 /* loading */
 .kom-loading .kom-spinner {display:block;margin:0 auto;}
 .kom-spinner {display:inline-block;width:24px;height:24px;-webkit-transform-origin:50%;transform-origin:50%;-webkit-animation:spinner-spin 1s step-end infinite;animation:spinner-spin 1s step-end infinite;}
