@@ -13,6 +13,7 @@ import welcome from '@/pages/welcome'
 import post from '@/pages/post'
 import postDetail from '@/pages/postDetail'
 import test from '@/pages/_test'
+import notfound from '@/pages/404'
 
 export default new Router({
   routes: [
@@ -35,6 +36,11 @@ export default new Router({
       path: '/post/:id',
       name: 'postDetail',
       component: postDetail
+    },
+    {
+      path: '*',
+      name: 'notfound',
+      component: notfound
     }
   ]
 })

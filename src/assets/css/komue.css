@@ -18,6 +18,7 @@ a:hover,a:active,a:focus{color:#c00;text-decoration:none;}
 .kom-mh-15{ margin-top: 15px!important; margin-bottom: 15px!important; }
 .kom-mt-15{ margin-top: 15px!important; }
 .kom-mb-15{ margin-bottom: 15px!important; }
+.kom-pw-10{ padding-left: 10px!important; padding-right: 10px!important; }
 
 
 /* color */
@@ -34,7 +35,7 @@ a:hover,a:active,a:focus{color:#c00;text-decoration:none;}
 .kom-bg-grey{background-color: #c7c7cc;}
 
 
-/* block */
+/* display, float */
 .kom-clearfix:before, .kom-clearfix:after {display: table; content:' ';}
 .kom-clearfix:after{clear: both;}
 .kom-pull-left{float: left;}
@@ -87,6 +88,25 @@ input[type='submit']:enabled:active,input[type='submit'].kom-active:enabled,.kom
 .kom-btn-block {display:block; width:100%; padding:10px 0;}
 
 
+/* row-col */
+.kom-row:before,.kom-row:after {display:table;content:' ';}
+.kom-row:after {clear:both;}
+.kom-col-1,.kom-col-2,.kom-col-3,.kom-col-4,.kom-col-5,.kom-col-6,.kom-col-7,.kom-col-8,.kom-col-9,.kom-col-10,.kom-col-11,.kom-col-12 {position:relative;min-height:1px;}
+.kom-row > [class*='kom-col-'] {float:left;}
+.kom-col-12 {width:100%;}
+.kom-col-11 {width:91.66666667%;}
+.kom-col-10 {width:83.33333333%;}
+.kom-col-9 {width:75%;}
+.kom-col-8 {width:66.66666667%;}
+.kom-col-7 {width:58.33333333%;}
+.kom-col-6 {width:50%;}
+.kom-col-5 {width:41.66666667%;}
+.kom-col-4 {width:33.33333333%;}
+.kom-col-3 {width:25%;}
+.kom-col-2 {width:16.66666667%;}
+.kom-col-1 {width:8.33333333%;}
+
+
 /* 列表 example：
 1、单行列表：
 <ul class="kom-list-box kom-mh-15">
@@ -110,23 +130,23 @@ input[type='submit']:enabled:active,input[type='submit'].kom-active:enabled,.kom
 font-size: 16px;}
 
 
-/* row-col */
-.kom-row:before,.kom-row:after {display:table;content:' ';}
-.kom-row:after {clear:both;}
-.kom-col-1,.kom-col-2,.kom-col-3,.kom-col-4,.kom-col-5,.kom-col-6,.kom-col-7,.kom-col-8,.kom-col-9,.kom-col-10,.kom-col-11,.kom-col-12 {position:relative;min-height:1px;}
-.kom-row > [class*='kom-col-'] {float:left;}
-.kom-col-12 {width:100%;}
-.kom-col-11 {width:91.66666667%;}
-.kom-col-10 {width:83.33333333%;}
-.kom-col-9 {width:75%;}
-.kom-col-8 {width:66.66666667%;}
-.kom-col-7 {width:58.33333333%;}
-.kom-col-6 {width:50%;}
-.kom-col-5 {width:41.66666667%;}
-.kom-col-4 {width:33.33333333%;}
-.kom-col-3 {width:25%;}
-.kom-col-2 {width:16.66666667%;}
-.kom-col-1 {width:8.33333333%;}
+/* 卡片 example：
+1、单行列表：
+<div class="kom-card">
+	<div class="kom-card-header kom-ellipsis">标题标题标题标题标题标题标题标题标题标题标题</div>
+	<div class="kom-card-body">
+		<p class="kom-ellipsis-2">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+	</div>
+	<div class="kom-card-footer">
+		<div class="kom-btn kom-btn-success kom-pull-right">按钮</div>
+	</div>
+</div>
+ */
+.kom-card{ margin-bottom: 10px; background:rgba(255,255,255,1);-webkit-box-shadow:0 0 10px 0 rgba(34,58,156,0.15);box-shadow:0 0 10px 0 rgba(34,58,156,0.15);-webkit-border-radius:2px;border-radius:2px;}
+.kom-card .kom-card-header{ padding: 14px 20px; font-size:16px; font-weight:400; color:rgba(23,43,77,1); border-bottom: 1px solid #eeeeee; }
+.kom-card .kom-card-body{ overflow: hidden; padding: 14px 20px; color:rgba(102,105,117,1); font-weight: 100;}
+.kom-card .kom-card-body p{ color: #999999;}
+.kom-card .kom-card-footer{ overflow: hidden; padding: 8px 20px; border-top: 1px solid #eeeeee; }
 
 
 /*  bar-nav example：
@@ -137,7 +157,7 @@ font-size: 16px;}
 
 <div class="kom-bar-nav kom-bar">
 	<a class="kom-btn kom-btn-link kom-pull-left"><i class="kiconfont kiconzuo"></i></a>
-<h3 class="kom-title">项目标题</h3>
+	<h3 class="kom-title">项目标题</h3>
 </div>
 
 
@@ -159,7 +179,7 @@ font-size: 16px;}
  */
 .kom-bar-nav {top:0; overflow: hidden; height:44px;-webkit-box-shadow:0 1px 6px #ccc;box-shadow:0 1px 6px #ccc;}
 .kom-bar-nav.kom-bar .kiconfont {margin-right:-10px;margin-left:-10px;padding-right:10px;padding-left:10px;}
-.kom-title {font-size:17px;font-weight:500;line-height:44px;position:absolute;display:block;width:100%;margin:0 -10px;padding:0;text-align:center;white-space:nowrap;color:#000;}
+.kom-title {font-size:17px;font-weight:500;line-height:44px;position:absolute;display:block;width:100%;margin:0;padding:0;text-align:center;white-space:nowrap;color:#000;}
 .kom-title a {color:inherit; }
 
 .kom-bar-tab {bottom:0;display:table;width:100%;height:50px;padding:0;table-layout:fixed;border-top:0;border-bottom:0;-webkit-touch-callout:none;}
