@@ -1,6 +1,6 @@
 /* 全局CSS */
 body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin:0;padding:0;}
-body{background:#fff;color:#333;font-size:14px;}
+body{background:#fff;color:#333;font-size:14px;-webkit-overflow-scrolling: touch;}
 body,select,input,select{font-family: '-apple-system', "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;}
 
 ul,ol{list-style-type:none;}
@@ -107,6 +107,12 @@ input[type='submit']:enabled:active,input[type='submit'].kom-active:enabled,.kom
 .kom-col-1 {width:8.33333333%;}
 
 
+/* 滚动条 */
+.kom-scroll-box{ overflow-y: auto; position: fixed; left: 0; top: 44px; right: 0; bottom: 0; height: auto; -webkit-overflow-scrolling: touch;}
+.kom-scroll-box.kom-padding-with-top{ top: 44px; }
+.kom-scroll-box.kom-padding-with-bottom{ bottom: 50px; }
+
+
 /* 列表 example：
 1、单行列表：
 <ul class="kom-list-box kom-mh-15">
@@ -181,6 +187,8 @@ font-size: 16px;}
 .kom-bar-nav.kom-bar .kiconfont {margin-right:-10px;margin-left:-10px;padding-right:10px;padding-left:10px;}
 .kom-title {font-size:17px;font-weight:500;line-height:44px;position:absolute;display:block;width:100%;margin:0;padding:0;text-align:center;white-space:nowrap;color:#000;}
 .kom-title a {color:inherit; }
+.kom-bar-bottom{ position: fixed; left: 0; right: 0; bottom: 0; background:rgba(255,255,255,1); -webkit-box-shadow:0 -2px 10px 0 rgba(0,0,0,0.05),0 1px 0 0 rgba(229,229,229,1);box-shadow:0 -2px 10px 0 rgba(0,0,0,0.05),0 1px 0 0 rgba(229,229,229,1);}
+
 
 .kom-bar-tab {bottom:0;display:table;width:100%;height:50px;padding:0;table-layout:fixed;border-top:0;border-bottom:0;-webkit-touch-callout:none;}
 .kom-bar-tab .kom-tab-item {display:table-cell;overflow:hidden;width:1%;height:50px;text-align:center;vertical-align:middle;white-space:nowrap;text-overflow:ellipsis;color:#929292;}
