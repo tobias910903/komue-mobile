@@ -39,8 +39,8 @@
     position: fixed;
     top: 0;
     right: 0;
+    bottom: 0;
     z-index: 50;
-    height: 100%;
     width: 70%;
     background-color: #ffffff;
     &.fold-enter-active, &.fold-leave-active{
