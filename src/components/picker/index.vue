@@ -16,7 +16,7 @@
         <div class="picker-wheel-wrapper" ref="wheelWrapper">
           <div class="picker-wheel" v-for="(wheel, index) in pickerData" :key="index">
             <ul class="wheel-scroll">
-              <li class="wheel-item" v-for="(item, index) in wheel" :key="index">{{item}}</li>
+              <li class="wheel-item" v-for="(item, index) in wheel" :key="index" v-html="item"></li>
             </ul>
           </div>
         </div>

@@ -9,7 +9,7 @@
     <p class="btn" @click="showPicker2">时间(内置)</p>
     <p class="btn" @click="showPicker3">日期(内置)</p>
 
-  <awesome-picker
+    <awesome-picker
       ref="picker666"
       :textTitle="picker666.textTitle"
       :data="picker666.data"
@@ -184,7 +184,16 @@ export default {
     handlePicker4Confirm (v) {
       this.picker4.anchor = v
       this.value = v ? JSON.stringify(v) : null
-    }
+    },
+    getCatgoary(){ // 动态更新弹出层的内容
+      this.$get(url, {id: 100}).then((response) =>{
+          this.picker.data = []; // 必须加这个!!!
+          this.picker.data[0] = [];
+          for(var i=0; i<response.length;i++){
+            this.picker.data[0].push(response[i].name)
+          }
+        });
+    },
   }
 }
 </script>
