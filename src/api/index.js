@@ -50,7 +50,8 @@ export function get(url, params = {}){
     axios.get(url, {
       params:params
     }).then(response => {
-      resolve(response.data);
+      resolve(response);
+      // resolve(response.data);
     }).catch(err => {
       reject(err)
     })
@@ -68,7 +69,8 @@ export function get(url, params = {}){
 export function post(url,data = {}){
   return new Promise((resolve,reject) => {
     axios.post(url, data).then(response => {
-      resolve(response.data);
+      resolve(response);
+      // resolve(response.data);
     }, err => {
       reject(err)
     })
