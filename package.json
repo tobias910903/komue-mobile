@@ -1,7 +1,7 @@
 {
   "name": "komue-mobile",
   "version": "1.0.0",
-  "description": "自己用的一套移动端vuecli组件库",
+  "description": "自己用的一套移动端vue-cli组件库",
   "author": "lihuyong <admin@lihuyong.com>",
   "private": true,
   "scripts": {
