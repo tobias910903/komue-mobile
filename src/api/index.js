@@ -1,5 +1,4 @@
 import axios from 'axios';
-import url from '@/api/url.js'
 
 axios.defaults.timeout = 3000; // 超时时间
 axios.defaults.baseURL ='';
