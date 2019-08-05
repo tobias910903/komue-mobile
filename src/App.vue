@@ -32,6 +32,8 @@ export default {
 			_this.$store.commit("setTransition", "turn-off");
 		}, false);
 
+		// 入口页...
+
 	}
 }
 </script>
