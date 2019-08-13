@@ -48,5 +48,5 @@ export {validatorFun}
 // import {validatorFun} from '@/utils/validator'
 // Vue.prototype.$validator = validatorFun
 
-// mounted 中:
+// 调用
 // this.$validator.isEmail("admin@lihuyong.com"); 

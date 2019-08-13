@@ -77,5 +77,5 @@ export {arrayFun}
 // import {arrayFun} from '@/utils/array'
 // Vue.prototype.$array = arrayFun
 
-// mounted 中:
+// 调用
 // this.$array.isArray(arr);
