@@ -4,13 +4,13 @@
     <diveditable class="kom-card-body" placeholder="点击添加内容" v-model="contentText"></diveditable>
   </div>
 </template>
- 
+
 <script>
   // 引入组件
   import diveditable from "@/components/diveditable"
- 
+
   export default {
-    components: { 
+    components: {
       diveditable
     },
     data() {
@@ -25,4 +25,4 @@
 </script>
 ```
 
-# div contenteditable属性双向绑定组件
+> div contenteditable 双向绑定
