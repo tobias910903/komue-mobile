@@ -2,9 +2,6 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import Router from 'vue-router'
 
-import "@/assets/css/komue.css"
-import "@/assets/iconfonts/iconfont.css"
-
 Vue.use(Vuex)
 Vue.use(Router)
 

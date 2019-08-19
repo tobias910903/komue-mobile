@@ -3,6 +3,9 @@ import App from './App'
 import router from './router'
 import store from '@/vuex/store'
 
+import "@/assets/css/komue.css"
+import "@/assets/iconfonts/iconfont.css"
+
 // axios
 import axios from 'axios'
 import {post, get} from '@/api'
