@@ -1,14 +1,14 @@
 ```
 <template>
   <div>
-    <v-modal v-show="showModal" :modal-option="modalOption" ref="modal">
+    <kom-modal v-show="showModal" :modal-option="modalOption" ref="modal">
       <h5>带有HTML的内容</h5>
-    </v-modal>
+    </kom-modal>
   </div>
 </template>
 
 <script>
-import vModal from '@/components/modal'
+import KomModal from '@/components/modal'
 
 export default {
   data() {
@@ -21,7 +21,7 @@ export default {
     }
   },
   components: {
-    vModal
+    KomModal
   },
   methods: {
 

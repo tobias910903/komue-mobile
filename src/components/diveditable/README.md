@@ -7,11 +7,11 @@
 
 <script>
   // 引入组件
-  import diveditable from "@/components/diveditable"
+  import Diveditable from "@/components/diveditable"
 
   export default {
     components: {
-      diveditable
+      Diveditable
     },
     data() {
       return {
