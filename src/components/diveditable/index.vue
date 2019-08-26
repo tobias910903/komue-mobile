@@ -26,6 +26,7 @@
                 isLocked: false
             }
         },
+        /*
         watch: {
             'value'(){
                 if (!this.isLocked || !this.innerText) {
@@ -33,6 +34,7 @@
                 }
             }
         },
+        */
         methods: {
             changeText(){
                 this.$emit('input', this.$el.innerHTML);
