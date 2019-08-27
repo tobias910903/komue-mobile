@@ -9,16 +9,10 @@ Vue.use(Router)
 import welcome from '@/pages/welcome'
 import post from '@/pages/post'
 import postDetail from '@/pages/postDetail'
-import test from '@/pages/_test'
 import notfound from '@/pages/404'
 
 export default new Router({
   routes: [
-    {
-      path: '/test',
-      name: 'test',
-      component: test
-    },
     {
       path: '/',
       name: 'welcome',

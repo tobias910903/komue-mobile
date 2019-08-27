@@ -1,16 +1,13 @@
 <template>
-	<div>{{msg}}</div>
+	<div>404 NOT FOUND</div>
 </template>
 
 <script>
 export default {
 	data(){
 		return {
-			msg: "404 not found"
+			msg: ""
 		}
-	},
-	mounted(){
-
 	}
 }
 </script>

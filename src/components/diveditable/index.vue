@@ -1,15 +1,16 @@
 <template>
-    <div class="edit-div"
-         v-html="innerText"
-         :contenteditable="canEdit"
-         @focus="isLocked = true"
-         @blur="isLocked = false"
-         @input="changeText">
+    <div class="kom-edit-div"
+        v-html="innerText"
+        :contenteditable="canEdit"
+        @focus="isLocked = true"
+        @blur="isLocked = false"
+        @input="changeText">
     </div>
 </template>
+
 <script>
     export default{
-        name: 'editDiv',
+        name: 'komEditDiv',
         props: {
             value: {
                 type: String,
@@ -42,8 +43,9 @@
         }
     }
 </script>
+
 <style lang="less" scoped>
-    .edit-div {
+    .kom-edit-div {
         width: 100%;
         height: 100%;
         overflow: auto;

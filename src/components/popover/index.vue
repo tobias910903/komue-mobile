@@ -1,15 +1,20 @@
 <template>
     <div class="kom-popover">
-        <div class="mask" @click="cancel"></div>
-        <div class="popover-content">
-            <slot></slot>
-        </div>
+        <transition name="fadeup">
+            <div class="content" v-show="popover.showPopover">
+                <slot></slot>
+            </div>
+        </transition>
+
+        <transition name="fade">
+            <div class="mask" @click="cancel" v-show="popover.showPopover"></div>
+        </transition>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'kompopover',
+    name: 'komPopover',
     props: {
         popoverOption: Object
     },
@@ -20,10 +25,10 @@ export default {
         }
     },
     computed: {
-        popover: function() { // 调用父组件中的popoverOption传递的参数 {{popover.params}} 
+        popover: function() { // 调用父组件中的popoverOption传递的参数 {{popover.showPopover}} 
             let options = this.popoverOption;
             return {
-                params: options.params,
+                showPopover: options.showPopover,
             }
         }
     },
@@ -43,8 +48,7 @@ export default {
 
 <style scoped lang="less">
 .kom-popover {
-    position: relative;
-    .popover-content {
+    .content {
         position: fixed;
         overflow-y: auto;
         box-sizing: border-box;
@@ -59,6 +63,13 @@ export default {
         border-radius: 3px;
         background: #fff;
         z-index: 40002;
+        &.fadeup-enter-active, &.fadeup-leave-active{
+          transition: all .3s ease;
+        }
+        &.fadeup-enter, &.fadeup-leave-to{
+          opacity: 0;
+          transform: translate(-50%, -40%);
+        }
     }
     .mask {
         position: fixed;
@@ -67,7 +78,14 @@ export default {
         bottom: 0;
         right: 0;
         z-index: 40001;
-        background: rgba(0,0,0,.5);
+        background: rgba(0,0,0,.5); 
+        opacity: 1;
+        &.fade-enter-active, &.fade-leave-active{
+          transition: all .3s ease;
+        }
+        &.fade-enter, &.fade-leave-to{
+          opacity: 0;
+        }
     }
 }
 </style>

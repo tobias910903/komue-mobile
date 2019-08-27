@@ -1,14 +1,13 @@
-<!-- 侧滑菜单 组件 -->
 <template>
-  <div>
+  <div class="kom-sidebar">
     <transition name="fold">
-      <div class="kom-sidebar" v-show="sidebarShow">
-          <slot></slot>
+      <div class="content" v-show="sidebarShow">
+        <slot></slot>
       </div>
     </transition>
 
     <transition name="fade">
-      <div class="kom-mask" @click.stop.prevent="hide" v-show="sidebarShow"></div>
+      <div class="mask" @click.stop.prevent="hide" v-show="sidebarShow"></div>
     </transition>
   </div>
 </template>
@@ -34,8 +33,9 @@
   }
 </script>
  
-<style lang="less" scoped>
-  .kom-sidebar{
+<style scoped lang="less">
+.kom-sidebar{
+  .content{
     position: fixed;
     top: 0;
     right: 0;
@@ -51,7 +51,8 @@
       transform: translateX(70%);
     }
   }
-  .kom-mask{
+  
+  .mask{
     position: fixed;
     top: 0px;
     left: 0px;
@@ -67,4 +68,5 @@
       opacity: 0;
     }
   }
+}
 </style>

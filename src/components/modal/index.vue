@@ -1,15 +1,19 @@
 <template>
     <div class="kom-modal">
-        <div class="mask"></div>
-        <div class="modal-content">
-            <h3 class="title">{{modal.title}}</h3>
-            <div class="text" v-if="modal.isHtml"><slot></slot></div>
-            <div class="text" v-if="!modal.isHtml">{{modal.text}}</div>
-            <div class="btn-group">
-                <div class="btn" @click="cancel">{{modal.cancelButtonText}}</div>
-                <div class="btn" @click="submit">{{modal.confirmButtonText}}</div>
+        <transition name="fadeup">
+            <div class="content" v-show="modal.showModal">
+                <h3 class="title">{{modal.title}}</h3>
+                <div class="text">{{modal.text}}</div>
+                <div class="btn-group">
+                    <div class="btn" @click="cancel">{{modal.cancelButtonText}}</div>
+                    <div class="btn" @click="submit">{{modal.confirmButtonText}}</div>
+                </div>
             </div>
-        </div>
+        </transition>
+
+        <transition name="fade">
+            <div class="mask" v-show="modal.showModal"></div>
+        </transition>
     </div>
 </template>
 
@@ -23,37 +27,34 @@ export default {
         return {
             resolve: '',
             reject: '',
-            promise: '', // 保存promise对象
+            promise: '' // 保存promise对象
         }
     },
     computed: {
         modal: function() {
             let options = this.modalOption;
             return {
-                isHtml: options.isHtml || false,
+                showModal: options.showModal || false,
                 title: options.title || '提示',
-                text: options.text,
-                cancelButtonText: options.cancelButtonText ? options.cancelButtonText : '取消',
-                confirmButtonText: options.confirmButtonText ? options.confirmButtonText : '确定',
+                text: options.text || '',
+                cancelButtonText: options.cancelButtonText || '取消',
+                confirmButtonText: options.confirmButtonText || '确定',
             }
         }
     },
     methods: {
-        //确定,将promise断定为完成态
         submit() {
-            this.resolve('submit');
+            this.resolve('submit'); //确定,将promise断定为完成态
         },
-        // 取消,将promise断定为reject状态
         cancel() {
-            this.reject('cancel');
+            this.reject('cancel'); // 取消,将promise断定为reject状态
         },
-        //显示confirm弹出,并创建promise对象，给父组件调用
-        confirm() {
+        confirm() { // 创建promise对象，给父组件调用
             this.promise = new Promise((resolve, reject) => {
                 this.resolve = resolve;
                 this.reject = reject;
             });
-            return this.promise; //返回promise对象,给父级组件调用
+            return this.promise;
         }
     }
 }
@@ -62,7 +63,7 @@ export default {
 <style scoped lang="less">
 .kom-modal {
     position: relative;
-    .modal-content {
+    .content {
         position: fixed;
         box-sizing: border-box;
         padding: 20px;
@@ -99,6 +100,13 @@ export default {
                 }
             }
         }
+        &.fadeup-enter-active, &.fadeup-leave-active{
+          transition: all .3s ease;
+        }
+        &.fadeup-enter, &.fadeup-leave-to{
+          opacity: 0;
+          transform: translate(-50%, -40%);
+        }
     }
     .mask {
         position: fixed;
@@ -108,6 +116,13 @@ export default {
         right: 0;
         z-index: 50001;
         background: rgba(0,0,0,.5);
+        opacity: 1;
+        &.fade-enter-active, &.fade-leave-active{
+          transition: all .3s ease;
+        }
+        &.fade-enter, &.fade-leave-to{
+          opacity: 0;
+        }
     }
 }
 </style>

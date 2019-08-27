@@ -6,9 +6,7 @@
     <button @click="setSidebar(false)">隐藏</button>
   
     <!-- 侧滑菜单 -->
-    <side-bar :sidebarShow="sidebarShow" v-on:hideSidebar="setSidebar">
-      <button class="kom-btn kom-btn-success" @click="testClick">带有事件的按钮</button>
-    </side-bar>
+    <side-bar :sidebarShow="sidebarShow" v-on:hideSidebar="setSidebar(false)"></side-bar>
   </div>
 </template>
  
@@ -19,7 +17,7 @@
   export default {
     name: 'komSideBar',
     components: { 
-      SideBar 
+    SideBar
     },
     data() {
       return {
@@ -29,9 +27,6 @@
     methods: {
       setSidebar(val){
         this.sidebarShow = val;
-      },
-      testClick(){
-        alert("触发插槽中的事件");
       }
     }
   }

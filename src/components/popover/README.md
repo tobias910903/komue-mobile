@@ -1,7 +1,7 @@
 ```
 <template>
   <div>
-    <kom-popover v-show="showPopover" :popover-option="popoverOption" ref="popover">
+    <kom-popover v-show="popoverOption.showPopover" :popoverShow="popoverOption.showPopover" :popover-option="popoverOption" ref="popover">
       <div>popover content</div>
     </kom-popover>
   </div>
@@ -13,9 +13,8 @@ import KomPopover from '@/components/popover'
 export default {
   data() {
     return {
-      showPopover: false,
       popoverOption: {
-        params: "需要传递的参数 可用可不用"
+        showPopover: false
       },
     }
   },
@@ -23,10 +22,10 @@ export default {
     KomPopover
   },
   mounted(){
-    this.showPopover = true;
+    this.popoverOption.showPopover = true;
     this.$refs.popover.confirm().then(() => {
-    this.showPopover = false;
-    console.log("关闭popover");
+      this.popoverOption.showPopover = false;
+      console.log("关闭popover");
     });
   }
 }

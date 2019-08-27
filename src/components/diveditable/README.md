@@ -6,22 +6,19 @@
 </template>
 
 <script>
-  // 引入组件
-  import Diveditable from "@/components/diveditable"
+// 引入组件
+import Diveditable from "@/components/diveditable"
 
-  export default {
-    components: {
-      Diveditable
-    },
-    data() {
-      return {
-        contentText: ""
-      }
-    },
-    methods: {
-
+export default {
+  components: {
+    Diveditable
+  },
+  data() {
+    return {
+      contentText: ""
     }
   }
+}
 </script>
 ```
 
