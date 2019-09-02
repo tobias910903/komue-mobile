@@ -27,15 +27,17 @@
                 isLocked: false
             }
         },
-        /*
         watch: {
             'value'(){
-                if (!this.isLocked || !this.innerText) {
+                // if (!this.isLocked || !this.innerText) {
+                //     this.innerText = this.value;
+                // }
+
+                if (!this.isLocked && !this.innerText) {
                     this.innerText = this.value;
                 }
             }
         },
-        */
         methods: {
             changeText(){
                 this.$emit('input', this.$el.innerHTML);
