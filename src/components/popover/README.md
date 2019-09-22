@@ -1,7 +1,7 @@
 ```
 <template>
   <div>
-    <kom-popover v-show="popoverOption.showPopover" :popoverShow="popoverOption.showPopover" :popover-option="popoverOption" ref="popover">
+    <kom-popover v-show="popoverOption.showPopover" :popover-option="popoverOption" ref="popover">
       <div>popover content</div>
     </kom-popover>
   </div>
