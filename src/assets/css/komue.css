@@ -14,15 +14,6 @@ a:visited{color:#800080;}
 a:hover,a:active,a:focus{color:#c00;text-decoration:none;}
 
 
-/* 盒子模型 */
-.kom-mh-10{ margin-top: 10px!important; margin-bottom: 10px!important; }
-.kom-mh-15{ margin-top: 15px!important; margin-bottom: 15px!important; }
-.kom-mt-10{ margin-top: 10px!important; }
-.kom-mt-15{ margin-top: 15px!important; }
-.kom-mb-15{ margin-bottom: 15px!important; }
-.kom-pw-10{ padding-left: 10px!important; padding-right: 10px!important; }
-
-
 /* color */
 .kom-text-success{color: #4cd964;}
 .kom-text-warning{color: #f0ad4e;}
