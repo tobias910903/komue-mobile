@@ -3,7 +3,7 @@ import App from './App'
 import router from './router'
 import store from '@/vuex/store'
 
-import "@/assets/css/komue.css"
+import "@/assets/less/komue.less"
 import "@/assets/iconfonts/iconfont.css"
 
 // axios

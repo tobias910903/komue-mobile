@@ -6,12 +6,12 @@ Vue.use(Vuex)
 Vue.use(Router)
 
 /* 配置路由 */
-import welcome from '@/pages/welcome'
-import post from '@/pages/post'
-import postDetail from '@/pages/postDetail'
-import notfound from '@/pages/404'
+import welcome from '@/views/welcome'
+import post from '@/views/post'
+import postDetail from '@/views/postDetail'
+import notfound from '@/views/404'
 
-export default new Router({
+let router = new Router({
   routes: [
     {
       path: '/',
@@ -36,3 +36,9 @@ export default new Router({
   ]
 })
 
+// 导航守卫
+router.beforeEach((to, from, next) => {
+  next();
+});
+
+export default router;

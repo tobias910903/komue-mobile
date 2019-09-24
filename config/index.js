@@ -8,8 +8,16 @@ module.exports = {
   dev: {
     assetsSubDirectory: 'static', // 编译输出的二级目录
     assetsPublicPath: '/', // 编译发布的根目录，可配置为资源服务器域名或者cdn域名
-    proxyTable: {}, // 需要使用proxyTable代理的接口(可以跨域)
-
+    proxyTable: {},
+    //proxyTable: {
+    //  '/api': {
+    //    changeOrigin: true,
+    //    target: 'https://www.lihuyong.com/',
+    //    pathRewrite: {
+    //      '^/api': ''
+    //    }
+    //  }
+    //}, // 需要使用proxyTable代理的接口(可以跨域)
     host: 'localhost',
     port: 8080, // 端口
     autoOpenBrowser: false, // 启动server之后自动打开浏览器

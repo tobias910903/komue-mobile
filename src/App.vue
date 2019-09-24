@@ -13,12 +13,12 @@ export default {
 		return {
 
 		}
-	},	
+	},
 	computed:{
-		
+
 	},
 	methods: {
-		
+
 	},
 	watch:{
 		$route(to, from){ // 监听路由
