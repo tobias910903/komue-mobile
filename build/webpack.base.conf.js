@@ -21,7 +21,7 @@ function resolve (dir) {
 module.exports = {
   context: path.resolve(__dirname, '../'),
   // 配置webpack编译入口
-  entry: { 
+  entry: {
     app: './src/main.js'
   },
   // 配置webpack输出路径和命名规则
@@ -41,10 +41,6 @@ module.exports = {
   // 配置不同类型模块的处理规则
   module: {
     rules: [
-      {
-        test: /\.less$/,
-        loader: "style-loader!css-loader!less-loader"    
-      },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
