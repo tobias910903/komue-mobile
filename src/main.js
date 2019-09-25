@@ -7,7 +7,6 @@ import "@/assets/less/komue.less"
 import "@/assets/iconfonts/iconfont.css"
 
 // axios
-import axios from 'axios'
 import {post, get} from '@/api'
 import {apiurl} from '@/api/url'
 Vue.prototype.$post = post;
