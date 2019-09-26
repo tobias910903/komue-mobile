@@ -7,11 +7,8 @@ import "@/assets/less/komue.less"
 import "@/assets/iconfonts/iconfont.css"
 
 // axios
-import {post, get} from '@/api'
-import {apiurl} from '@/api/url'
-Vue.prototype.$post = post;
-Vue.prototype.$get = get;
-Vue.prototype.$api = apiurl;
+import ajax from '@/api'
+Vue.prototype.$ajax = ajax;
 
 // utils
 import {arrayFun} from '@/utils/array'
