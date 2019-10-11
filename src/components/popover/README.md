@@ -1,32 +1,35 @@
 ```
 <template>
   <div>
-    <kom-popover v-show="popoverOption.showPopover" :popover-option="popoverOption" ref="popover">
+    <!-- 点击按钮 显示侧滑菜单 -->
+    <button @click="setPopover(true)">显示</button>
+    <button @click="setPopover(false)">隐藏</button>
+
+    <!-- popover -->
+    <popover :popoverShow="popoverShow" v-on:hidePopover="setPopover(false)">
       <div>popover content</div>
-    </kom-popover>
+    </popover>
   </div>
 </template>
 
 <script>
-import KomPopover from '@/components/popover'
+// 引入 侧滑菜单组件
+import Popover from '@/components/popover'
 
 export default {
+  name: 'komPopover',
+  components: {
+    Popover
+  },
   data() {
     return {
-      popoverOption: {
-        showPopover: false
-      },
+      popoverShow: false
     }
   },
-  components: {
-    KomPopover
-  },
-  mounted(){
-    this.popoverOption.showPopover = true;
-    this.$refs.popover.confirm().then(() => {
-      this.popoverOption.showPopover = false;
-      console.log("关闭popover");
-    });
+  methods: {
+    setPopover(val){
+      this.popoverShow = val;
+    }
   }
 }
 </script>

@@ -26,7 +26,7 @@ export default {
       this.modalOption.showModal = false;
       console.log("then next");
     }).catch(() => {
-        this.modalOption.showModal = false;
+      this.modalOption.showModal = false;
       console.log("catch next");
     });
   }

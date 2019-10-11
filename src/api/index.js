@@ -130,7 +130,7 @@ const upload = (data) => {
 
 export default {
   test1: data => get({url: apiurl.url1, data}),
-  test2: data => get({url: apiurl.url2, data})
+  test2: data => post({url: apiurl.url2, data})
 }
 
 //this.$ajax.test1({

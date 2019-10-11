@@ -11,7 +11,7 @@
     </transition>
   </div>
 </template>
- 
+
 <script>
   export default {
     props: {
@@ -32,7 +32,7 @@
     }
   }
 </script>
- 
+
 <style scoped lang="less">
 .kom-sidebar{
   .content{
@@ -44,25 +44,25 @@
     width: 70%;
     background-color: #ffffff;
     &.fold-enter-active, &.fold-leave-active{
-      transition: all .5s;
+      transition: all .3s;
     }
     &.fold-enter,&.fold-leave-to{
+      right: -70%;
       opacity: 0;
-      transform: translateX(70%);
     }
   }
-  
+
   .mask{
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     z-index: 40;
     background: rgba(7, 17, 27, 0.5);
     opacity: 1;
     &.fade-enter-active, &.fade-leave-active{
-      transition: all 0.5s ease;
+      transition: all 0.3s ease;
     }
     &.fade-enter, &.fade-leave-to{
       opacity: 0;

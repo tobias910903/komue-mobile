@@ -38,7 +38,7 @@ export default {
                 title: options.title || '提示',
                 text: options.text || '',
                 cancelButtonText: options.cancelButtonText || '取消',
-                confirmButtonText: options.confirmButtonText || '确定',
+                confirmButtonText: options.confirmButtonText || '确定'
             }
         }
     },
