@@ -29,10 +29,6 @@
         },
         watch: {
             'value'(){
-                // if (!this.isLocked || !this.innerText) {
-                //     this.innerText = this.value;
-                // }
-
                 if (!this.isLocked && !this.innerText) {
                     this.innerText = this.value;
                 }
