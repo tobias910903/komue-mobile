@@ -50,7 +50,7 @@ const EVENT_CONFIRM = 'confirm'
 const EVENT_CANCEL = 'cancel'
 
 export default {
-  name: 'awesome-picker',
+  name: 'kom-picker',
   props: {
     data: {
       type: Array,

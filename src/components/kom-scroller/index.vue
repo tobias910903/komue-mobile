@@ -1,12 +1,11 @@
 <template>
   <div class="_v-container" :id="containerId"
-       @touchstart="touchStart($event)"
-       @touchmove="touchMove($event)"
-       @touchend="touchEnd($event)"
-       @mousedown="mouseDown($event)"
-       @mousemove="mouseMove($event)"
-       @mouseup="mouseUp($event)"
-  >
+    @touchstart="touchStart($event)"
+    @touchmove="touchMove($event)"
+    @touchend="touchEnd($event)"
+    @mousedown="mouseDown($event)"
+    @mousemove="mouseMove($event)"
+    @mouseup="mouseUp($event)">
 
     <div class="_v-content" :id="contentId">
       <div v-if="onRefresh" class="pull-to-refresh-layer"

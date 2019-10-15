@@ -1,21 +1,22 @@
 <template>
-  <div class="kom-sidebar">
+  <div class="kom-drawer">
     <transition name="fold">
-      <div class="content" v-show="sidebarShow">
+      <div class="content" v-show="drawerShow">
         <slot></slot>
       </div>
     </transition>
 
     <transition name="fade">
-      <div class="mask" @click.stop.prevent="hide" v-show="sidebarShow"></div>
+      <div class="mask" @click.stop.prevent="hide" v-show="drawerShow"></div>
     </transition>
   </div>
 </template>
 
 <script>
   export default {
+    name: "komDrawer",
     props: {
-      sidebarShow: {
+      drawerShow: {
         type: Boolean,
         default: false
       }
@@ -27,14 +28,14 @@
     },
     methods: {
       hide() {
-        this.$emit('hideSidebar', false);
+        this.$emit('hideDrawer', false);
       }
     }
   }
 </script>
 
 <style scoped lang="less">
-.kom-sidebar{
+.kom-drawer{
   .content{
     position: fixed;
     top: 0;

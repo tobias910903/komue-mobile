@@ -1,23 +1,23 @@
 ```
 <template>
-    <scroller :on-refresh="refresh" :on-infinite="infinite" ref="my_scroller">
-        <div v-for="(item, index) in items">
-            {{ item }}
-        </div>
-    </scroller>
+  <kom-scroller :on-refresh="refresh" :on-infinite="infinite" ref="my_scroller">
+    <div v-for="(item, index) in items">
+      {{ item }}
+    </div>
+  </kom-scroller>
 </template>
- 
-<script>
-import Scroller from '@/components/scroller'
 
-export default {
+<script>
+  import KomScroller from '@/components/kom-scroller'
+
+  export default {
     data(){
       return {
         items: []
       }
     },
     components: {
-        Scroller
+      KomScroller
     },
     mounted: function () {
       for (var i = 1; i <= 10; i++) {
@@ -37,7 +37,7 @@ export default {
           for (var i = 1; i <= 5; i++) {
             this.items.push(i + ' - 555');
           }
-          
+
           this.$refs.my_scroller.finishPullToRefresh();
         }, 1000)
       },
@@ -54,8 +54,7 @@ export default {
         }, 1000)
       }
     }
-}
-
+  }
 </script>
 ```
 
