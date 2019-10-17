@@ -1,16 +1,16 @@
 <template>
     <div class="kom-edit-div"
-        v-html="innerText"
-        :contenteditable="canEdit"
-        @focus="isLocked = true"
-        @blur="isLocked = false"
-        @input="changeText">
+         v-html="innerText"
+         :contenteditable="canEdit"
+         @focus="isLocked = true"
+         @blur="isLocked = false"
+         @input="changeText">
     </div>
 </template>
 
 <script>
-    export default{
-        name: 'komEditDiv',
+    export default {
+        name: 'KomEditDiv',
         props: {
             value: {
                 type: String,
@@ -21,21 +21,21 @@
                 default: true
             }
         },
-        data(){
+        data() {
             return {
                 innerText: this.value,
                 isLocked: false
             }
         },
         watch: {
-            'value'(){
+            'value'() {
                 if (!this.isLocked && !this.innerText) {
                     this.innerText = this.value;
                 }
             }
         },
         methods: {
-            changeText(){
+            changeText() {
                 this.$emit('input', this.$el.innerHTML);
             }
         }
@@ -52,8 +52,10 @@
         user-select: text;
         white-space: pre-wrap;
         text-align: left;
-        &[contenteditable=true]{
+        
+        &[contenteditable=true] {
             user-modify: read-write-plaintext-only;
+            
             &:empty:before {
                 content: attr(placeholder);
                 display: block;

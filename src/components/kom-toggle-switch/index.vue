@@ -7,7 +7,7 @@
                  :style="{transition: `transform ${speed}ms`, transform: toggled ? null: `translate3d(32px, 0, 0)`}"></div>
         </div>
         <span class="switch-label label-right" v-if="toggled" v-html="labelChecked"></span>
-        <span class="switch-label label-left" v-else v-html="labelUnchecked" ></span>
+        <span class="switch-label label-left" v-else v-html="labelUnchecked"></span>
     </label>
 </template>
 
