@@ -36,7 +36,6 @@
             }
         },
         mounted() {
-            console.log(this.direction);
             this.fold = "fold-" + this.direction;
         }
     }
