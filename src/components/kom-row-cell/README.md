@@ -23,7 +23,7 @@
             }
         },
         components: {
-            'KomRowCell': KomRowCell
+            KomRowCell
         }
     }
 </script>

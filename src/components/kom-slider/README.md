@@ -28,7 +28,7 @@
             }
         },
         components: {
-            'KomSlider': KomSlider
+            KomSlider
         },
         mounted() {
             window.addEventListener("resize", () => {
