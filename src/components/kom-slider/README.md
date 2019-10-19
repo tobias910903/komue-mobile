@@ -1,7 +1,7 @@
 ```
 <template>
     <div>
-        <kom-slider :list="data" :loop="true" v-if="data.length"></kom-slider>
+        <kom-slider :list="sliderList" :loop="true" v-if="sliderList.length" v-on:handleClick="sliderClick"></kom-slider>
     </div>
 </template>
 
@@ -11,7 +11,7 @@
     export default {
         data() {
             return {
-                data: [
+                sliderList: [
                     {
                         linkUrl: '/post',
                         picUrl: 'https://www.lihuyong.com/wp-content/uploads/2019/10/demo.jpg'
@@ -29,6 +29,11 @@
         },
         components: {
             KomSlider
+        },
+        methods: {
+            sliderClick(data) {
+                console.log(data)
+            }
         },
         mounted() {
             window.addEventListener("resize", () => {

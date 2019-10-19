@@ -1,7 +1,7 @@
 ```
 <template>
     <div>
-        <kom-row-cell :list="list" rowNum="3"></kom-row-cell>
+        <kom-row-cell :list="rowlist" rowNum="3" v-on:cellClick="cellClick"></kom-row-cell>
     </div>
 </template>
 
@@ -11,7 +11,7 @@
     export default {
         data() {
             return {
-                list: [
+                rowlist: [
                     {icon: "kiconfont kiconfenlei", title: "我的1", href: "/post"},
                     {icon: "kiconfont kiconfenlei", title: "我的2", href: "/post"},
                     {icon: "kiconfont kiconfenlei", title: "我的3", href: "/post"},
@@ -24,7 +24,12 @@
         },
         components: {
             KomRowCell
-        }
+        },
+        methods: {
+            cellClick(item){
+                console.log(item)
+            }
+        },
     }
 </script>
 ```

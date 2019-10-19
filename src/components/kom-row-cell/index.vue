@@ -1,9 +1,9 @@
 <template>
     <div class="kom-row-cell kom-row">
-        <router-link :to="{path : i.href}" :class="'kom-col-'+ col" v-for="(i, index) in list" :key="index">
+        <div :class="'kom-col-'+ col" v-for="(i, index) in list" :key="index" @click="itemClick(i)">
             <i :class="i.icon"></i>
             <p>{{i.title}}</p>
-        </router-link>
+        </div>
     </div>
 </template>
 <script>
@@ -22,7 +22,12 @@
             'col': function () {
                 return this.rowNum == '3' ? '4' : '3';
             }
-        }
+        },
+        methods: {
+            itemClick(item){ // 触发父组件回调
+                this.$emit("cellClick", item);
+            }
+        },
     };
 </script>
 <style lang="less" scoped>
@@ -42,7 +47,7 @@
             }
 
             p {
-                margin-top: 8px;
+                margin-top: 10px;
                 font-size: 12px;
             }
         }

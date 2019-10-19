@@ -1,10 +1,8 @@
 <template>
     <div class="kom-slider" ref="slider">
         <div class="slider-group" ref="sliderGroup">
-            <div class="slider-item" v-for="(item, index) in list" :key="index">
-                <router-link :to="{path : item.linkUrl}">
-                    <img :src="item.picUrl" :alt="item.linkUrl" :style="`width: ${width}`" ref="sliderItemImg">
-                </router-link>
+            <div class="slider-item" v-for="(item, index) in list" :key="index" @click="itemClick(item)">
+                <img :src="item.picUrl" :alt="item.linkUrl" :style="`width: ${width}`" ref="sliderItemImg">
             </div>
         </div>
         <div class="dots" v-if="this.dots">
@@ -87,7 +85,6 @@
                     scrollX: true,
                     scrollY: false,
                     momentum: false,
-                    click: true,
                     snap: {
                         loop: this.loop,
                         threshold: 0.1
@@ -118,6 +115,9 @@
                     _this.currentPageIndex = pageIndex;
                     _this._slider.goToPage(pageIndex);
                 }, this.speed);
+            },
+            itemClick(item){ // 触发父组件回调
+                this.$emit("handleClick", item);
             }
         }
     };
@@ -136,13 +136,6 @@
                 float: left;
                 overflow: hidden;
                 text-align: center;
-                
-                a {
-                    display: block;
-                    width: 100%;
-                    overflow: hidden;
-                    text-decoration: none;
-                }
                 
                 img {
                     display: block;
