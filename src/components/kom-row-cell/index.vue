@@ -27,10 +27,11 @@
 </script>
 <style lang="less" scoped>
     .kom-row-cell {
+        padding: 10px 0;
         text-align: center;
 
         & > [class*='kom-col-'] {
-            padding: 20px;
+            padding: 25px;
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
