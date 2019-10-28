@@ -1,54 +1,7 @@
 /* 引入样式 */
 @import "mixins";
 @import "reset";
-
-/* less variables */
-@success: #4cd964;
-@warning: #f0ad4e;
-@danger: #dd524d;
-@primary: #007aff;
-@grey: #c7c7cc;
-
-@primary-disact: #0062cc;
-@success-disact: #2ac845;
-@warning-disact: #ec971f;
-@danger-disact: #cf2d28;
-@grey-disact: #acacb4;
-
-@white: #ffffff;
-@dark-light: #cccccc;
-@dark: #333333;
-@black: #000000;
-
-
-/* 全局CSS */
-body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin:0;padding:0;}
-body{background:@white; color:@dark; -webkit-overflow-scrolling: touch;}
-body,select,input,select{font-size:14px; font-weight:400; font-family: "Segoe UI", sans-serif;}
-
-ul,ol{list-style-type:none;}
-select,input,select{ vertical-align:middle; outline: none;}
-img{vertical-align:middle; border:0;}
-table { border-collapse:collapse; border-spacing:0; }
-
-a{text-decoration:none;}
-a:link{color:@dark;}
-a:visited{color:@dark;}
-a:hover,a:active,a:focus{color:@black;text-decoration:none;}
-
-
-/* color */
-.kom-text-success{color: @success;}
-.kom-text-warning{color: @warning;}
-.kom-text-danger{color: @danger;}
-.kom-text-primary{color: @primary;}
-.kom-text-grey{color: @grey;}
-
-.kom-bg-success{background-color: @success;}
-.kom-bg-warning{background-color: @warning;}
-.kom-bg-danger{background-color: @danger;}
-.kom-bg-primary{background-color: @primary;}
-.kom-bg-grey{background-color: @grey;}
+@import "animate";
 
 
 /* display, float */
@@ -60,6 +13,7 @@ a:hover,a:active,a:focus{color:@black;text-decoration:none;}
 .kom-block{display: block !important;}
 .kom-visibility{visibility: visible !important;}
 .kom-hidden{display: none !important;}
+.kom-border-box{ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 
 
 /* text */
@@ -71,6 +25,24 @@ a:hover,a:active,a:focus{color:@black;text-decoration:none;}
 .kom-text-right{text-align: right !important;}
 
 
+/* row-col */
+.kom-row:before,.kom-row:after {display:table;content:' ';}
+.kom-row:after {clear:both;}
+.kom-row > [class*='kom-col-'] {float:left;position:relative;min-height:1px;}
+.kom-col-12 {width:100%;}
+.kom-col-11 {width:91.66666667%;}
+.kom-col-10 {width:83.33333333%;}
+.kom-col-9 {width:75%;}
+.kom-col-8 {width:66.66666667%;}
+.kom-col-7 {width:58.33333333%;}
+.kom-col-6 {width:50%;}
+.kom-col-5 {width:41.66666667%;}
+.kom-col-4 {width:33.33333333%;}
+.kom-col-3 {width:25%;}
+.kom-col-2 {width:16.66666667%;}
+.kom-col-1 {width:8.33333333%;}
+
+
 /* form */
 input,textarea,select { -webkit-tap-highlight-color:transparent;-webkit-tap-highlight-color:transparent;}
 input:focus,textarea:focus,select:focus {-webkit-tap-highlight-color:transparent;-webkit-tap-highlight-color:transparent;-webkit-user-modify:read-write-plaintext-only;}
@@ -79,6 +51,7 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
 textarea {height:auto;resize:none;}
 select {font-size:14px;height:auto;margin-top:1px;border:0 !important;background-color:@white;}
 select:focus {-webkit-user-modify:read-only;}
+
 
 input[type='button'],input[type='submit'],input[type='reset'],button,.kom-btn {font-size:14px;font-weight:400;line-height:1.42;position:relative;display:inline-block;margin-bottom:0;padding:6px 12px;cursor:pointer;-webkit-transition:all;transition:all;-webkit-transition-timing-function:linear;transition-timing-function:linear;-webkit-transition-duration:.2s;transition-duration:.2s;text-align:center;vertical-align:top;white-space:nowrap;color:@dark;border:1px solid @dark-light;border-radius:3px;background-color:@white;background-clip:padding-box;}
 input[type='button']:enabled:active,input[type='button'].kom-active:enabled,input[type='submit']:enabled:active,input[type='submit'].kom-active:enabled,input[type='reset']:enabled:active,input[type='reset'].kom-active:enabled,button:enabled:active,button.kom-active:enabled,.kom-btn:enabled:active,.kom-btn.kom-active:enabled {color:@white;background-color:#929292;}
@@ -105,74 +78,13 @@ input[type='submit']:enabled:active,input[type='submit'].kom-active:enabled,.kom
 
 
 
-/* row-col */
-.kom-row:before,.kom-row:after {display:table;content:' ';}
-.kom-row:after {clear:both;}
-.kom-col-1,.kom-col-2,.kom-col-3,.kom-col-4,.kom-col-5,.kom-col-6,.kom-col-7,.kom-col-8,.kom-col-9,.kom-col-10,.kom-col-11,.kom-col-12 {position:relative;min-height:1px;}
-.kom-row > [class*='kom-col-'] {float:left;}
-.kom-col-12 {width:100%;}
-.kom-col-11 {width:91.66666667%;}
-.kom-col-10 {width:83.33333333%;}
-.kom-col-9 {width:75%;}
-.kom-col-8 {width:66.66666667%;}
-.kom-col-7 {width:58.33333333%;}
-.kom-col-6 {width:50%;}
-.kom-col-5 {width:41.66666667%;}
-.kom-col-4 {width:33.33333333%;}
-.kom-col-3 {width:25%;}
-.kom-col-2 {width:16.66666667%;}
-.kom-col-1 {width:8.33333333%;}
-
 
 /* 滚动条 */
 .kom-scroll-box{ overflow-y: auto; position: fixed; left: 0; top: 0; right: 0; bottom: 0; height: auto; -webkit-overflow-scrolling: touch;}
 .kom-scroll-box.kom-padding-with-top{ top: 44px; }
 .kom-scroll-box.kom-padding-with-bottom{ bottom: 50px; }
 
-
-/* 列表 example：
-1、单行列表：
-<ul class="kom-list-box kom-mh-15">
-  <li><i class="kiconfont kiconzuo"></i> 一行数据</li>
-  <li class="kom-list-text-right">一行数据<span>右浮动的文字</span></li>
-  <li class="kom-list-navigate-right">一行数一行数据一行数</li>
-  <li class="kom-list-navigate-right kom-list-text-right">一行数据一行数数据一行数据<span>右浮动的文字</span></li>
-  <li>一行数据一行数据一行数据一行数据一行数据一行数据</li>
-  <li>一行数据</li>
-  <li class="kom-list-navigate-right kom-list-text-right kom-list-box-textlong">姓名：<span>王大锤</span></li>
-</ul>
- */
-.kom-list-box{ background: @white; -webkit-box-shadow:0 0 10px 0 rgba(34,58,156,0.15);box-shadow:0 0 10px 0 rgba(34,58,156,0.15);}
-.kom-list-box li{ position: relative; padding: 0 20px; height: 44px; line-height: 44px; color: #172B4D; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
-.kom-list-box li + li{ border-top: 1px solid rgba(242,242,242,1); }
-.kom-list-box li.kom-list-text-right { padding-right: 100px; }
-.kom-list-box li.kom-list-text-right span{ position: absolute; right: 20px; width: 80px; text-align: right;overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-.kom-list-box li.kom-list-navigate-right{ position: relative; padding-right: 35px; }
-.kom-list-box li.kom-list-navigate-right.kom-list-text-right{ padding-right: 115px; }
-.kom-list-box li.kom-list-navigate-right.kom-list-text-right span{ right:35px; }
-.kom-list-box li.kom-list-navigate-right:after{ position: absolute; right: 20px; content: "\e621";font-family: "kiconfont" !important;
-font-size: 16px;}
-.kom-list-box li.kom-list-navigate-right.kom-list-text-right.kom-list-box-textlong{ padding-right: 0; }
-.kom-list-box li.kom-list-text-right.kom-list-box-textlong{ padding-right: 0; }
-.kom-list-box li.kom-list-text-right.kom-list-box-textlong span{ width: 200px; }
-
-
-/* 卡片 example：
-<div class="kom-card">
-	<div class="kom-card-header kom-ellipsis">标题标题标题标题标题标题标题标题标题标题标题</div>
-	<div class="kom-card-body">
-		<p class="kom-ellipsis-2">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
-	</div>
-	<div class="kom-card-footer">
-		<div class="kom-btn kom-btn-success kom-pull-right">按钮</div>
-	</div>
-</div>
- */
-.kom-card{ margin-bottom: 10px; background:rgba(255,255,255,1);-webkit-box-shadow:0 0 10px 0 rgba(34,58,156,0.15);box-shadow:0 0 10px 0 rgba(34,58,156,0.15);-webkit-border-radius:2px;border-radius:2px;}
-.kom-card .kom-card-header{ padding: 14px 20px; font-size:16px; font-weight:400; color:rgba(23,43,77,1); border-bottom: 1px solid #eeeeee; }
-.kom-card .kom-card-body{ overflow: hidden; padding: 14px 20px; color:rgba(102,105,117,1); font-weight: 100;}
-.kom-card .kom-card-body p{ color: #999999;}
-.kom-card .kom-card-footer{ overflow: hidden; padding: 8px 20px; border-top: 1px solid #eeeeee; }
+.transition-box{ position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; background-color: #ffffff;}
 
 
 /*  bar-nav example：
@@ -209,14 +121,6 @@ font-size: 16px;}
 .kom-title a {color:inherit; }
 .kom-bar-bottom{ position: fixed; left: 0; right: 0; bottom: 0; background:rgba(255,255,255,1); -webkit-box-shadow:0 -2px 10px 0 rgba(0,0,0,0.05),0 1px 0 0 rgba(229,229,229,1);box-shadow:0 -2px 10px 0 rgba(0,0,0,0.05),0 1px 0 0 rgba(229,229,229,1);}
 
-
-.kom-bar-tab {bottom:0;display:table;width:100%;height:50px;padding:0;table-layout:fixed;border-top:0;border-bottom:0;-webkit-touch-callout:none;}
-.kom-bar-tab .kom-tab-item {display:table-cell;overflow:hidden;width:1%;height:50px;text-align:center;vertical-align:middle;white-space:nowrap;text-overflow:ellipsis;color:#929292;}
-.kom-bar-tab .kom-tab-item.kom-active {color:@primary;}
-.kom-bar-tab .kom-tab-item .kiconfont {top:3px;width:24px;height:24px;padding-top:0;padding-bottom:0;}
-.kom-bar-tab .kom-tab-item .kiconfont ~ .kom-tab-label {font-size:11px;display:block;overflow:hidden;text-overflow:ellipsis;}
-.kom-bar-tab .kom-tab-item .kiconfont:active {background:none;}
-
 .kom-bar .kom-btn {font-weight:400;position:relative;z-index:20; line-height: 1; top:5px;margin-top:0;padding:6px 12px 7px;}
 .kom-bar .kom-btn.kom-pull-right {margin-right:10px;}
 .kom-bar .kom-btn.kom-pull-left {margin-left:10px;}
@@ -226,6 +130,13 @@ font-size: 16px;}
 .kom-bar .kiconfont:active {opacity:.3;}
 .kom-bar .kom-btn .kiconfont {top:1px;margin:0;padding:0;}
 .kom-bar .kom-title .kiconfont {margin:0;padding:0;}
+
+.kom-bar-tab {bottom:0;display:table;width:100%;height:50px;padding:0;table-layout:fixed;border-top:0;border-bottom:0;-webkit-touch-callout:none;}
+.kom-bar-tab .kom-tab-item {display:table-cell;overflow:hidden;width:1%;height:50px;text-align:center;vertical-align:middle;white-space:nowrap;text-overflow:ellipsis;color:#929292;}
+.kom-bar-tab .kom-tab-item.kom-active {color:@primary;}
+.kom-bar-tab .kom-tab-item .kiconfont {top:3px;width:24px;height:24px;padding-top:0;padding-bottom:0;}
+.kom-bar-tab .kom-tab-item .kiconfont ~ .kom-tab-label {font-size:11px;display:block;overflow:hidden;text-overflow:ellipsis;}
+.kom-bar-tab .kom-tab-item .kiconfont:active {background:none;}
 
 
 /* loading */
@@ -264,27 +175,3 @@ font-size: 16px;}
 	100% {transform:rotate(360deg);}
 }
 
-
-
-/* transition */
-.transition-box{ position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; background-color: #ffffff;}
-
-/* 动画切换效果 */
-.turn-on-enter {  transform: translate3d(100%, 0, 0); }
-.turn-on-enter-active,
-.turn-on-leave-active { transition: transform 0.4s ease; }
-.turn-off-leave-to { transform: translate3d(100%, 0, 0); }
-.turn-off-enter-active,
-.turn-off-leave-active { transition: transform 0.4s ease; }
-.turn-off-leave-active { z-index: 2; }
-
-.fadeIn-enter { -webkit-animation:fadeIn .2s ease; animation:fadeIn .2s ease; }
-.fadeIn-enter-active { -webkit-animation:fadeIn .2s ease; animation:fadeIn .2s ease; }
-@-webkit-keyframes fadeIn{
-	from{ opacity: 0;}
-	to{ opacity: 1;}
-}
-@keyframes fadeIn{
-	from{ opacity: 0;}
-	to{ opacity: 1;}
-}
