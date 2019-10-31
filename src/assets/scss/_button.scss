@@ -1,0 +1,107 @@
+@import "variables";
+
+@mixin button-style($active-color) {
+  &:active:not(.md-button) {
+    background-color: darken($active-color, 10%);
+    &.button-clear {
+      background-color: transparent;
+      color: darken($active-color, 10%);
+    }
+  }
+}
+
+.button-assertive {
+  @include button-style($assertive);
+}
+
+.button-positive {
+  @include button-style($positive);
+}
+
+.button-balanced {
+  @include button-style($balanced);
+}
+
+.button-energized {
+  @include button-style($energized);
+}
+
+.button-calm {
+  @include button-style($calm);
+}
+
+.button-royal {
+  @include button-style($royal);
+}
+
+.button-light {
+  @include button-style($light);
+}
+
+.button-dark {
+  @include button-style($dark);
+}
+
+.button-stable {
+  @include button-style($stable);
+}
+
+.button-outline {
+  &:active {
+    color: #FFF !important;
+  }
+}
+
+// Fab Button
+.button-fab {
+  min-width: 44px !important;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 1px 0 0 0;
+}
+
+// MdButton
+.md-button {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.md-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(#FFF, 0.4);
+  min-width: 20px;
+  min-height: 20px;
+  opacity: 0;
+}
+
+.md-ripple-effect {
+  animation: ripple 2s;
+  -webkit-animation: ripple 2s;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(20);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes ripple {
+  0% {
+    -webkit-transform: scale(1);
+    opacity: 0.4;
+  }
+  100% {
+    -webkit-transform: scale(20);
+    opacity: 0;
+  }
+}

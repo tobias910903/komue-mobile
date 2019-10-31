@@ -1,0 +1,54 @@
+@import "variables";
+@import "mixins";
+
+html, body {
+  height: 100%;
+  background-color: $default-page-bg;
+}
+
+app {
+  height: 100%;
+}
+
+// fix fastclick bug: https://github.com/ftlabs/fastclick/issues/60
+label > * {
+  pointer-events: none;
+}
+
+.backdrop {
+  background-color: rgba(0,0,0,0.3);
+  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  pointer-events: auto;
+}
+
+// Safari input placeholder margin issue
+.grade-a input::-webkit-input-placeholder {
+  line-height: 20px;
+}
+
+// button
+.button {
+  min-height: 44px;
+  &.button-small {
+    min-height: 30px;
+  }
+}
+
+// hairline
+
+.hairline-top:before {
+  @include hairline(top);
+}
+
+.hairline-bottom:after {
+  @include hairline(bottom);
+}
+
+.hairline-left:before {
+  @include hairline(left);
+}
+
+.hairline-right:after {
+  @include hairline(right);
+}

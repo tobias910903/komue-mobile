@@ -3,6 +3,10 @@ import App from './App'
 import router from './router'
 import store from '@/vuex/store'
 
+// 组件
+import install from './install'
+Vue.use(install);
+
 import "@/assets/less/komue.less"
 import "@/assets/iconfonts/iconfont.css"
 
@@ -14,18 +18,18 @@ Vue.prototype.$ajax = ajax;
 import {arrayFun} from '@/utils/array'
 import {timeFun} from '@/utils/time'
 import {validatorFun} from '@/utils/validator'
-Vue.prototype.$array = arrayFun
-Vue.prototype.$time = timeFun
-Vue.prototype.$validator = validatorFun
 
+Vue.prototype.$array = arrayFun;
+Vue.prototype.$time = timeFun;
+Vue.prototype.$validator = validatorFun;
 
 // 阻止启动生产消息
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 new Vue({
-  el: '#app',
-  router,
-  store,
-  components: {App},
-  template: '<App/>'
+    el: '#app',
+    router,
+    store,
+    components: {App},
+    template: '<App/>'
 })
