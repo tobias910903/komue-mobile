@@ -1,6 +1,7 @@
 <template>
     <div class="kom-btn" :class="btnClass" @click="clickFun">{{text}}</div>
 </template>
+
 <script>
     export default {
         name: "KomButton",
@@ -37,8 +38,9 @@
 </script>
 
 <style lang="less" scoped>
+    @import "../../assets/less/_variables.less";
     @import "../../assets/less/_mixins.less";
-
+    
     .kom-btn {
         font-size: 14px;
         font-weight: 400;
@@ -62,91 +64,98 @@
         transition-timing-function: linear;
         -webkit-transition-duration: .2s;
         transition-duration: .2s;
+        
         &.small {
             padding: 3px 8px;
             font-size: 12px;
         }
+        
         &.block {
             display: block;
             padding: 8px 0;
             width: 100%;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
+            .border-box;
         }
-
+        
         &.kom-btn-primary {
             color: @white;
             border: 1px solid @primary;
             background-color: @primary;
+            
             &:enabled:active, &.kom-active:enabled {
                 color: @white;
                 border: 1px solid @primary-disact;
                 background-color: @primary-disact;
             }
         }
-
+        
         &.kom-btn-success {
             color: @white;
             border: 1px solid @success;
             background-color: @success;
-
+            
             &:enabled:active, &.kom-active:enabled {
                 color: @white;
                 border: 1px solid @success-disact;
                 background-color: @success-disact;
             }
         }
-
+        
         &.kom-btn-warning {
             color: @white;
             border: 1px solid @warning;
             background-color: @warning;
-
+            
             &:enabled:active, &.kom-active:enabled {
                 color: @white;
                 border: 1px solid @warning-disact;
                 background-color: @warning-disact;
             }
         }
-
+        
         &.kom-btn-danger {
             color: @white;
             border: 1px solid @danger;
             background-color: @danger;
-
+            
             &:enabled:active, &.kom-active:enabled {
                 color: @white;
                 border: 1px solid @danger-disact;
                 background-color: @danger-disact;
             }
         }
-
+        
         &.kom-btn-grey {
             color: @white;
             border: 1px solid @grey;
             background-color: @grey;
+            
             &:enabled:active, &.kom-active:enabled {
                 color: @white;
                 border: 1px solid @grey-disact;
                 background-color: @grey-disact;
             }
         }
-
+        
         &.kom-btn-outlined {
             background-color: transparent;
+            
             &.kom-btn-primary {
                 color: @primary;
             }
+            
             &.kom-btn-success {
                 color: @success;
             }
+            
             &.kom-btn-warning {
                 color: @warning;
             }
+            
             &.kom-btn-danger {
                 color: @danger;
             }
+            
             &.kom-btn-grey {
                 color: @grey;
             }

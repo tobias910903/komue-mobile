@@ -1,113 +1,76 @@
 ```
-<template>
-  <div>
-    <button @click="alert">Alert</button>
-    <button @click="alert2">自定义按钮样式的Alert</button>
-    <button @click="confirm">Confirm</button>
-    <button @click="confirm2">自定义按钮样式的Confirm</button>
-    <button @click="wxAlert">wxAlert</button>
-    <button @click="wxConfirm">wxConfirm</button>
-    <button @click="toast">toast</button>
-    <button @click="loading">loading</button>
-  </div>
-</template>
+// alert
+this.$alert('这里是内容')  // 如果传递一个字符串给 this.$alert, 则 标题默认为 '提示', 按钮默认为 '确定'
 
-<script>
-  import {Alert, Confirm, Toast, Loading} from '@/components/kom-messagebox'
-  Vue.use(Alert);
-  Vue.use(Confirm);
-  Vue.use(Toast);
-  Vue.use(Loading);
+如果参数为对象, 则可接受如下配置选项:
+title: '这里是标题',
+content: '这里是内容',
+btnText: '这里是按钮',
+component: Component // 用于用户自行指明 Alert 组件
 
-  // 自定义的样式
-  import wxAlert from '@/components/kom-messagebox/wechat/Alert'
-  import wxConfirm from '@/components/kom-messagebox/wechat/Confirm'
-  import komMessagebox from '@/components/kom-messagebox'
-  import Vue from 'vue'
-  Vue.use(komMessagebox)
+比如:
+this.$alert({
+  title: '我是标题',
+  content: '我是内容'
+})
 
-  export default {
-    name: 'komMessagebox',
+// confirm
+this.$confirm('这里是内容');
 
-    components: {
-      wxAlert,
-      wxConfirm
+如果参数为对象, 则可接受如下配置选项:
+title: '这里是标题',
+content: '这里是内容',
+yesStyle: {}, // 设置左边按钮样式
+yesText: '',  // 左边按钮文本,
+noStyle: {},  // 设置右边按钮样式,
+noText: '',   // 设置右边按钮文本
+component: Component // 可不设置, 适用于用户自定义组件.
+
+比如:
+this.$confirm({
+    title: '我是标题',
+    content: '我是内容',
+    yesText: '你好'
+})
+
+// toast
+this.$toast(text, {
+    durtaion: 200,
+    location: 'bottom|center|top' // 默认在中间
+});
+
+// toast 的图文混合模式
+this.$toast(text, {
+    path: path,
+    location: 'center',
+    toastStyle: {
+        height: '100px',
+        width: '100px'
     },
-
-    methods: {
-      alert () {
-        this.$alert('IOS弹窗').then(function(){
-          console.log("callback");
-        })
-      },
-      alert2 () {
-        this.$alert({
-          title:'IOS弹窗2',
-          content: '内容内容2',
-          btnText: '4',
-          style: {
-            'background-color': '#ff0000',
-            'font-size': '20px',
-            'color': '#ffffff'
-          }
-        })
-      },
-      wxAlert () {
-        this.$alert({
-          title:'微信弹窗',
-          content: '内容内容',
-          component: wxAlert
-        }).then(function(){
-          console.log("callback");
-        })
-      },
-      confirm () {
-        this.$confirm('IOS弹窗2').then(function(){
-          console.log("callback-true");
-        }).catch(function(){
-          console.log("callback-false");
-        })
-      },
-      confirm2 () {
-        this.$confirm({
-          title: '标题',
-          content: '6666',
-          yesText:  '确定11',
-          noStyle: {},
-          noText: '取消22',
-          yesStyle: {
-            'background-color': '#333333',
-            'font-size': '12px',
-            'color': '#cccccc'
-          }
-        }).then(function(){
-          console.log("callback-true");
-        }).catch(function(){
-          console.log("callback-false");
-        })
-      },
-      wxConfirm () {
-        this.$confirm({
-          title: '微信弹窗2',
-          content: '内容内容',
-          component: wxConfirm
-        }).then(function(){
-          console.log("callback-true");
-        }).catch(function(){
-          console.log("callback-false");
-        })
-      },
-      toast () {
-        this.$toast('笑嘻嘻嘻嘻', {
-          location: 'bottom'
-        })
-      },
-      loading () {
-        this.$loading.show('自定义文字')
-      }
+    imgStyle: {
+        width: '40px',
+        marginBottom: '15px'
     }
-  }
-</script>
-```
+})
 
-> 参考：https://github.com/helicopters/wc-messagebox
+// loading
+this.$loading.show('自定义文字'); //显示
+this.$loading.hide(); //隐藏
+
+// 自定义样式组件
+this.$alert({
+    title:'微信弹窗',
+    content: '内容内容',
+    component: wxAlert
+}).then(function(){
+    console.log("callback");
+});
+
+this.$alert({
+    title:'微信弹窗',
+    content: '内容内容',
+    component: wxConfirm
+}).then(function(){
+    console.log("callback");
+});
+```

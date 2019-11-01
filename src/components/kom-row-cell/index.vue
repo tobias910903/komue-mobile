@@ -25,7 +25,7 @@
         },
         methods: {
             itemClick(item){ // 触发父组件回调
-                this.$emit("cellClick", item);
+                this.$emit("click", item);
             }
         },
     };

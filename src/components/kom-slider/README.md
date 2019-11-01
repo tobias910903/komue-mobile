@@ -1,13 +1,11 @@
 ```
 <template>
     <div>
-        <kom-slider :list="sliderList" :loop="true" v-if="sliderList.length" v-on:handleClick="sliderClick"></kom-slider>
+        <kom-slider :list="sliderList" :loop="true" v-if="sliderList.length" @click="sliderClick"></kom-slider>
     </div>
 </template>
 
 <script>
-    import KomSlider from '@/components/kom-slider';
-    
     export default {
         data() {
             return {
@@ -27,9 +25,6 @@
                 ]
             }
         },
-        components: {
-            KomSlider
-        },
         methods: {
             sliderClick(data) {
                 console.log(data)
@@ -44,5 +39,3 @@
     }
 </script>
 ```
-
-> 基于better-scroll的轮播图

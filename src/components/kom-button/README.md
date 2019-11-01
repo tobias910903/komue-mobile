@@ -34,12 +34,7 @@
 </template>
 
 <script>
-    import KomButton from '@/components/kom-button'
-
     export default {
-        components: {
-            KomButton
-        },
         methods:{
             btnClick(){
                 console.log("按钮点击");
@@ -48,5 +43,3 @@
     }
 </script>
 ```
-
-> 按钮

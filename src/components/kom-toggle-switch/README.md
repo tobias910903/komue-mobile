@@ -8,16 +8,12 @@
 </template>
 
 <script>
-    import KomToggleSwitch from '@/components/kom-toggle-switch'
     export default {
         data(){
             return {
                 testToggle1: false,
                 testToggle2: true
             }
-        },
-        components: {
-            KomToggleSwitch
         },
         methods:{
             tog1(val){
@@ -30,5 +26,3 @@
     }
 </script>
 ```
-
-> Toggle Switch 开关

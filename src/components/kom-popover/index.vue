@@ -1,13 +1,13 @@
 <template>
     <div class="kom-popover">
         <transition name="fold">
-            <div class="content" v-show="popoverShow">
+            <div class="content" v-show="isShow">
                 <slot></slot>
             </div>
         </transition>
         
         <transition name="fade">
-            <div class="mask" @click.stop.prevent="hide" v-show="popoverShow"></div>
+            <div class="mask" @click.stop.prevent="hide" v-show="isShow"></div>
         </transition>
     </div>
 </template>
@@ -16,7 +16,7 @@
     export default {
         name: 'KomPopover',
         props: {
-            popoverShow: {
+            isShow: {
                 type: Boolean,
                 default: false
             }
@@ -28,7 +28,7 @@
         },
         methods: {
             hide() {
-                this.$emit('hidePopover', false);
+                this.$emit('toggle', false);
             }
         }
     }

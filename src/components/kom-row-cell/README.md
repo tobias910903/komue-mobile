@@ -1,13 +1,11 @@
 ```
 <template>
     <div>
-        <kom-row-cell :list="rowlist" rowNum="3" v-on:cellClick="cellClick"></kom-row-cell>
+        <kom-row-cell :list="rowlist" rowNum="3" @click="cellClick"></kom-row-cell>
     </div>
 </template>
 
 <script>
-    import KomRowCell from '@/components/kom-row-cell'
-
     export default {
         data() {
             return {
@@ -22,9 +20,6 @@
                 ]
             }
         },
-        components: {
-            KomRowCell
-        },
         methods: {
             cellClick(item){
                 console.log(item)
@@ -33,5 +28,3 @@
     }
 </script>
 ```
-
-> 宫格布局

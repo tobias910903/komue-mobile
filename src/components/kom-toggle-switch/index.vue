@@ -1,8 +1,7 @@
 <template>
     <label role="checkbox" :class="['kom-switch', { toggled }]">
         <input type="checkbox" class="switch-input" @change="toggle"/>
-        <div class="switch-core"
-             :style="{backgroundColor: toggled ? colorChecked  : colorUnchecked}">
+        <div class="switch-core" :style="{backgroundColor: toggled ? colorChecked  : colorUnchecked}">
             <div class="switch-button"
                  :style="{transition: `transform ${speed}ms`, transform: toggled ? null: `translate3d(32px, 0, 0)`}"></div>
         </div>

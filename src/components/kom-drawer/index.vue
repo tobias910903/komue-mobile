@@ -1,13 +1,13 @@
 <template>
     <div class="kom-drawer">
         <transition :name="fold">
-            <div class="content" :class="fold" v-show="drawerShow">
+            <div class="content" :class="fold" v-show="isShow">
                 <slot></slot>
             </div>
         </transition>
         
         <transition name="fade">
-            <div class="mask" @click.stop.prevent="hide" v-show="drawerShow"></div>
+            <div class="mask" @click.stop.prevent="hide" v-show="isShow"></div>
         </transition>
     </div>
 </template>
@@ -21,7 +21,7 @@
             }
         },
         props: {
-            drawerShow: {
+            isShow: {
                 type: Boolean,
                 default: false
             },
@@ -32,7 +32,7 @@
         },
         methods: {
             hide() {
-                this.$emit('hideDrawer', false);
+                this.$emit('toggle', false);
             }
         },
         mounted() {

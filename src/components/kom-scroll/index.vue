@@ -8,7 +8,7 @@
 
 <script>
     import BScroll from 'better-scroll'
-
+    
     export default {
         data() {
             return {
@@ -37,8 +37,9 @@
         bottom: 0;
         height: auto;
         -webkit-overflow-scrolling: touch;
-        .content{
-
+        
+        .content {
+        
         }
     }
 </style>

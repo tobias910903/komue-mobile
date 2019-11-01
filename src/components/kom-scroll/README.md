@@ -1,6 +1,6 @@
 ```
 <template>
-    <div>
+    <div style="position: fixed; top: 0; bottom: 0; height: 100%; width: 100%;">
         <kom-scroll>
             <div>Every Day</div>
             <div>Every Day</div>
@@ -63,18 +63,6 @@
         </kom-scroll>
     </div>
 </template>
-
-<script>
-    import KomScroll from '@/components/kom-scroll'
-
-    export default {
-        components: {
-            KomScroll
-        }
-    }
-</script>
 ```
 
-> 滚动弹性盒子
-
-> 需要通过父级的position：relative来定位
+> 滚动弹性盒子，需要通过父级固定高度来定位

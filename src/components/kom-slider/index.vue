@@ -117,7 +117,7 @@
                 }, this.speed);
             },
             itemClick(item){ // 触发父组件回调
-                this.$emit("handleClick", item);
+                this.$emit("click", item);
             }
         }
     };
