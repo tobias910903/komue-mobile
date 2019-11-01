@@ -8,4 +8,6 @@
 > npm run build
 ```
 
-> 说明文档：https://www.lihuyong.com/komue-mobile
+> better-scroll：http://ustbhuangyi.github.io/better-scroll/doc/api.html
+
+> lodash：https://www.lodashjs.com/docs/latest
