@@ -152,8 +152,8 @@ export default {
 
       anchor = anchor.map((item, i) => {
         let index = 0
-        if (item.index) {
-          index = item.index
+        if (item.axios) {
+          index = item.axios
         } else if (item.value) {
           index = this.pickerData && this.pickerData[i] && this.pickerData[i].indexOf(item.value) > -1
             ? this.pickerData[i].indexOf(item.value) : 0
@@ -215,7 +215,7 @@ export default {
       if (this.dataType !== DATA_CASCADE) {
         return
       }
-      const newIndex = this._getCurrentValue()[i].index
+      const newIndex = this._getCurrentValue()[i].axios
       if (newIndex !== this.pickerAnchor[i]) {
         this.pickerAnchor.splice(i, 1, newIndex)
         this._updatePickerData(i + 1)

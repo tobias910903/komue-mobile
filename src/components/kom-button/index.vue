@@ -37,7 +37,7 @@
 </script>
 
 <style lang="less" scoped>
-    @import "../../assets/less/mixins.less";
+    @import "../../assets/less/_mixins.less";
 
     .kom-btn {
         font-size: 14px;
