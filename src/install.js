@@ -1,121 +1,63 @@
-// vonic scss
-import './assets/scss/vonic.scss'
-
-// promise & object assign
-import Promise from 'es6-promise'
-Promise.polyfill()
-
-// VueScroller
-// import VueScroller from 'vue-scroller'
-
-// Basic Components
-import MdButton from './components/md-button'
-import VonInput from './components/input/Input.vue'
-import Search from './components/input/Search.vue'
-import VonRadio from './components/radio'
-import VonCheckbox from './components/checkbox'
-import VonToggle from './components/toggle'
-import VonRange from './components/range'
-import VonHeader from './components/header'
-import VonBadge from './components/badge'
-
-// Layout
-import HairlineList from './components/list/HairlineList'
-import HairlineItem from './components/list/HairlineItem'
-import Cells from './components/cells'
-import Tabs from './components/tabs'
-import ButtonBar from './components/buttonbar'
-import Scalable from './components/scalable'
-
-// Advanced
-import Scroll from './components/scroll'
-import Cascade from './components/cascade'
-import Datepicker from './components/datepicker'
-
-// Modal
-import Modal from './services/modal/Modal.vue'
-
-// Services
-import $backdrop from './services/backdrop'
-import {$loading, $toast} from './services/loading'
-import $dialog from './services/popup/dialog.js'
-import $popup from './services/popup/index.js'
-import $cascadePanel from './services/cascadepanel/index.js'
-import $actionSheet from './services/actionsheet/index.js'
-import $tabbar from './services/tabbar/index.js'
-import $sidebar from './services/sidebar/index.js'
-import $modal from './services/modal/index.js'
-import Storage from 'storage-js-iso'
-
+import Vue from 'vue'
 import FastClick from 'fastclick'
+import _ from 'lodash'
+
+// style
+import "@/assets/less/komue.less"
+import "@/assets/iconfonts/iconfont.css"
+
+// axios
+import ajax from '@/api'
+
+// utils
+import {arrayFun} from '@/utils/array'
+import {timeFun} from '@/utils/time'
+import {validatorFun} from '@/utils/validator'
+
+// components
+import KomButton from '@/components/kom-button'
+
+// services
+
 
 const is_ios = () =>{
-    return /iPad|iPhone|iPod/.test(navigator.userAgent)
+    return /iPad|iPhone|iPod/.test(navigator.userAgent);
 }
 
-export default function install(Vue, options) {
-    // Vue.use(VueScroller)
+export default function install(Vue) {
 
-    // Basic Components
-    Vue.component('md-button', MdButton)
-    Vue.component('von-input', VonInput)
-    Vue.component('search', Search)
-    Vue.component('von-radio', VonRadio)
-    Vue.component('von-checkbox', VonCheckbox)
-    Vue.component('von-toggle', VonToggle)
-    Vue.component('von-range', VonRange)
-    Vue.component('von-header', VonHeader)
-    Vue.component('badge', VonBadge)
+    // axios
+    Vue.prototype.$ajax = ajax;
 
-    // Layout Components
-    Vue.component('list', HairlineList)
-    Vue.component('item', HairlineItem)
-    Vue.component('hl-list', HairlineList)
-    Vue.component('hl-item', HairlineItem)
-    Vue.component('cells', Cells)
-    Vue.component('tabs', Tabs)
-    Vue.component('button-bar', ButtonBar)
-    Vue.component('scalable', Scalable)
+    // utils
+    Vue.prototype.$array = arrayFun;
+    Vue.prototype.$time = timeFun;
+    Vue.prototype.$validator = validatorFun;
 
-    Vue.component('scroll', Scroll)
-    Vue.component('cascade', Cascade)
-    Vue.component('datepicker', Datepicker)
+    // components
+    Vue.component('KomButton', KomButton);
 
-    // Modal
-    Vue.component('modal', Modal)
+    // services
 
-    // Services
-    Vue.prototype.$backdrop = window.$backdrop = $backdrop
-    Vue.prototype.$loading = window.$loading = $loading
-    Vue.prototype.$toast = window.$toast = $toast
-    Vue.prototype.$dialog = window.$dialog = $dialog
-    Vue.prototype.$popup = window.$popup = $popup
-    Vue.prototype.$cascadePanel = window.$cascadePanel = $cascadePanel
-    Vue.prototype.$actionSheet = window.$actionSheet = $actionSheet
-    Vue.prototype.$tabbar = window.$tabbar = $tabbar
-    Vue.prototype.$sidebar = window.$sidebar = $sidebar
-    Vue.prototype.$modal = window.$modal = $modal
-    Vue.prototype.$storage = window.$storage = Storage
 
-    // 一些兼容性代码
-    /* for iOS 10, users can now pinch-to-zoom even when a website sets user-scalable=no in the viewport. */
+    /* 对于ios 10，即使网站在视窗中设置了user scalable=no，用户现在也可以收缩缩放 */
     document.documentElement.addEventListener('touchstart', (e) => {
         if(e.touches.length > 1){
-            e.preventDefault()
+            e.preventDefault();
         }
-    },false)
+    }, false);
 
-    /* iOS Safari - Disable double click to zoom */
+    /* iOS Safari-禁用双击缩放 */
     if (is_ios()) {
         let lastTouchEnd = 0;
         document.documentElement.addEventListener('touchend', (e) => {
-            let now = (new Date()).getTime()
+            let now = (new Date()).getTime();
             if(now - lastTouchEnd < 300){
-                e.preventDefault()
+                e.preventDefault();
             }
-            lastTouchEnd = now
-        },false)
+            lastTouchEnd = now;
+        }, false);
     }
 
-    FastClick.attach(document.body)
+    FastClick.attach(document.body);
 }
