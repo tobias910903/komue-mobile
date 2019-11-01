@@ -42,11 +42,4 @@ let validatorFun = {
 	}
 }
 
-export {validatorFun}
-
-// 使用
-// import {validatorFun} from '@/utils/validator'
-// Vue.prototype.$validator = validatorFun
-
-// 调用
-// this.$validator.isEmail("admin@lihuyong.com"); 
+export default validatorFun;

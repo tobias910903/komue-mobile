@@ -71,11 +71,4 @@ let arrayFun = {
 	}
 };
 
-export {arrayFun}
-
-// 使用
-// import {arrayFun} from '@/utils/array'
-// Vue.prototype.$array = arrayFun
-
-// 调用
-// this.$array.isArray(arr);
+export default arrayFun;

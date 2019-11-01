@@ -60,12 +60,4 @@ let timeFun = {
     }
 }
 
-export {timeFun}
-
-// 使用
-// import {timeFun} from '@/utils/time'
-// Vue.prototype.$time = timeFun
-
-// 调用
-// this.$time.getTime();
-// this.$time.format(new Date(timestamp), "yyyy-MM-dd HH:mm:ss");
+export default timeFun;
