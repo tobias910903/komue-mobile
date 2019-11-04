@@ -1,59 +1,10 @@
 /* 引入样式 */
 @import "_variables";
+@import "_mixins";
 
 @import "_reset";
-@import "_mixins";
 @import "_animate";
-
-
-/* display, float */
-.kom-clearfix:before, .kom-clearfix:after {display: table; content:' ';}
-.kom-clearfix:after{clear: both;}
-.kom-pull-left{float: left;}
-.kom-pull-right{float: right;}
-.kom-inline{display: inline-block;vertical-align: top;}
-.kom-block{display: block !important;}
-.kom-visibility{visibility: visible !important;}
-.kom-hidden{display: none !important;}
-.kom-border-box{ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-
-
-/* text */
-.kom-ellipsis{overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
-.kom-ellipsis-2{display: -webkit-box;overflow: hidden; white-space: normal !important; text-overflow: ellipsis;word-wrap: break-word;-webkit-line-clamp: 2; -webkit-box-orient: vertical;}
-.kom-text-left{text-align: left !important;}
-.kom-text-center{text-align: center !important;}
-.kom-text-justify{text-align: justify !important;}
-.kom-text-right{text-align: right !important;}
-
-
-/* 内容布局 */
-.transition-box{ position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; background-color: #ffffff;}
-
-.kom-scroll-box{
-    overflow-y: auto; position: fixed; left: 0; top: 0; right: 0; bottom: 0; height: auto; -webkit-overflow-scrolling: touch;
-    &.kom-padding-with-top{ top: 44px; }
-    &.kom-padding-with-bottom{ bottom: 50px; }
-}
-
-/* row-col */
-.kom-row{
-    &:before, &:after{display:table;content:' ';}
-    &:after{clear:both;}
-    & > [class*='kom-col-'] {float:left;position:relative;min-height:1px;}
-    .kom-col-12 {width:100%;}
-    .kom-col-11 {width:91.66666667%;}
-    .kom-col-10 {width:83.33333333%;}
-    .kom-col-9 {width:75%;}
-    .kom-col-8 {width:66.66666667%;}
-    .kom-col-7 {width:58.33333333%;}
-    .kom-col-6 {width:50%;}
-    .kom-col-5 {width:41.66666667%;}
-    .kom-col-4 {width:33.33333333%;}
-    .kom-col-3 {width:25%;}
-    .kom-col-2 {width:16.66666667%;}
-    .kom-col-1 {width:8.33333333%;}
-}
+@import "_common";
 
 
 /* form */
@@ -93,62 +44,4 @@ select:focus {-webkit-user-modify:read-only;}
 .kom-bar .kom-title .kiconfont {margin:0;padding:0;}
 
 
-/*  kom-bar-tab example：
-<div class="kom-bar-tab">
-  <div class="kom-tab-item">
-    <i class="kiconfont kiconfenlei"></i>
-    <div class="kom-tab-label">项目一</div>
-  </div>
-  <div class="kom-tab-item kom-active">
-    <i class="kiconfont kiconfenlei"></i>
-    <div class="kom-tab-label">项目二</div>
-  </div>
-  <div class="kom-tab-item">
-    <i class="kiconfont kiconfenlei"></i>
-    <div class="kom-tab-label">项目三</div>
-  </div>
-</div>
- */
-.kom-bar-tab {bottom:0;display:table;width:100%;height:50px;padding:0;table-layout:fixed;border-top:0;border-bottom:0;-webkit-touch-callout:none;}
-.kom-bar-tab .kom-tab-item {display:table-cell;overflow:hidden;width:1%;height:50px;text-align:center;vertical-align:middle;white-space:nowrap;text-overflow:ellipsis;color:#929292;}
-.kom-bar-tab .kom-tab-item.kom-active {color:@primary;}
-.kom-bar-tab .kom-tab-item .kiconfont {top:3px;width:24px;height:24px;padding-top:0;padding-bottom:0;}
-.kom-bar-tab .kom-tab-item .kiconfont ~ .kom-tab-label {font-size:11px;display:block;overflow:hidden;text-overflow:ellipsis;}
-.kom-bar-tab .kom-tab-item .kiconfont:active {background:none;}
 
-
-/* loading */
-.kom-loading .kom-spinner {display:block;margin:0 auto;}
-.kom-spinner {display:inline-block;width:24px;height:24px;-webkit-transform-origin:50%;transform-origin:50%;-webkit-animation:spinner-spin 1s step-end infinite;animation:spinner-spin 1s step-end infinite;}
-.kom-spinner:after {display:block;width:100%;height:100%;content:'';background-image:url("data:image/svg+xml;charset=utf-8,<svg viewBox=\'0 0 120 120\' xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\'><defs><line id=\'l\' x1=\'60\' x2=\'60\' y1=\'7\' y2=\'27\' stroke=\'%236c6c6c\' stroke-width=\'11\' stroke-linecap=\'round\'/></defs><g><use xlink:href=\'%23l\' opacity=\'.27\'/><use xlink:href=\'%23l\' opacity=\'.27\' transform=\'rotate(30 60,60)\'/><use xlink:href=\'%23l\' opacity=\'.27\' transform=\'rotate(60 60,60)\'/><use xlink:href=\'%23l\' opacity=\'.27\' transform=\'rotate(90 60,60)\'/><use xlink:href=\'%23l\' opacity=\'.27\' transform=\'rotate(120 60,60)\'/><use xlink:href=\'%23l\' opacity=\'.27\' transform=\'rotate(150 60,60)\'/><use xlink:href=\'%23l\' opacity=\'.37\' transform=\'rotate(180 60,60)\'/><use xlink:href=\'%23l\' opacity=\'.46\' transform=\'rotate(210 60,60)\'/><use xlink:href=\'%23l\' opacity=\'.56\' transform=\'rotate(240 60,60)\'/><use xlink:href=\'%23l\' opacity=\'.66\' transform=\'rotate(270 60,60)\'/><use xlink:href=\'%23l\' opacity=\'.75\' transform=\'rotate(300 60,60)\'/><use xlink:href=\'%23l\' opacity=\'.85\' transform=\'rotate(330 60,60)\'/></g></svg>");background-repeat:no-repeat;background-position:50%;background-size:100%;}
-.kom-spinner-white:after {background-image:url("data:image/svg+xml;charset=utf-8,<svg viewBox=\'0 0 120 120\' xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\'><defs><line id=\'l\' x1=\'60\' x2=\'60\' y1=\'7\' y2=\'27\' stroke=\'%23fff\' stroke-width=\'11\' stroke-linecap=\'round\'/></defs><g><use xlink:href=\'%23l\' opacity=\'.27\'/><use xlink:href=\'%23l\' opacity=\'.27\' transform=\'rotate(30 60,60)\'/><use xlink:href=\'%23l\' opacity=\'.27\' transform=\'rotate(60 60,60)\'/><use xlink:href=\'%23l\' opacity=\'.27\' transform=\'rotate(90 60,60)\'/><use xlink:href=\'%23l\' opacity=\'.27\' transform=\'rotate(120 60,60)\'/><use xlink:href=\'%23l\' opacity=\'.27\' transform=\'rotate(150 60,60)\'/><use xlink:href=\'%23l\' opacity=\'.37\' transform=\'rotate(180 60,60)\'/><use xlink:href=\'%23l\' opacity=\'.46\' transform=\'rotate(210 60,60)\'/><use xlink:href=\'%23l\' opacity=\'.56\' transform=\'rotate(240 60,60)\'/><use xlink:href=\'%23l\' opacity=\'.66\' transform=\'rotate(270 60,60)\'/><use xlink:href=\'%23l\' opacity=\'.75\' transform=\'rotate(300 60,60)\'/><use xlink:href=\'%23l\' opacity=\'.85\' transform=\'rotate(330 60,60)\'/></g></svg>");}
-@-webkit-keyframes spinner-spin {
-	0% {-webkit-transform:rotate(0deg);}
-	8.33333333% {-webkit-transform:rotate(30deg);}
-	16.66666667% {-webkit-transform:rotate(60deg);}
-	25% {-webkit-transform:rotate(90deg);}
-	33.33333333% {-webkit-transform:rotate(120deg);}
-	41.66666667% {-webkit-transform:rotate(150deg);}
-	50% {-webkit-transform:rotate(180deg);}
-	58.33333333% {-webkit-transform:rotate(210deg);}
-	66.66666667% {-webkit-transform:rotate(240deg);}
-	75% {-webkit-transform:rotate(270deg);}
-	83.33333333% {-webkit-transform:rotate(300deg);}
-	91.66666667% {-webkit-transform:rotate(330deg);}
-	100% {-webkit-transform:rotate(360deg);}
-}
-@keyframes spinner-spin {
-	0% {transform:rotate(0deg);}
-	8.33333333% {transform:rotate(30deg);}
-	16.66666667% {transform:rotate(60deg);}
-	25% {transform:rotate(90deg);}
-	33.33333333% {transform:rotate(120deg);}
-	41.66666667% {transform:rotate(150deg);}
-	50% {transform:rotate(180deg);}
-	58.33333333% {transform:rotate(210deg);}
-	66.66666667% {transform:rotate(240deg);}
-	75% {transform:rotate(270deg);}
-	83.33333333% {transform:rotate(300deg);}
-	91.66666667% {transform:rotate(330deg);}
-	100% {transform:rotate(360deg);}
-}
