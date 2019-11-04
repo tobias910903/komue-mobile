@@ -19,14 +19,18 @@ import validatorFun from '@/utils/validator'
 import KomButton from '@/components/kom-button'
 import KomDiveditable from "@/components/kom-diveditable"
 import KomDrawer from '@/components/kom-drawer'
+import KomInput from '@/components/kom-input'
 import KomModal from '@/components/kom-modal'
+import KomNav from '@/components/kom-nav'
 import komPicker from '@/components/kom-picker'
 import KomPopover from '@/components/kom-popover'
 import KomRowCell from '@/components/kom-row-cell'
 import KomScroll from '@/components/kom-scroll'
 import KomScroller from '@/components/kom-scroller'
 import KomSlider from '@/components/kom-slider'
+import KomSpinner from '@/components/kom-spinner'
 import KomTitle from '@/components/kom-title'
+import KomTab from '@/components/kom-tab'
 import KomToggleSwitch from '@/components/kom-toggle-switch'
 
 import {Alert, Confirm, Toast, Loading} from '@/components/kom-messagebox'
@@ -45,13 +49,17 @@ export default function install(Vue) {
     Vue.component('KomButton', KomButton);
     Vue.component('KomDiveditable', KomDiveditable);
     Vue.component('KomDrawer', KomDrawer);
+    Vue.component('KomInput', KomInput);
     Vue.component('KomModal', KomModal);
+    Vue.component('KomNav', KomNav);
     Vue.component('KomPopover', KomPopover);
     Vue.component('KomRowCell', KomRowCell);
     Vue.component('KomScroll', KomScroll);
     Vue.component('KomScroller', KomScroller);
     Vue.component('KomSlider', KomSlider);
+    Vue.component('KomSpinner', KomSpinner);
     Vue.component('KomTitle', KomTitle);
+    Vue.component('KomTab', KomTab);
     Vue.component('KomToggleSwitch', KomToggleSwitch);
 
     Vue.use(Alert);

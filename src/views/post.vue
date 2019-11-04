@@ -1,5 +1,5 @@
 <template>
-	<div class="transition-box">
+	<div class="kom-transition-box">
 		<button @click="goAction(3)">查看详情</button>
 		<i class="iconfont icon-search"></i>
 	</div>

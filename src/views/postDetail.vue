@@ -1,5 +1,5 @@
 <template>
-	<div class="transition-box">
+	<div class="kom-transition-box">
 		<p>详情页</p>
 		<button @click="backAction">返回</button>
 		<p>传过来的参数：{{this.$route.params}}</p>
