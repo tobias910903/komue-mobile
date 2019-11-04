@@ -1,8 +1,8 @@
 ```
 <template>
     <div>
-        <kom-input v-model="a"></kom-input>
-        <kom-input v-model="b"></kom-input>
+        <kom-input type="text" v-model="a"></kom-input>
+        <kom-input type="password" v-model="b"></kom-input>
         <kom-input v-model="c"></kom-input>
     </div>
 </template>

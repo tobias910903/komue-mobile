@@ -1,6 +1,6 @@
 <template>
     <div>
-        <input :value="currentValue" @input="inputload"/>
+        <input :type="type" :value="currentValue" @input="inputload"/>
     </div>
 </template>
 
@@ -17,6 +17,10 @@
                 type: [String, Number],
                 default: ''
             },
+            type: {
+                type: String,
+                default: 'text'
+            }
         },
         watch: {
             value(val) {
