@@ -20,6 +20,8 @@ import KomButton from '@/components/kom-button'
 import KomDiveditable from "@/components/kom-diveditable"
 import KomDrawer from '@/components/kom-drawer'
 import KomInput from '@/components/kom-input'
+import KomList from '@/components/kom-list'
+import KomItem from '@/components/kom-list/item'
 import KomModal from '@/components/kom-modal'
 import KomNav from '@/components/kom-nav'
 import komPicker from '@/components/kom-picker'
@@ -50,6 +52,8 @@ export default function install(Vue) {
     Vue.component('KomDiveditable', KomDiveditable);
     Vue.component('KomDrawer', KomDrawer);
     Vue.component('KomInput', KomInput);
+    Vue.component('KomList', KomList);
+    Vue.component('KomItem', KomItem);
     Vue.component('KomModal', KomModal);
     Vue.component('KomNav', KomNav);
     Vue.component('KomPopover', KomPopover);

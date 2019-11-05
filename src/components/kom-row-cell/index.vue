@@ -19,7 +19,7 @@
             }
         },
         computed: {
-            'col': function () {
+            col: function () {
                 return this.rowNum == '3' ? '4' : '3';
             }
         },

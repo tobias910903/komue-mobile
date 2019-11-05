@@ -23,7 +23,7 @@
             }
         },
         computed: {
-            'btnClass': function () {
+            btnClass: function () {
                 let type = 'kom-btn-' + this.type;
                 let outLined = this.outlined ? 'kom-btn-outlined' : '';
                 return type + ' ' + this.size + ' ' + outLined;
