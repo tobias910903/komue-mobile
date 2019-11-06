@@ -1,9 +1,9 @@
 ```
 <template>
     <div>
-        <Kom-spinner color="kom-spinner-white"></Kom-spinner>
+        <kom-spinner color="kom-spinner-white"></kom-spinner>
         <br />
-        <Kom-spinner></Kom-spinner>
+        <kom-spinner></kom-spinner>
     </div>
 </template>
 ```
