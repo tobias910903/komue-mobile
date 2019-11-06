@@ -21,7 +21,8 @@
                     left: false,
                     right: false
                 },
-                bounceTime: 300
+                bounceTime: 300,
+                click: true
             });
             this.scroller.refresh();
         }
