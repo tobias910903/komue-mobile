@@ -1,6 +1,6 @@
 <template>
     <div class="kom-tab">
-        <div class="kom-tab-item kom-active" v-for="(i, index) in list" :key="index" @click="itemClick(i)">
+        <div class="kom-tab-item" :class="i.routeName == activeTab ? 'kom-active' : ''" v-for="(i, index) in list" :key="index" @click="itemClick(i)">
             <i :class="i.icon"></i>
             <div class="kom-tab-label">{{i.title}}</div>
         </div>
@@ -9,30 +9,39 @@
 
 <script>
     export default {
+        data(){
+            return {
+                activeItem: 0
+            }
+        },
         props: {
             list: {
                 type: Array,
                 default: []
+            },
+            activeTab: {
+                type: String
             }
         },
         methods: {
             itemClick(item) { // 触发父组件回调
                 this.$emit("click", item);
             }
-        },
+        }
     };
 </script>
 
 <style lang="less" scoped>
     .kom-tab {
-        bottom: 0;
         display: table;
+        position: fixed;
+        bottom: 0;
+        padding: 0;
         width: 100%;
         height: 50px;
-        padding: 0;
+        background-color: #ffffff;
         table-layout: fixed;
-        border-top: 0;
-        border-bottom: 0;
+        border-top: 1px solid rgba(242, 242, 242, 1);
         -webkit-touch-callout: none;
         .kom-tab-item {
             display: table-cell;
