@@ -36,8 +36,8 @@
         position: relative;
         z-index: 100;
         height: 44px;
-        -webkit-box-shadow: 0 1px 6px #cccccc;
-        box-shadow: 0 1px 6px #cccccc;
+        -webkit-box-shadow: 0 0 4px #dddddd;
+        box-shadow: 0 0 4px #dddddd;
         
         .kom-nav-left{
             display: inline-block;
