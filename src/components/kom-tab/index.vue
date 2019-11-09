@@ -56,12 +56,13 @@
             &.kom-active {
                 color: #007aff;
             }
+            &:active {
+                background-color: rgba(155, 155, 155, .1);
+            }
             .kiconfont {
-                top: 3px;
                 width: 24px;
                 height: 24px;
-                padding-top: 0;
-                padding-bottom: 0;
+                font-size: 20px;
                 &:active {
                     background: none;
                 }
@@ -71,6 +72,9 @@
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
+            }
+            .kom-tab-label {
+                font-size: 12px;
             }
         }
     }
