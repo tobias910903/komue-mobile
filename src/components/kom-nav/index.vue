@@ -1,6 +1,9 @@
 <template>
     <div class="kom-nav">
-        <!--<div class="kom-pull-left"><i class="kiconfont kiconzuo"></i></div>-->
+        <div class="kom-nav-left" @click="backFun">
+            <i class="kiconfont kiconzuo" v-if="backIcon != undefined"></i>{{leftText}}
+        </div>
+
         <h3 class="kom-title">{{title}}</h3>
     </div>
 </template>
@@ -11,6 +14,18 @@
             title: {
                 type: String,
                 default: ""
+            },
+            leftText: {
+                type: String,
+                default: ""
+            },
+            backIcon: {
+                type: String
+            }
+        },
+        methods: {
+            backFun(){
+                this.$emit('backFun');
             }
         }
     };
@@ -18,37 +33,36 @@
 
 <style lang="less" scoped>
     .kom-nav {
-        top: 0;
-        overflow: hidden;
+        position: relative;
+        z-index: 100;
         height: 44px;
         -webkit-box-shadow: 0 1px 6px #cccccc;
         box-shadow: 0 1px 6px #cccccc;
         
-        .kom-pull-left{
-            padding-left: 10px;
+        .kom-nav-left{
+            display: inline-block;
+            position: relative;
+            z-index: 10;
+            padding-left: 15px;
             height: 44px;
             line-height: 44px;
+            .kiconfont{
+                font-size: 14px;
+            }
         }
-        
-        .kiconfont {
-            margin-right: -10px;
-            margin-left: -10px;
-            padding-right: 10px;
-            padding-left: 10px;
-        }
-        
+
         .kom-title {
-            font-size: 17px;
+            position: absolute;
+            top: 0;
+            font-size: 14px;
             font-weight: 500;
             line-height: 44px;
-            position: absolute;
-            display: block;
             width: 100%;
-            margin: 0;
-            padding: 0;
             text-align: center;
             white-space: nowrap;
-            color: #000000;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #333333;
         }
     }
 </style>

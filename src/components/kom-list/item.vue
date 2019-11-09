@@ -1,6 +1,6 @@
 <template>
     <li :class="itemClass" @click="handleClick">
-        <slot></slot>
+        <slot></slot> {{title}}
     </li>
 </template>
 
@@ -9,6 +9,10 @@
         props: {
             navigate: {
                 type: String
+            },
+            title:{
+                type: String,
+                default: ""
             }
         },
         computed: {
