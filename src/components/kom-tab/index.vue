@@ -9,11 +9,6 @@
 
 <script>
     export default {
-        data(){
-            return {
-                activeItem: 0
-            }
-        },
         props: {
             list: {
                 type: Array,
