@@ -1,6 +1,8 @@
 <template>
-    <div>
-        <input :type="type" :value="currentValue" @input="inputload"/>
+    <div class="kom-form" :class="label != null ? 'has-label' : ''">
+        <div class="kom-label" v-if="label != null">{{label}}</div>
+        <textarea v-if="type == 'textarea'"></textarea>
+        <input v-else :type="type" :value="currentValue" @input="inputload" :placeholder="placeholder" />
     </div>
 </template>
 
@@ -20,6 +22,13 @@
             type: {
                 type: String,
                 default: 'text'
+            },
+            placeholder:{
+                type: String,
+                default: ''
+            },
+            label:{
+                type: String
             }
         },
         watch: {
@@ -43,41 +52,36 @@
 </script>
 
 <style lang="less" scoped>
-    input,
-    textarea,
-    select {
-        -webkit-tap-highlight-color: transparent;
+    .kom-form{
+        position: relative;
+        &.has-label{
+            margin-top: 10px;
+            .kom-label{
+                position: absolute;
+                top: -12px;
+                left: 10px;
+                padding: 1px 10px;
+                background-color: #ffffff;
+                color: #666666;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                font-size: 12px;
+                -webkit-border-radius: 2px;
+                border-radius: 2px;
+            }
+        }
     }
     
     input:focus,
-    select:focus,
     textarea:focus {
         -webkit-tap-highlight-color: transparent;
         -webkit-user-modify: read-write-plaintext-only;
     }
-    
+
     input,
-    select,
-    textarea,
-    input[type='text'],
-    input[type='search'],
-    input[type='password'],
-    input[type='datetime'],
-    input[type='datetime-local'],
-    input[type='date'],
-    input[type='month'],
-    input[type='time'],
-    input[type='week'],
-    input[type='number'],
-    input[type='email'],
-    input[type='url'],
-    input[type='tel'],
-    input[type='color'] {
-        padding: 0 12px;
+    textarea{
         width: 100%;
-        line-height: 38px;
-        height: 38px;
         outline: none;
+        font-family: inherit;
         border: 1px solid rgba(0, 0, 0, .2);
         background-color: #ffffff;
         -webkit-user-select: text;
@@ -86,6 +90,7 @@
         box-sizing: border-box;
         -webkit-border-radius: 2px;
         border-radius: 2px;
+        -webkit-tap-highlight-color: transparent;
     }
     
     input[type=number]::-webkit-inner-spin-button,
@@ -93,21 +98,17 @@
         margin: 0;
         -webkit-appearance: none;
     }
-    
-    textarea {
-        height: auto;
-        resize: none;
+
+    input{
+        padding: 0 12px;
+        line-height: 38px;
+        height: 38px;
     }
-    
-    select {
-        font-size: 14px;
-        height: auto;
-        margin-top: 1px;
-        border: 0 !important;
-        background-color: #ffffff;
-        
-        &:focus {
-            -webkit-user-modify: read-only;
-        }
+
+    textarea {
+        padding: 6px 12px;
+        height: 80px;
+        line-height: 1.8;
+        resize: none;
     }
 </style>

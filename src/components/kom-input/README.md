@@ -1,9 +1,10 @@
 ```
 <template>
     <div>
-        <kom-input type="text" v-model="a"></kom-input>
+        <kom-input type="text" v-model="a" placeholder="用户名..."></kom-input>
         <kom-input type="password" v-model="b"></kom-input>
-        <kom-input v-model="c"></kom-input>
+        <kom-input v-model="c" label="昵称"></kom-input>
+        <kom-input type="textarea" v-model="d"></kom-input>
     </div>
 </template>
 <script>
@@ -12,12 +13,8 @@
             return {
                 a: '',
                 b: '',
-                c: ''
-            }
-        },
-        methods: {
-            submit() {
-                console.log(this.a, this.b, this.c);
+                c: '',
+                d: ''
             }
         }
     }

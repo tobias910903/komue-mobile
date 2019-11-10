@@ -38,6 +38,10 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+
+        &:active{
+            background-color: #f8f8f8;
+        }
         
         & + li {
             border-top: 1px solid rgba(242, 242, 242, 1);
