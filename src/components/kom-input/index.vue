@@ -1,7 +1,7 @@
 <template>
     <div class="kom-form" :class="label != null ? 'has-label' : ''">
         <div class="kom-label" v-if="label != null">{{label}}</div>
-        <textarea v-if="type == 'textarea'"></textarea>
+        <textarea v-if="type == 'textarea'" :value="currentValue" @input="inputload"></textarea>
         <input v-else :type="type" :value="currentValue" @input="inputload" :placeholder="placeholder" />
     </div>
 </template>
@@ -107,7 +107,7 @@
 
     textarea {
         padding: 6px 12px;
-        height: 80px;
+        height: auto;
         line-height: 1.8;
         resize: none;
     }
