@@ -45,35 +45,35 @@
     .kom-drawer {
         .content {
             position: fixed;
-            z-index: 50;
+            z-index: 501;
             background-color: #ffffff;
             
             &.fold-top {
                 top: 0;
                 left: 0;
                 right: 0;
-                height: 50%;
+                height: 80%;
             }
             
             &.fold-right {
                 top: 0;
                 right: 0;
                 bottom: 0;
-                width: 70%;
+                width: 80%;
             }
             
             &.fold-bottom {
                 right: 0;
                 left: 0;
                 bottom: 0;
-                height: 50%;
+                height: 80%;
             }
             
             &.fold-left {
                 top: 0;
                 left: 0;
                 bottom: 0;
-                width: 70%;
+                width: 80%;
             }
             
             &.fold-top-enter-active, &.fold-top-leave-active {
@@ -81,7 +81,7 @@
             }
             
             &.fold-top-enter, &.fold-top-leave-to {
-                top: -50%;
+                top: -80%;
                 opacity: 0;
             }
             
@@ -90,7 +90,7 @@
             }
             
             &.fold-right-enter, &.fold-right-leave-to {
-                right: -70%;
+                right: -80%;
                 opacity: 0;
             }
             
@@ -99,7 +99,7 @@
             }
             
             &.fold-bottom-enter, &.fold-bottom-leave-to {
-                bottom: -50%;
+                bottom: -80%;
                 opacity: 0;
             }
             
@@ -108,7 +108,7 @@
             }
             
             &.fold-left-enter, &.fold-left-leave-to {
-                left: -70%;
+                left: -80%;
                 opacity: 0;
             }
         }
@@ -119,7 +119,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: 40;
+            z-index: 500;
             background: rgba(7, 17, 27, 0.5);
             opacity: 1;
             
