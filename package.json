@@ -17,6 +17,7 @@
         "axios": "^0.18.0",
         "better-scroll": "^1.15.2",
         "cross-env": "^5.2.0",
+        "fastclick": "^1.0.6",
         "less": "^3.9.0",
         "less-loader": "^5.0.0",
         "lodash": "^4.17.11",

@@ -2,6 +2,7 @@ import Vue from 'vue'
 
 // Plugin
 import _ from 'lodash'
+import fastClick from 'fastclick'
 
 // style
 import "@/assets/less/komue.less"
@@ -95,5 +96,10 @@ export default function install(Vue) {
             }
             lastTouchEnd = now;
         }, false);
+    }
+
+    /* 解决ANDROID设备上的延时300ms */
+    if(!is_ios()) {
+        fastClick.attach(document.body);
     }
 }
