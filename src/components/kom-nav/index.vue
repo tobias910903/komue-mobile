@@ -54,7 +54,7 @@
         .kom-title {
             position: absolute;
             top: 0;
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 500;
             line-height: 44px;
             width: 100%;
