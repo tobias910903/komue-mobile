@@ -1,10 +1,16 @@
 <template>
     <div class="kom-nav">
-        <div class="kom-nav-left" @click="backFun">
-            <i class="kiconfont kiconzuo" v-if="backIcon != undefined"></i>{{leftText}}
+        <div class="kom-nav-item kom-nav-left">
+            <i class="kiconfont kiconzuo" v-if="backIcon != undefined" @click="backFun"></i>
+            {{leftText}}
         </div>
 
-        <h3 class="kom-title">{{title}}</h3>
+        <div class="kom-nav-item kom-nav-right">
+            {{rightText}}
+            <i class="kiconfont" :class="rightIcon" v-if="rightIcon != undefined" @click="prevFun"></i>
+        </div>
+
+        <h3 class="kom-title border-box">{{title}}</h3>
     </div>
 </template>
 
@@ -21,29 +27,41 @@
             },
             backIcon: {
                 type: String
+            },
+            rightText: {
+                type: String,
+                default: ""
+            },
+            rightIcon: {
+                type: String
             }
         },
         methods: {
             backFun(){
                 this.$emit('backFun');
+            },
+            prevFun(){
+                this.$emit('prevFun');
             }
         }
     };
 </script>
 
 <style lang="less" scoped>
+    @import "../../assets/less/_mixins.less";
+
     .kom-nav {
         position: relative;
         z-index: 100;
         height: 44px;
         -webkit-box-shadow: 0 0 4px #dddddd;
         box-shadow: 0 0 4px #dddddd;
-        
-        .kom-nav-left{
+
+        .kom-nav-item{
             display: inline-block;
-            position: relative;
+            position: absolute;
+            top: 0;
             z-index: 10;
-            padding-left: 15px;
             height: 44px;
             line-height: 44px;
             .kiconfont{
@@ -51,9 +69,22 @@
             }
         }
 
+        .kom-nav-left{
+            left: 0;
+            padding-left: 15px;
+        }
+
+        .kom-nav-right{
+            right: 0;
+            padding-right: 15px;
+            .kiconfont{
+                margin-left: 5px;
+                font-size: 14px;
+            }
+        }
+
         .kom-title {
-            position: absolute;
-            top: 0;
+            padding: 0 40px;
             font-size: 15px;
             font-weight: 500;
             line-height: 44px;
