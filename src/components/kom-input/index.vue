@@ -58,15 +58,15 @@
             margin-top: 10px;
             .kom-label{
                 position: absolute;
-                top: -12px;
-                left: 10px;
+                top: -10px;
+                left: 0;
                 padding: 1px 10px;
                 background-color: #ffffff;
                 color: #666666;
                 border: 1px solid rgba(0, 0, 0, 0.2);
                 font-size: 12px;
-                -webkit-border-radius: 2px;
-                border-radius: 2px;
+                -webkit-border-radius: 4px;
+                border-radius: 4px;
             }
         }
     }
@@ -88,8 +88,8 @@
         -webkit-appearance: none;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
-        -webkit-border-radius: 2px;
-        border-radius: 2px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
         -webkit-tap-highlight-color: transparent;
     }
     
