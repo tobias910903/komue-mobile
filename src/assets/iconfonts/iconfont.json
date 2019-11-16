@@ -356,6 +356,13 @@
       "unicode_decimal": 58882
     },
     {
+      "icon_id": "3494283",
+      "name": "话题",
+      "font_class": "huatizhuanhuan",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
       "icon_id": "4988698",
       "name": "search",
       "font_class": "search",
@@ -382,6 +389,20 @@
       "font_class": "weixin",
       "unicode": "e630",
       "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "6041683",
+      "name": "文章",
+      "font_class": "article",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "6455205",
+      "name": "图集",
+      "font_class": "tuji",
+      "unicode": "e946",
+      "unicode_decimal": 59718
     },
     {
       "icon_id": "6705975",

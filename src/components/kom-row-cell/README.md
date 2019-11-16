@@ -10,13 +10,13 @@
         data() {
             return {
                 rowlist: [
-                    {icon: "kiconfont kiconfenlei", title: "我的1", href: "/post"},
-                    {icon: "kiconfont kiconfenlei", title: "我的2", href: "/post"},
-                    {icon: "kiconfont kiconfenlei", title: "我的3", href: "/post"},
-                    {icon: "kiconfont kiconfenlei", title: "我的4", href: "/post"},
-                    {icon: "kiconfont kiconfenlei", title: "我的5", href: "/post"},
-                    {icon: "kiconfont kiconfenlei", title: "我的6", href: "/post"},
-                    {icon: "kiconfont kiconfenlei", title: "我的7", href: "/post"}
+                    {icon: "kiconfenlei", title: "我的1", href: "/post"},
+                    {icon: "kiconfenlei", title: "我的2", href: "/post"},
+                    {icon: "kiconfenlei", title: "我的3", href: "/post"},
+                    {icon: "kiconfenlei", title: "我的4", href: "/post"},
+                    {icon: "kiconfenlei", title: "我的5", href: "/post"},
+                    {icon: "kiconfenlei", title: "我的6", href: "/post"},
+                    {icon: "kiconfenlei", title: "我的7", href: "/post"}
                 ]
             }
         },

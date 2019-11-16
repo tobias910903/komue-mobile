@@ -1,7 +1,7 @@
 <template>
     <div class="kom-row-cell kom-row">
         <div :class="'kom-col-'+ col" v-for="(i, index) in list" :key="index" @click="itemClick(i)">
-            <i :class="i.icon"></i>
+            <i class="kiconfont" :class="i.icon"></i>
             <p>{{i.title}}</p>
         </div>
     </div>
