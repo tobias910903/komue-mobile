@@ -14,7 +14,7 @@ import ajax from '@/api'
 // utils
 import arrayFun from '@/utils/array'
 import timeFun from '@/utils/time'
-import validatorFun from '@/utils/validator'
+import {regexp, validatorFun} from '@/utils/validator'
 
 // components
 import KomButton from '@/components/kom-button'
@@ -77,6 +77,7 @@ export default function install(Vue) {
     Vue.prototype.$ajax = ajax;
     Vue.prototype.$array = arrayFun;
     Vue.prototype.$time = timeFun;
+    Vue.prototype.$regexp = regexp;
     Vue.prototype.$validator = validatorFun;
 
     /* 对于ios 10，即使网站在视窗中设置了user scalable=no，用户现在也可以收缩缩放 */
