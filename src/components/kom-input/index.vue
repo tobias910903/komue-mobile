@@ -1,5 +1,5 @@
 <template>
-    <div class="kom-form" :class="label != null ? 'has-label' : ''">
+    <div class="kom-form">
         <div class="kom-label" v-if="label != null">{{label}}</div>
         <textarea v-if="type == 'textarea'" :value="currentValue" @input="inputload"></textarea>
         <input v-else :type="type" :value="currentValue" @input="inputload" :placeholder="placeholder" />
@@ -41,7 +41,7 @@
                 if (value === this.currentValue) {
                     return
                 }
-                
+
                 this.currentValue = value;
             },
             inputload(event) {
@@ -54,61 +54,53 @@
 <style lang="less" scoped>
     .kom-form{
         position: relative;
-        &.has-label{
-            margin-top: 10px;
-            .kom-label{
-                position: absolute;
-                top: -10px;
-                left: 0;
-                padding: 1px 10px;
-                background-color: #ffffff;
-                color: #666666;
-                border: 1px solid rgba(0, 0, 0, 0.2);
-                font-size: 12px;
-                -webkit-border-radius: 4px;
-                border-radius: 4px;
-            }
+        .kom-label{
+            color: #787878;
+            padding: 4px 12px;
+            font-size: 12px;
         }
-    }
-    
-    input:focus,
-    textarea:focus {
-        -webkit-tap-highlight-color: transparent;
-        -webkit-user-modify: read-write-plaintext-only;
-    }
+        input:focus,
+        textarea:focus {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-user-modify: read-write-plaintext-only;
+        }
 
-    input,
-    textarea{
-        width: 100%;
-        outline: none;
-        font-family: inherit;
-        border: 1px solid rgba(0, 0, 0, .2);
-        background-color: #ffffff;
-        -webkit-user-select: text;
-        -webkit-appearance: none;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        -webkit-border-radius: 4px;
-        border-radius: 4px;
-        -webkit-tap-highlight-color: transparent;
-    }
-    
-    input[type=number]::-webkit-inner-spin-button,
-    input[type=number]::-webkit-outer-spin-button {
-        margin: 0;
-        -webkit-appearance: none;
-    }
+        input,
+        textarea{
+            width: 100%;
+            outline: none;
+            font-family: inherit;
+            font-size: 13px;
+            border-top: 1px solid rgba(0, 0, 0, .05);
+            border-bottom: 1px solid rgba(0, 0, 0, .05);
+            border-right: none;
+            border-left: none;
+            background-color: #ffffff;
+            -webkit-user-select: text;
+            -webkit-appearance: none;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
 
-    input{
-        padding: 0 12px;
-        line-height: 38px;
-        height: 38px;
-    }
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            margin: 0;
+            -webkit-appearance: none;
+        }
 
-    textarea {
-        padding: 6px 12px;
-        height: auto;
-        line-height: 1.8;
-        resize: none;
+        input{
+            padding: 0 12px;
+            line-height: 36px;
+            height: 36px;
+        }
+
+        textarea {
+            padding: 6px 12px;
+            min-height: 120px;
+            height: auto;
+            line-height: 1.6;
+            resize: none;
+        }
     }
 </style>

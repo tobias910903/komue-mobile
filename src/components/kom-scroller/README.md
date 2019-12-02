@@ -48,7 +48,11 @@
                     })
                 }, 1000)
             }
-        }
+        },
+        beforeDestroy(){
+            this.$refs.content_scroller.finishInfinite();
+            this.$refs.content_scroller.finishPullToRefresh();
+        },
     }
 </script>
 ```
