@@ -16,6 +16,9 @@ import arrayFun from '@/utils/array'
 import timeFun from '@/utils/time'
 import {regexp, validatorFun} from '@/utils/validator'
 
+// directive
+import '@/directive/touch/index.js'
+
 // components
 import KomButton from '@/components/kom-button'
 import KomDiveditable from "@/components/kom-diveditable"
