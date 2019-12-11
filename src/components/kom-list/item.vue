@@ -1,6 +1,8 @@
 <template>
     <li :class="itemClass" @click="handleClick">
-        <slot></slot> {{title}}
+        <slot></slot>
+        {{title}}
+        <span class="text-right" v-if="textRight">{{textRight}}</span>
     </li>
 </template>
 
@@ -11,7 +13,11 @@
                 type: String
             },
             title:{
-                type: String,
+                type: [String, Number],
+                default: ""
+            },
+            textRight:{
+                type: [String, Number],
                 default: ""
             }
         },
@@ -58,6 +64,10 @@
                 content: "\e621";
                 font-size: 16px;
             }
+        }
+        
+        .text-right{
+            float: right;
         }
     }
 </style>
