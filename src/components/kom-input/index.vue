@@ -2,7 +2,7 @@
     <div class="kom-form">
         <div class="kom-label" v-if="label != null">{{label}}</div>
         <textarea v-if="type == 'textarea'" :value="currentValue" @input="inputload"></textarea>
-        <input v-else :type="type" :value="currentValue" @input="inputload" :placeholder="placeholder" />
+        <input v-else :type="type" :value="currentValue" @input="inputload" :placeholder="placeholder" :readonly="readonly" />
     </div>
 </template>
 
@@ -26,6 +26,9 @@
             placeholder:{
                 type: String,
                 default: ''
+            },
+            readonly: {
+                type: String,
             },
             label:{
                 type: String
@@ -54,6 +57,7 @@
 <style lang="less" scoped>
     .kom-form{
         position: relative;
+        margin-bottom: 10px;
         .kom-label{
             color: #787878;
             padding: 4px 12px;
@@ -91,8 +95,12 @@
 
         input{
             padding: 0 12px;
-            line-height: 36px;
-            height: 36px;
+            line-height: 40px;
+            height: 40px;
+            &:read-only{
+                cursor: not-allowed;
+                background-color: #f5f5f5;
+            }
         }
 
         textarea {
