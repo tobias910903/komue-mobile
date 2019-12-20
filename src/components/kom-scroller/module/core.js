@@ -1220,7 +1220,7 @@ var Scroller;
 					}
 					self.scrollTo(self.__scrollLeft, self.__scrollTop, true, self.__zoomLevel);
 
-					// Directly signalize deactivation (nothing todo on refresh?)
+					// Directly signalize deactivation (nothing to-do on refresh?)
 					if (self.__refreshActive) {
 
 						self.__refreshActive = false;
