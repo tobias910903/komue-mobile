@@ -14,6 +14,7 @@ import ajax from '@/api'
 // utils
 import arrayFun from '@/utils/array'
 import timeFun from '@/utils/time'
+import methodFun from '@/utils/method'
 import {regexp, validatorFun} from '@/utils/validator'
 
 // directive
@@ -80,6 +81,7 @@ export default function install(Vue) {
     Vue.prototype.$ajax = ajax;
     Vue.prototype.$array = arrayFun;
     Vue.prototype.$time = timeFun;
+    Vue.prototype.$method = methodFun;
     Vue.prototype.$regexp = regexp;
     Vue.prototype.$validator = validatorFun;
 
