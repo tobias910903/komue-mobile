@@ -8,6 +8,8 @@
 > npm run build
 ```
 
-> better-scroll：http://ustbhuangyi.github.io/better-scroll/doc/api.html
+#### 参考、使用的项目
 
-> lodash：https://www.lodashjs.com/docs/latest
+* <a href="https://www.lodashjs.com/docs/latest" target="_blank">lodash</a>
+* <a href="http://ustbhuangyi.github.io/better-scroll/doc/api.html" target="_blank">better-scroll</a>
+* <a href="http://vue.ydui.org/demo/#/" target="_blank">vue-ydui</a>
