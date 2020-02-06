@@ -1,7 +1,7 @@
 @import "../common/variables";
 @import "../common/mixins";
 
-@keyframes yd-kf-rolling {
+@keyframes kom-kf-rolling {
   0% {
     transform: rotate(0deg);
   }
@@ -69,21 +69,21 @@
   }
 
   &-btn-primary {
-    &:not(.yd-btn-loading) {
+    &:not(.kom-btn-loading) {
       .tap-color(@btn-primary-bg);
     }
     color: @btn-default-color;
   }
 
   &-btn-danger {
-    &:not(.yd-btn-loading) {
+    &:not(.kom-btn-loading) {
       .tap-color(@btn-danger-bg);
     }
     color: @btn-default-color;
   }
 
   &-btn-warning {
-    &:not(.yd-btn-loading) {
+    &:not(.kom-btn-loading) {
       .tap-color(@btn-warning-bg);
     }
     color: @btn-default-color;
@@ -96,13 +96,13 @@
   }
 
   &-btn-hollow {
-    &:not(.yd-btn-loading) {
+    &:not(.kom-btn-loading) {
       .tap-color(@btn-hollow-bg, .97);
     }
     color: @btn-hollow-color;
     border: 1px solid @btn-hollow-border-color;
 
-    &.yd-btn-mini {
+    &.kom-btn-mini {
       border: none;
       &:after {
         position: absolute;
@@ -118,7 +118,7 @@
       }
     }
 
-    .yd-btn-rolling {
+    .kom-btn-rolling {
       > i,
       > i:after {
         border: 1px solid #CCC;
@@ -133,7 +133,7 @@
 
   &-btn-angle {
     border-radius: 0;
-    &.yd-btn-hollow.yd-btn-mini:after {
+    &.kom-btn-hollow.kom-btn-mini:after {
       border-radius: 0 !important;
     }
   }
@@ -181,7 +181,7 @@
     > i {
       top: 50%;
       left: 50%;
-      animation: yd-kf-rolling .5s linear infinite;
+      animation: kom-kf-rolling .5s linear infinite;
     }
 
     > i:after {
