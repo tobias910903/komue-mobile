@@ -114,7 +114,7 @@ const upload = (data) =>{
     return service({
         method: "post",
         url: data.url,
-        data: data.data,
+        data: data.body,
         headers: {
             'Content-Type': 'multipart/form-data'
         }
