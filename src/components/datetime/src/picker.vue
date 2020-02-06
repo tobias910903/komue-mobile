@@ -1,15 +1,15 @@
 <template>
     <div>
-        <yd-mask v-model="show" @click.native="close" :opacity="maskerOpacity"></yd-mask>
-        <div class="yd-datetime" :class="show ? 'yd-datetime-active' : ''">
-            <div class="yd-datetime-head">
+        <kom-mask v-model="show" @click.native="close" :opacity="maskerOpacity"></kom-mask>
+        <div class="kom-datetime" :class="show ? 'kom-datetime-active' : ''">
+            <div class="kom-datetime-head">
                 <a href="javascript:;" @click.stop="close">{{cancelText}}</a>
                 <a href="javascript:;" @click.stop="setValue">{{confirmText}}</a>
             </div>
-            <div class="yd-datetime-content">
-                <div class="yd-datetime-item" v-for="column, key in columns" :key="key">
-                    <div class="yd-datetime-item-box" :ref="'Component_' + column">
-                        <div class="yd-datetime-item-content" :ref="'Content_' + column">
+            <div class="kom-datetime-content">
+                <div class="kom-datetime-item" v-for="column, key in columns" :key="key">
+                    <div class="kom-datetime-item-box" :ref="'Component_' + column">
+                        <div class="kom-datetime-item-content" :ref="'Content_' + column">
                             <span v-for="item, key in items[column]"
                                   :data-value="item.value"
                                   v-html="item.name"
@@ -18,8 +18,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="yd-datetime-shade"></div>
-                <div class="yd-datetime-indicator"><span></span></div>
+                <div class="kom-datetime-shade"></div>
+                <div class="kom-datetime-indicator"><span></span></div>
             </div>
         </div>
     </div>
@@ -78,7 +78,7 @@
             }
         },
         components: {
-            'yd-mask': Mask
+            'kom-mask': Mask
         },
         watch: {
             currentYear(val) {

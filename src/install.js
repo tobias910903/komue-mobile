@@ -5,7 +5,6 @@ import _ from 'lodash'
 import fastClick from 'fastclick'
 
 // style
-import "@/assets/iconfonts/iconfont.css"
 import "@/assets/styles/base.less"
 
 // axios
@@ -34,7 +33,6 @@ import {CountUp} from '@/components/countup';
 import {DateTime} from '@/components/datetime';
 import {FlexBox, FlexBoxItem} from '@/components/flexbox';
 import {GridsItem, GridsGroup} from '@/components/grids';
-import {Icons} from '@/components/icons';
 import {InfiniteScroll} from '@/components/infinitescroll';
 import {Input} from '@/components/input';
 import {KeyBoard} from '@/components/keyboard';
@@ -73,8 +71,9 @@ import wxAlert from '@/components/messagebox/wechat/Alert' // 自定义样式的
 import wxConfirm from '@/components/messagebox/wechat/Confirm' // 自定义样式的 messagebox
 import Messagebox from '@/components/messagebox'
 
-// 干掉的组件 CitySelect、Dialog
+// 干掉的组件 CitySelect、Dialog、Icon
 // 改名的组件 spinner => counter
+// 需新增组件 Icon
 
 const is_ios = () =>{
     return /iPad|iPhone|iPod/.test(navigator.userAgent);
@@ -106,7 +105,6 @@ export default function install(Vue) {
     Vue.component('KomFlexboxItem', FlexBoxItem);
     Vue.component('KomGridsItem', GridsItem);
     Vue.component('KomGridsGroup', GridsGroup);
-    Vue.component('KomIcon', Icons);
     Vue.component('KomInfinitescroll', InfiniteScroll);
     Vue.component('KomInput', Input);
     Vue.component('KomKeyboard', KeyBoard);

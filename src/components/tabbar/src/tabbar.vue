@@ -1,5 +1,5 @@
 <template>
-    <footer class="yd-tabbar" :class="classes" :style="styles" ref="navbar">
+    <footer class="kom-tabbar" :class="classes" :style="styles" ref="navbar">
         <slot></slot>
     </footer>
 </template>
@@ -8,7 +8,7 @@
     import {isColor} from '../../../utils/assist';
 
     export default {
-        name: 'yd-tabbar',
+        name: 'kom-tabbar',
         data() {
             return {
                 activeIndex: this.value,
@@ -72,7 +72,7 @@
         },
         computed: {
             classes() {
-                return this.fixed ? 'yd-tabbar-fixed' : '';
+                return this.fixed ? 'kom-tabbar-fixed' : '';
             },
             styles() {
                 return {
@@ -85,7 +85,7 @@
         },
         methods: {
             setCurrent(index) {
-                const tabPanels = this.$children.filter(item => item.$options.name === 'yd-tabbar-item');
+                const tabPanels = this.$children.filter(item => item.$options.name === 'kom-tabbar-item');
                 tabPanels.forEach((item, key) => {
                     this.$set(item, 'isCurrent', index === key);
                 });

@@ -9,7 +9,7 @@
     import Box from './box.vue';
 
     export default {
-        name: 'yd-lightbox',
+        name: 'kom-lightbox',
         data() {
             return {
                 show: true,
@@ -53,7 +53,7 @@
             },
             findImgs(el) {
                 el.forEach((item) => {
-                    if (item && item.$options.name === 'yd-lightbox-img') {
+                    if (item && item.$options.name === 'kom-lightbox-img') {
                         this.imgItems.push(item);
                     }
                     item.$children && this.findImgs(item.$children);
@@ -61,7 +61,7 @@
             },
             appendDOM(index) {
                 const boxComponent = Vue.extend(Box);
-                const mes = this.$children.filter(item => item.$options.name === 'yd-lightbox-txt');
+                const mes = this.$children.filter(item => item.$options.name === 'kom-lightbox-txt');
 
                 this.box = new boxComponent({
                     el: document.createElement('div'),

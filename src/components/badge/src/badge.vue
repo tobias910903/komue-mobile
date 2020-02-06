@@ -1,5 +1,5 @@
 <template>
-    <span class="yd-badge" :class="typesClass"
+    <span class="kom-badge" :class="typesClass"
           :style="{backgroundColor: bgcolor, color: color, transform: 'scale('+scale+')'}">
         <slot></slot>
     </span>
@@ -9,7 +9,7 @@
     import {isColor} from '../../../utils/assist';
 
     export default {
-        name: 'yd-badge',
+        name: 'kom-badge',
         props: {
             type: {
                 validator(value) {
@@ -44,11 +44,11 @@
             typesClass() {
                 if (this.bgcolor) {
                     if (this.shape === 'square') {
-                        return ' yd-badge-radius';
+                        return ' kom-badge-radius';
                     }
                     return '';
                 }
-                return (this.type ? 'yd-badge-' + this.type : '') + (this.shape === 'square' ? ' yd-badge-radius' : '');
+                return (this.type ? 'kom-badge-' + this.type : '') + (this.shape === 'square' ? ' kom-badge-radius' : '');
             }
         }
     }

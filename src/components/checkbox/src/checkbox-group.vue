@@ -8,7 +8,7 @@
     import {isColor} from '../../../utils/assist';
 
     export default {
-        name: 'yd-checkbox-group',
+        name: 'kom-checkbox-group',
         props: {
             value: {
                 type: Array,
@@ -35,7 +35,7 @@
         methods: {
             updateValue () {
                 const value = this.value;
-                this.childrens = this.$children.filter(item => item.$options.name === 'yd-checkbox');
+                this.childrens = this.$children.filter(item => item.$options.name === 'kom-checkbox');
 
                 if (this.childrens) {
                     this.childrens.forEach(child => {

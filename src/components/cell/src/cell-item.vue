@@ -1,39 +1,39 @@
 <template>
-    <label class="yd-cell-item" v-if="type == 'label' || type == 'checkbox' || type == 'radio'">
-        <span class="yd-cell-left" v-if="checkLeft">
-            <span class="yd-cell-icon" v-if="$slots.icon"><slot name="icon"></slot></span>
+    <label class="kom-cell-item" v-if="type == 'label' || type == 'checkbox' || type == 'radio'">
+        <span class="kom-cell-left" v-if="checkLeft">
+            <span class="kom-cell-icon" v-if="$slots.icon"><slot name="icon"></slot></span>
             <slot name="left"></slot>
         </span>
-        <label class="yd-cell-right" :class="classes">
+        <label class="kom-cell-right" :class="classes">
             <slot name="right"></slot>
-            <i v-if="type == 'checkbox'" class="yd-cell-checkbox-icon"></i>
-            <i v-if="type == 'radio'" class="yd-cell-radio-icon"></i>
+            <i v-if="type == 'checkbox'" class="kom-cell-checkbox-icon"></i>
+            <i v-if="type == 'radio'" class="kom-cell-radio-icon"></i>
         </label>
     </label>
-    <router-link class="yd-cell-item" :to="href" v-else-if="type == 'link'">
-        <div class="yd-cell-left" v-if="checkLeft">
-            <span class="yd-cell-icon" v-if="$slots.icon"><slot name="icon"></slot></span>
+    <router-link class="kom-cell-item" :to="href" v-else-if="type == 'link'">
+        <div class="kom-cell-left" v-if="checkLeft">
+            <span class="kom-cell-icon" v-if="$slots.icon"><slot name="icon"></slot></span>
             <slot name="left"></slot>
         </div>
-        <div class="yd-cell-right" :class="classes">
+        <div class="kom-cell-right" :class="classes">
             <slot name="right"></slot>
         </div>
     </router-link>
-    <a class="yd-cell-item" :href="href" v-else-if="type == 'a'">
-        <div class="yd-cell-left" v-if="checkLeft">
-            <span class="yd-cell-icon" v-if="$slots.icon"><slot name="icon"></slot></span>
+    <a class="kom-cell-item" :href="href" v-else-if="type == 'a'">
+        <div class="kom-cell-left" v-if="checkLeft">
+            <span class="kom-cell-icon" v-if="$slots.icon"><slot name="icon"></slot></span>
             <slot name="left"></slot>
         </div>
-        <div class="yd-cell-right" :class="classes">
+        <div class="kom-cell-right" :class="classes">
             <slot name="right"></slot>
         </div>
     </a>
-    <div class="yd-cell-item" v-else>
-        <div class="yd-cell-left" v-if="checkLeft">
-            <span class="yd-cell-icon" v-if="$slots.icon"><slot name="icon"></slot></span>
+    <div class="kom-cell-item" v-else>
+        <div class="kom-cell-left" v-if="checkLeft">
+            <span class="kom-cell-icon" v-if="$slots.icon"><slot name="icon"></slot></span>
             <slot name="left"></slot>
         </div>
-        <div class="yd-cell-right" :class="classes">
+        <div class="kom-cell-right" :class="classes">
             <slot name="right"></slot>
         </div>
     </div>
@@ -41,7 +41,7 @@
 
 <script type="text/babel">
     export default {
-        name: 'yd-cell-item',
+        name: 'kom-cell-item',
         props: {
             type: {
                 validator (value) {
@@ -62,7 +62,7 @@
                 return !!this.$slots.left || !!this.$slots.icon;
             },
             classes() {
-                return this.arrow ? 'yd-cell-arrow' : '';
+                return this.arrow ? 'kom-cell-arrow' : '';
             }
         }
     }

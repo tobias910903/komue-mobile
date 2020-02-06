@@ -1,5 +1,5 @@
 <template>
-    <yd-sendcode-button
+    <kom-sendcode-button
             :size="size"
             :type="type"
             :action-type="actionType"
@@ -7,17 +7,17 @@
             :class="start ? 'btn-disabled' : ''"
             :style="{backgroundColor: bgcolor, color: color}"
     >{{tmpStr}}
-    </yd-sendcode-button>
+    </kom-sendcode-button>
 </template>
 
 <script type="text/babel">
     import Button from '../../button/src/button.vue';
 
     export default {
-        name: 'yd-sendcode',
+        name: 'kom-sendcode',
         extends: Button,
         components: {
-            'yd-sendcode-button': Button
+            'kom-sendcode-button': Button
         },
         data() {
             return {

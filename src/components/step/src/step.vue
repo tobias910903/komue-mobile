@@ -1,6 +1,6 @@
 <template>
-    <div class="yd-step" :class="'yd-step-theme' + theme">
-        <ul class="yd-step-content"
+    <div class="kom-step" :class="'kom-step-theme' + theme">
+        <ul class="kom-step-content"
             :style="{paddingBottom: hasBottom ? '42px' : '10px', paddingTop: hasTop ? '42px' : '10px', color: currentColor}">
             <slot></slot>
         </ul>
@@ -11,7 +11,7 @@
     import {isColor} from '../../../utils/assist';
 
     export default {
-        name: 'yd-step',
+        name: 'kom-step',
         data() {
             return {
                 hasTop: false,
@@ -40,7 +40,7 @@
         },
         methods: {
             updateChildStatus(reinit) {
-                const childrens = this.$children.filter(item => item.$options.name === 'yd-step-item');
+                const childrens = this.$children.filter(item => item.$options.name === 'kom-step-item');
                 childrens.forEach((item, key) => {
                     item.stepNumber = key + 1;
                     if (key + 1 === childrens.length && this.current >= item.stepNumber) {

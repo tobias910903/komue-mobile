@@ -1,5 +1,5 @@
 <template>
-    <div class="yd-input">
+    <div class="kom-input">
         <template v-if="regex == 'mobile'">
             <input ref="input" type="tel" pattern="[0-9]*"
                    v-model="currentValue" :name="name" @focus="focusHandler" @blur="blurHandler" maxlength="11" :placeholder="placeholder" :autocomplete="autocomplete" :readonly="readonly" :disabled="disabled"
@@ -39,17 +39,17 @@
                    v-model="currentValue" :name="name" @focus="focusHandler" @blur="blurHandler" :maxlength="max" :placeholder="placeholder" :autocomplete="autocomplete" :readonly="readonly" :disabled="disabled"
             >
         </template>
-        <a href="javascript:;" class="yd-input-clear" tabindex="-1" @click="clearInput" v-show="showClearIcon && showClear && !isempty"></a>
-        <span class="yd-input-error" v-if="showErrorIcon" v-show="(!!regex || !!min || !!max || required) && iserror && initError"></span>
-        <span class="yd-input-warn" v-if="showRequiredIcon && showErrorIcon" v-show="(required || (!!min && min > 0)) && isempty && showWarn"></span>
-        <span class="yd-input-success" v-if="showSuccessIcon" v-show="(!!regex || !!min || !!max || required) && !iserror && currentValue != ''"></span>
-        <a href="javascript:;" v-if="type == 'password'" class="yd-input-password" :class="showPwd ? 'yd-input-password-open' : ''" tabindex="-1" @click.stop="showPwd = !showPwd"></a>
+        <a href="javascript:;" class="kom-input-clear" tabindex="-1" @click="clearInput" v-show="showClearIcon && showClear && !isempty"></a>
+        <span class="kom-input-error" v-if="showErrorIcon" v-show="(!!regex || !!min || !!max || required) && iserror && initError"></span>
+        <span class="kom-input-warn" v-if="showRequiredIcon && showErrorIcon" v-show="(required || (!!min && min > 0)) && isempty && showWarn"></span>
+        <span class="kom-input-success" v-if="showSuccessIcon" v-show="(!!regex || !!min || !!max || required) && !iserror && currentValue != ''"></span>
+        <a href="javascript:;" v-if="type == 'password'" class="kom-input-password" :class="showPwd ? 'kom-input-password-open' : ''" tabindex="-1" @click.stop="showPwd = !showPwd"></a>
     </div>
 </template>
 
 <script type="text/babel">
     export default {
-        name: 'yd-input',
+        name: 'kom-input',
         data() {
             return {
                 currentValue: this.value,

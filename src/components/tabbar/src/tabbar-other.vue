@@ -1,12 +1,12 @@
 <template>
-    <div class="yd-tabbar-other">
+    <div class="kom-tabbar-other">
         <slot></slot>
     </div>
 </template>
 
 <script type="text/babel">
     export default {
-        name: 'yd-tabbar-other',
+        name: 'kom-tabbar-other',
         props: {
             type: {
                 validator (value) {

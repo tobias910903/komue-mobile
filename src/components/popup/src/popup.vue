@@ -1,11 +1,11 @@
 <template>
     <div>
-        <yd-mask v-model="show" @click.native="close" :opacity="maskerOpacity"></yd-mask>
+        <kom-mask v-model="show" @click.native="close" :opacity="maskerOpacity"></kom-mask>
         <div :class="classes" :style="styles" ref="box">
             <div v-if="!!$slots.top && position !== 'center'" ref="top">
                 <slot name="top"></slot>
             </div>
-            <div class="yd-popup-content">
+            <div class="kom-popup-content">
                 <div ref="content">
                     <slot></slot>
                 </div>
@@ -22,9 +22,9 @@
     import Mask from '../../mask/src/mask.vue';
 
     export default {
-        name: 'yd-popup',
+        name: 'kom-popup',
         components: {
-            'yd-mask': Mask
+            'kom-mask': Mask
         },
         data() {
             return {
@@ -69,8 +69,8 @@
         },
         computed: {
             classes() {
-                return (this.position === 'center' ? 'yd-popup-center ' : 'yd-popup yd-popup-' + this.position) +
-                        (this.show ? ' yd-popup-show ' : '');
+                return (this.position === 'center' ? 'kom-popup-center ' : 'kom-popup kom-popup-' + this.position) +
+                        (this.show ? ' kom-popup-show ' : '');
             },
             styles() {
                 if (this.position === 'left' || this.position === 'right') {

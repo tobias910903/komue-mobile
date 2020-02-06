@@ -1,5 +1,5 @@
 <template>
-    <span class="yd-rate" :style="{fontSize: size, color: color}">
+    <span class="kom-rate" :style="{fontSize: size, color: color}">
         <a href="javascript:;"
            v-for="item, key in ~~count"
            :key="key"
@@ -7,7 +7,7 @@
            :style="{color: index >= item ? activeColor : color, paddingRight: padding}"
            @click="!readonly && choose(item)"
         ></a>
-        <span class="yd-rate-text" v-if="!!str" v-html="str"></span>
+        <span class="kom-rate-text" v-if="!!str" v-html="str"></span>
     </span>
 </template>
 
@@ -15,7 +15,7 @@
     import {isColor} from '../../../utils/assist';
 
     export default {
-        name: 'yd-rate',
+        name: 'kom-rate',
         data() {
             return {
                 index: 0,

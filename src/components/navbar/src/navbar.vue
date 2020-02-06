@@ -1,14 +1,14 @@
 <template>
-    <header class="yd-navbar" :class="classes" :style="{backgroundColor: bgcolor, height: height, color: borderColor}">
-        <div class="yd-navbar-item">
+    <header class="kom-navbar" :class="classes" :style="{backgroundColor: bgcolor, height: height, color: borderColor}">
+        <div class="kom-navbar-item">
             <slot name="left"></slot>
         </div>
-        <div class="yd-navbar-center-box" :style="{height: height}">
-            <div class="yd-navbar-center">
-                <slot name="center"><span class="yd-navbar-center-title" :style="{color: color, fontSize: fontsize}">{{title}}</span></slot>
+        <div class="kom-navbar-center-box" :style="{height: height}">
+            <div class="kom-navbar-center">
+                <slot name="center"><span class="kom-navbar-center-title" :style="{color: color, fontSize: fontsize}">{{title}}</span></slot>
             </div>
         </div>
-        <div class="yd-navbar-item">
+        <div class="kom-navbar-item">
             <slot name="right"></slot>
         </div>
     </header>
@@ -18,7 +18,7 @@
     import {isColor} from '../../../utils/assist';
 
     export default {
-        name: 'yd-navbar',
+        name: 'kom-navbar',
         props: {
             title: String,
             fixed: Boolean,
@@ -58,7 +58,7 @@
         },
         computed: {
             classes() {
-                return this.fixed ? 'yd-navbar-fixed' : '';
+                return this.fixed ? 'kom-navbar-fixed' : '';
             }
         }
     }

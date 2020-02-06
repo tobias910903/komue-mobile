@@ -1,10 +1,10 @@
 <template>
-    <li :class="!!$slots.icon ? 'yd-timeline-custom-item' : 'yd-timeline-item'">
+    <li :class="!!$slots.icon ? 'kom-timeline-custom-item' : 'kom-timeline-item'">
         <template v-if="!!$slots.icon">
-            <span class="yd-timeline-icon"><slot name="icon"></slot></span>
+            <span class="kom-timeline-icon"><slot name="icon"></slot></span>
         </template>
         <template v-else>
-            <em class="yd-timeline-icon"></em>
+            <em class="kom-timeline-icon"></em>
         </template>
         <slot></slot>
     </li>
@@ -12,6 +12,6 @@
 
 <script type="text/babel">
     export default {
-        name: 'yd-timeline-item'
+        name: 'kom-timeline-item'
     }
 </script>

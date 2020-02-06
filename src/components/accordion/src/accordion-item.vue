@@ -1,17 +1,17 @@
 <template>
     <div>
-        <div class="yd-accordion-head">
-            <div class="yd-accordion-head-content">
+        <div class="kom-accordion-head">
+            <div class="kom-accordion-head-content">
                 <slot name="icon"></slot>
-                <div @click="toggle" class="yd-accordion-title" :class="!$slots.icon && !$slots.txt ? 'yd-accordion-title-full' : ''">
+                <div @click="toggle" class="kom-accordion-title" :class="!$slots.icon && !$slots.txt ? 'kom-accordion-title-full' : ''">
                     <span v-if="$slots.title"><slot name="title"></slot></span>
                     <span v-else>{{title}}</span>
                 </div>
                 <slot name="txt"></slot>
             </div>
-            <div class="yd-accordion-head-arrow" @click.stop="toggle" :class="show ? 'yd-accordion-rotated' : ''"></div>
+            <div class="kom-accordion-head-arrow" @click.stop="toggle" :class="show ? 'kom-accordion-rotated' : ''"></div>
         </div>
-        <div class="yd-accordion-content" :style="styleHeight">
+        <div class="kom-accordion-content" :style="styleHeight">
             <div ref="content">
                 <slot></slot>
             </div>
@@ -21,7 +21,7 @@
 
 <script type="text/babel">
     export default {
-        name: 'yd-accordion-item',
+        name: 'kom-accordion-item',
         data() {
             return {
                 show: this.open,

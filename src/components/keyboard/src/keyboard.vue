@@ -1,17 +1,17 @@
 <template>
     <div>
-        <yd-mask v-model="show" @click.native="close" :opacity="maskerOpacity"></yd-mask>
-        <div class="yd-keyboard" :class="show ? 'yd-keyboard-active' : ''">
-            <div class="yd-keyboard-head">
+        <kom-mask v-model="show" @click.native="close" :opacity="maskerOpacity"></kom-mask>
+        <div class="kom-keyboard" :class="show ? 'kom-keyboard-active' : ''">
+            <div class="kom-keyboard-head">
                 <strong>{{inputText}}</strong>
             </div>
-            <div class="yd-keyboard-error">{{error}}</div>
-            <ul class="yd-keyboard-password">
+            <div class="kom-keyboard-error">{{error}}</div>
+            <ul class="kom-keyboard-password">
                 <li v-for="n, k in 6" :key="k"><i v-show="nums.length >= n"></i></li>
             </ul>
-            <div class="yd-keyboard-content">
-                <div class="yd-keyboard-title">{{title}}</div>
-                <ul class="yd-keyboard-numbers">
+            <div class="kom-keyboard-content">
+                <div class="kom-keyboard-title">{{title}}</div>
+                <ul class="kom-keyboard-numbers">
                     <li v-for="i, k in 4" :key="k">
                         <template v-if="triggerClose">
                             <a href="javascript:;" v-if="i == 4" @click.stop="close">{{cancelText}}</a>
@@ -38,9 +38,9 @@
     import Mask from '../../mask/src/mask.vue';
 
     export default {
-        name: 'yd-keyboard',
+        name: 'kom-keyboard',
         components: {
-            'yd-mask': Mask
+            'kom-mask': Mask
         },
         data() {
             return {
@@ -64,7 +64,7 @@
             },
             title: {
                 type: String,
-                default: 'YDUI安全键盘'
+                default: 'KOM安全键盘'
             },
             cancelText: {
                 type: String,
@@ -107,11 +107,11 @@
         },
         methods: {
             init() {
-                this.$on('ydui.keyboard.error', (error) => {
+                this.$on('KOM.keyboard.error', (error) => {
                     this.setError(error);
                 });
 
-                this.$on('ydui.keyboard.close', this.close);
+                this.$on('KOM.keyboard.close', this.close);
             },
             numclick(num) {
                 this.error = '';

@@ -1,13 +1,13 @@
 <template>
-    <div class="yd-scrolltab-content-item">
-        <strong class="yd-scrolltab-content-title">{{label}}</strong>
+    <div class="kom-scrolltab-content-item">
+        <strong class="kom-scrolltab-content-title">{{label}}</strong>
         <slot></slot>
     </div>
 </template>
 
 <script type="text/babel">
     export default {
-        name: 'yd-scrolltab-panel',
+        name: 'kom-scrolltab-panel',
         props: {
             label: String,
             icon: String,

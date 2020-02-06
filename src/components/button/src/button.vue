@@ -1,7 +1,7 @@
 <template>
     <button :disabled="disabled || loading" :class="classes" :style="{backgroundColor: bgcolor, color: color}" :type="actionType">
-        <span class="yd-btn-loading" v-if="loading">
-            <span class="yd-btn-rolling" :class="rollingClasses" :style="{marginRight: loadingTxt ? '8px' : '0'}"><i></i></span>
+        <span class="kom-btn-loading" v-if="loading">
+            <span class="kom-btn-rolling" :class="rollingClasses" :style="{marginRight: loadingTxt ? '8px' : '0'}"><i></i></span>
             <template v-if="size === 'large'">{{loadingTxt}}</template>
         </span>
         <span :style="{visibility: loading ? 'hidden' : ''}"><slot></slot></span>
@@ -12,7 +12,7 @@
     import {isColor} from '../../../utils/assist';
 
     export default {
-        name: 'yd-button',
+        name: 'kom-button',
         props: {
             disabled: Boolean,
             actionType: {
@@ -67,11 +67,11 @@
             rollingClasses() {
                 let a = '';
                 if (this.size === 'mini') {
-                    a = 'yd-btn-rolling-mini';
+                    a = 'kom-btn-rolling-mini';
                 } else if (!this.size || this.size === 'small') {
-                    a = 'yd-btn-rolling-small';
+                    a = 'kom-btn-rolling-small';
                 } else {
-                    a = 'yd-btn-rolling-large';
+                    a = 'kom-btn-rolling-large';
                 }
 
                 return a
@@ -79,26 +79,26 @@
             classes() {
                 let s = '';
                 if(this.size === 'mini') {
-                    s = 'yd-btn-mini'
+                    s = 'kom-btn-mini'
                 } else {
-                    s = this.size === 'large' ? 'yd-btn-block' : 'yd-btn';
+                    s = this.size === 'large' ? 'kom-btn-block' : 'kom-btn';
                 }
 
-                let t = ' yd-btn-' + this.type;
+                let t = ' kom-btn-' + this.type;
 
                 if (this.bgcolor) {
                     t = '';
                 }
 
                 if (this.disabled) {
-                    t = ' yd-btn-disabled';
+                    t = ' kom-btn-disabled';
                 }
 
                 let r = '';
                 if (this.shape === 'angle') {
-                    r = ' yd-btn-angle';
+                    r = ' kom-btn-angle';
                 } else {
-                    r = this.shape === 'circle' ? ' yd-btn-circle' : ''
+                    r = this.shape === 'circle' ? ' kom-btn-circle' : ''
                 }
 
                 return s + t + r;

@@ -1,15 +1,15 @@
 <template>
-    <label class="yd-radio">
+    <label class="kom-radio">
         <input type="radio" @change="changeHandler" :disabled="disabled" :checked="checked"/>
-        <span class="yd-radio-icon" :style="[{color: $parent.color}, styles(1)]"><i :style="styles(2)"></i></span>
-        <span class="yd-radio-text" v-if="!$slots.default">{{val}}</span>
-        <span class="yd-radio-text" v-else><slot></slot></span>
+        <span class="kom-radio-icon" :style="[{color: $parent.color}, styles(1)]"><i :style="styles(2)"></i></span>
+        <span class="kom-radio-text" v-if="!$slots.default">{{val}}</span>
+        <span class="kom-radio-text" v-else><slot></slot></span>
     </label>
 </template>
 
 <script type="text/babel">
     export default {
-        name: 'yd-radio',
+        name: 'kom-radio',
         data() {
             return {
                 checked: false

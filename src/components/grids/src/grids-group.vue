@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="yd-gridstitle" v-if="title">{{title}}</div>
+        <div class="kom-gridstitle" v-if="title">{{title}}</div>
         <div :class="classes">
             <slot></slot>
         </div>
@@ -9,7 +9,7 @@
 
 <script type="text/babel">
     export default{
-        name: 'yd-grids-group',
+        name: 'kom-grids-group',
         data() {
             return {
                 height: 55
@@ -35,7 +35,7 @@
         },
         computed: {
             classes() {
-                return 'yd-grids-' + this.rows;
+                return 'kom-grids-' + this.rows;
             }
         }
     }

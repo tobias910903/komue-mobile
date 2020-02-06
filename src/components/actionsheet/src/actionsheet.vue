@@ -1,9 +1,9 @@
 <template>
     <div>
-        <yd-mask v-model="show" @click.native="close" :opacity="maskerOpacity"></yd-mask>
-        <div class="yd-actionsheet" :class="show ? 'yd-actionsheet-active' : ''">
-            <a v-for="item, key in items" @click.stop="itemClick(item)" href="javascript:;" class="yd-actionsheet-item" :key="key">{{item.label}}</a>
-            <a v-if="cancel" @click.stop="close" href="javascript:;" class="yd-actionsheet-action">{{cancel}}</a>
+        <kom-mask v-model="show" @click.native="close" :opacity="maskerOpacity"></kom-mask>
+        <div class="kom-actionsheet" :class="show ? 'kom-actionsheet-active' : ''">
+            <a v-for="item, key in items" @click.stop="itemClick(item)" href="javascript:;" class="kom-actionsheet-item" :key="key">{{item.label}}</a>
+            <a v-if="cancel" @click.stop="close" href="javascript:;" class="kom-actionsheet-action">{{cancel}}</a>
         </div>
     </div>
 </template>
@@ -13,9 +13,9 @@
     import Mask from '../../mask/src/mask.vue';
 
     export default {
-        name: 'yd-actionsheet',
+        name: 'kom-actionsheet',
         components: {
-            'yd-mask': Mask
+            'kom-mask': Mask
         },
         data() {
             return {

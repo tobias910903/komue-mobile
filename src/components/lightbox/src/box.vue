@@ -2,18 +2,18 @@
     <div>
         <lightbox-tip></lightbox-tip>
 
-        <div class="yd-lightbox" :style="bgStyleObject">
-            <div class="yd-lightbox-head" :class="show ? '' : 'yd-lightbox-up-hide'">
+        <div class="kom-lightbox" :style="bgStyleObject">
+            <div class="kom-lightbox-head" :class="show ? '' : 'kom-lightbox-up-hide'">
                 <span>{{currentIndex + 1}} / {{imgItems.length}}</span>
                 <a href="javascript:;" @click="close">{{closeText}}</a>
             </div>
-            <div class="yd-lightbox-img" @click="show = !show" ref="imgbox" :style="dragStyleObject">
+            <div class="kom-lightbox-img" @click="show = !show" ref="imgbox" :style="dragStyleObject">
                 <slider autoplay="0" :show-pagination="false" :loop="false" :callback="changeIndex" :index="index">
                     <slider-item v-for="item, key in imgItems" :key="key">
                         <img :src="getImgSrc(item.$el)" style="background-color: #000">
                     </slider-item>
                 </slider>
-                <div class="yd-lightbox-loading" v-show="showLoaingIcon">
+                <div class="kom-lightbox-loading" v-show="showLoaingIcon">
                     <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
                          preserveAspectRatio="xMidYMid">
                         <circle cx="50" cy="50" fill="none" stroke="#ffffff" stroke-width="7" r="47"
@@ -26,7 +26,7 @@
                     </svg>
                 </div>
             </div>
-            <div class="yd-lightbox-foot" :class="show ? '' : 'yd-lightbox-down-hide'" v-if="!!txtHTML"
+            <div class="kom-lightbox-foot" :class="show ? '' : 'kom-lightbox-down-hide'" v-if="!!txtHTML"
                  v-html="txtHTML"></div>
         </div>
     </div>

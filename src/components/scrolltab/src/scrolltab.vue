@@ -1,18 +1,18 @@
 <template>
-    <div class="yd-scrolltab">
-        <div class="yd-scrolltab-nav" ref="navbox">
+    <div class="kom-scrolltab">
+        <div class="kom-scrolltab-nav" ref="navbox">
             <a href="javascript:;"
-               class="yd-scrolltab-item"
+               class="kom-scrolltab-item"
                v-for="item, key in navList"
                :key="key"
                :ref="`tabitem_${key}`"
-               :class="activeIndex == key ? 'yd-scrolltab-active' : ''"
+               :class="activeIndex == key ? 'kom-scrolltab-active' : ''"
                @click="moveHandler(key)">
-                <div class="yd-scrolltab-icon"><i :class="item.icon"></i></div>
-                <div class="yd-scrolltab-title">{{item.label}}</div>
+                <div class="kom-scrolltab-icon"><i :class="item.icon"></i></div>
+                <div class="kom-scrolltab-title">{{item.label}}</div>
             </a>
         </div>
-        <div class="yd-scrolltab-content" ref="scrollView">
+        <div class="kom-scrolltab-content" ref="scrollView">
             <slot></slot>
         </div>
     </div>
@@ -20,7 +20,7 @@
 
 <script type="text/babel">
     export default {
-        name: 'yd-scrolltab',
+        name: 'kom-scrolltab',
         data() {
             return {
                 scrolling: false,
@@ -53,7 +53,7 @@
                 this.navList.push(panel);
             },
             getPanels() {
-                return this.$children.filter(item => item.$options.name === 'yd-scrolltab-panel');
+                return this.$children.filter(item => item.$options.name === 'kom-scrolltab-panel');
             },
             bindEvent() {
                 this.scrollView.addEventListener('scroll', this.scrollHandler);

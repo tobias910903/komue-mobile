@@ -1,6 +1,6 @@
 <template>
     <div v-show="show" @click.stop="backtop">
-        <div class="yd-backtop" :class="!$slots.default && 'yd-backtop-inlay'" :style="{right: right, bottom: bottom}">
+        <div class="kom-backtop" :class="!$slots.default && 'kom-backtop-inlay'" :style="{right: right, bottom: bottom}">
             <slot v-if="!!$slots.default"></slot>
         </div>
     </div>
@@ -10,7 +10,7 @@
     import {scrollTop, getScrollview} from '../../../utils/assist';
 
     export default {
-        name: 'yd-backtop',
+        name: 'kom-backtop',
         data() {
             return {
                 show: false

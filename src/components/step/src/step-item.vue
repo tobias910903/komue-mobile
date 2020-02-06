@@ -1,15 +1,15 @@
 <template>
-    <li class="yd-step-item" :class="currentClass">
+    <li class="kom-step-item" :class="currentClass">
         <template v-if="theme == 1">
-            <em :class="stepNumber < current ? 'yd-step-checkmark' : ''"><i>{{stepNumber >= current ? stepNumber : ''}}</i></em>
+            <em :class="stepNumber < current ? 'kom-step-checkmark' : ''"><i>{{stepNumber >= current ? stepNumber : ''}}</i></em>
         </template>
         <template v-else>
             <em></em>
         </template>
-        <div class="yd-step-item-top">
-            <div class="yd-step-item-top-text"><span><slot name="top"></slot></span></div>
+        <div class="kom-step-item-top">
+            <div class="kom-step-item-top-text"><span><slot name="top"></slot></span></div>
         </div>
-        <div class="yd-step-item-bottom">
+        <div class="kom-step-item-bottom">
             <slot name="bottom"></slot>
         </div>
     </li>
@@ -17,7 +17,7 @@
 
 <script type="text/babel">
     export default {
-        name: 'yd-step-item',
+        name: 'kom-step-item',
         data() {
             return {
                 stepNumber: '',
@@ -29,10 +29,10 @@
         methods: {
             setCurrentClass() {
                 if (this.theme == 2) {
-                    this.currentClass = this.stepNumber == this.current ? 'yd-step-item-current' : '';
+                    this.currentClass = this.stepNumber == this.current ? 'kom-step-item-current' : '';
                     return;
                 }
-                this.currentClass = this.stepNumber <= this.current ? 'yd-step-item-current' : '';
+                this.currentClass = this.stepNumber <= this.current ? 'kom-step-item-current' : '';
             }
         },
         mounted() {

@@ -6,7 +6,7 @@
 
 <script type="text/babel">
     export default {
-        name: 'yd-scrollnav-panel',
+        name: 'kom-scrollnav-panel',
         props: {
             label: String
         },

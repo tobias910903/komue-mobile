@@ -1,11 +1,11 @@
 <template>
-    <div class="yd-list-other">
+    <div class="kom-list-other">
         <slot></slot>
     </div>
 </template>
 
 <script type="text/babel">
     export default {
-        name: 'yd-list-other'
+        name: 'kom-list-other'
     }
 </script>

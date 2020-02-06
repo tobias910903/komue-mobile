@@ -2,19 +2,19 @@
     <div>
         <div ref="dragBox">
             <slot></slot>
-            <div class="yd-pullrefresh-dragtip" ref="dragTip"
+            <div class="kom-pullrefresh-dragtip" ref="dragTip"
                  v-show="touches.isDraging"
                  :class="dragTip.animationTiming"
                  :style="{ 'transform': 'translate3d(0, ' + dragTip.translate + 'px, 0)' }"
             >
-                <span class="yd-pullrefresh-dragtip-icon">
+                <span class="kom-pullrefresh-dragtip-icon">
                     <i :class="dragTip.loadingIcon"
                        :style="{ 'transform': 'rotate(' + dragTip.iconRotate + 'deg)' }"></i>
                     {{dragTip.statusText}}
                 </span>
             </div>
         </div>
-        <div class="yd-pullrefresh-draghelp" v-if="showHelpTag" @click="showHelpTag = false">
+        <div class="kom-pullrefresh-draghelp" v-if="showHelpTag" @click="showHelpTag = false">
             <div><span>下拉更新</span></div>
         </div>
     </div>
@@ -24,7 +24,7 @@
     import {getScrollview} from '../../../utils/assist';
 
     export default {
-        name: 'yd-pullrefresh',
+        name: 'kom-pullrefresh',
         props: {
             callback: {
                 type: Function
@@ -77,7 +77,7 @@
 
                 this.bindEvents();
 
-                this.$on('ydui.pullrefresh.finishLoad', this.resetParams);
+                this.$on('KOM.pullrefresh.finishLoad', this.resetParams);
 
                 this.showHelp();
             },
@@ -207,11 +207,11 @@
                     return;
                 }
 
-                this.dragTip.animationTiming = 'yd-pullrefresh-animation-timing';
+                this.dragTip.animationTiming = 'kom-pullrefresh-animation-timing';
 
                 if (touches.moveOffset >= this.dragTip.distance) {
                     this.dragTip.statusText = this.loadingText;
-                    this.dragTip.loadingIcon = 'yd-pullrefresh-loading';
+                    this.dragTip.loadingIcon = 'kom-pullrefresh-loading';
                     this.triggerLoad();
                     return;
                 }

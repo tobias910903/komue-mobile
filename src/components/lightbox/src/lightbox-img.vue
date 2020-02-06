@@ -4,7 +4,7 @@
 
 <script type="text/babel">
     export default {
-        name: 'yd-lightbox-img',
+        name: 'kom-lightbox-img',
         props: {
             src: String,
             original: String

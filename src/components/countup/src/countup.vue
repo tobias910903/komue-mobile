@@ -6,7 +6,7 @@
     import CountUp from './countup.js';
 
     export default {
-        name: 'yd-countup',
+        name: 'kom-countup',
         data() {
             return {
                 instance: null

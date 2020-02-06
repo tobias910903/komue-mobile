@@ -1,17 +1,17 @@
 <template>
-    <div class="yd-textarea" :class="readonly ? 'yd-textarea-readonly' : ''">
+    <div class="kom-textarea" :class="readonly ? 'kom-textarea-readonly' : ''">
         <textarea v-model="mlstr"
                   :placeholder="placeholder"
                   :maxlength="maxlength"
                   :readonly="readonly"
         ></textarea>
-        <div class="yd-textarea-counter" v-if="showCounter && maxlength">{{num}}/{{maxlength}}</div>
+        <div class="kom-textarea-counter" v-if="showCounter && maxlength">{{num}}/{{maxlength}}</div>
     </div>
 </template>
 
 <script type="text/babel">
     export default {
-        name: 'yd-textarea',
+        name: 'kom-textarea',
         data() {
             return {
                 num: 0,

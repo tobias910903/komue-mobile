@@ -1,16 +1,16 @@
 <template>
-    <section class="yd-flexview">
+    <section class="kom-flexview">
         <slot name="navbar" v-if="showNavbar">
-            <yd-navbar :title="title" v-if="!!title">
+            <kom-navbar :title="title" v-if="!!title">
                 <router-link :to="link || '/'" slot="left">
-                    <yd-navbar-back-icon></yd-navbar-back-icon>
+                    <kom-navbar-back-icon></kom-navbar-back-icon>
                 </router-link>
-            </yd-navbar>
+            </kom-navbar>
         </slot>
 
         <slot name="top"></slot>
 
-        <section class="yd-scrollview" ref="scrollView" id="scrollView">
+        <section class="kom-scrollview" ref="scrollView" id="scrollView">
             <slot></slot>
         </section>
 
@@ -22,7 +22,7 @@
 
 <script type="text/babel">
     export default {
-        name: 'yd-layout',
+        name: 'kom-layout',
         props: {
             link: String,
             title: String,

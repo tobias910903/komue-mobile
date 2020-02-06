@@ -1,12 +1,12 @@
 <template>
-    <div class="yd-mask" :style="styles"><slot></slot></div>
+    <div class="kom-mask" :style="styles"><slot></slot></div>
 </template>
 
 <script type="text/babel">
     import {addClass, removeClass, getScrollview, isIOS} from '../../../utils/assist';
 
     export default {
-        name: 'yd-mask',
+        name: 'kom-mask',
         data() {
             return {
                 show: this.value

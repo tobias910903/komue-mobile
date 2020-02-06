@@ -1,7 +1,7 @@
 <template>
     <div style="display: none;">
         <slot name="top"></slot>
-        <div class="yd-lightbox-scroller">
+        <div class="kom-lightbox-scroller">
             <slot name="content"></slot>
         </div>
         <slot name="bottom"></slot>
@@ -10,6 +10,6 @@
 
 <script type="text/babel">
     export default {
-        name: 'yd-lightbox-txt'
+        name: 'kom-lightbox-txt'
     }
 </script>

@@ -1,12 +1,12 @@
 <template>
-    <div class="yd-accordion">
+    <div class="kom-accordion">
         <slot></slot>
     </div>
 </template>
 
 <script type="text/babel">
     export default {
-        name: 'yd-accordion',
+        name: 'kom-accordion',
         data() {
             return {
                 opening: false

@@ -1,7 +1,7 @@
 <template>
-    <div class="yd-preview">
+    <div class="kom-preview">
         <slot></slot>
-        <div class="yd-preview-footer" v-if="buttons.length > 0">
+        <div class="kom-preview-footer" v-if="buttons.length > 0">
             <template v-for="item in buttons">
                 <template v-if="typeof item.link === 'object'">
                     <router-link :to="item.link" :style="{color: item.color}" @click.native="clickHander(item.click)">{{item.text}}</router-link>
@@ -16,7 +16,7 @@
 
 <script type="text/babel">
     export default {
-        name: 'yd-preview',
+        name: 'kom-preview',
         props: {
             buttons: [Array]
         },

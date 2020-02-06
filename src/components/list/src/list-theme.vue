@@ -1,12 +1,12 @@
 <template>
-    <article class="yd-list" :class="classes">
+    <article class="kom-list" :class="classes">
         <slot></slot>
     </article>
 </template>
 
 <script type="text/babel">
     export default {
-        name: 'yd-list',
+        name: 'kom-list',
         props: {
             theme: {
                 validator(value){
@@ -17,7 +17,7 @@
         },
         computed: {
             classes() {
-                return 'yd-list-theme' + this.theme;
+                return 'kom-list-theme' + this.theme;
             }
         }
     }

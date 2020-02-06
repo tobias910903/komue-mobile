@@ -4,7 +4,7 @@
 
         <div ref="tag" style="height: 0;"></div>
 
-        <div class="yd-list-loading" v-if="!isDone">
+        <div class="kom-list-loading" v-if="!isDone">
             <div v-show="isLoading">
                 <slot name="loadingTip">
                     <loading></loading>
@@ -12,7 +12,7 @@
             </div>
         </div>
 
-        <div class="yd-list-donetip" v-show="!isLoading && isDone">
+        <div class="kom-list-donetip" v-show="!isLoading && isDone">
             <slot name="doneTip">没有更多数据了</slot>
         </div>
     </div>
@@ -23,7 +23,7 @@
     import {getScrollview} from '../../../utils/assist';
 
     export default {
-        name: 'yd-infinitescroll',
+        name: 'kom-infinitescroll',
         components: {Loading},
         data() {
             return {
@@ -61,16 +61,16 @@
 
                 this.scrollview.addEventListener('scroll', this.throttledCheck, false);
 
-                this.$on('ydui.infinitescroll.loadedDone', () => {
+                this.$on('KOM.infinitescroll.loadedDone', () => {
                     this.isLoading = false;
                     this.isDone = true;
                 });
 
-                this.$on('ydui.infinitescroll.finishLoad', (ret) => {
+                this.$on('KOM.infinitescroll.finishLoad', (ret) => {
                     this.isLoading = false;
                 });
 
-                this.$on('ydui.infinitescroll.reInit', () => {
+                this.$on('KOM.infinitescroll.reInit', () => {
                     this.isLoading = false;
                     this.isDone = false;
                 });

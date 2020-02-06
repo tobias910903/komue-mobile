@@ -1,38 +1,38 @@
 <template>
     <div>
-        <div class="yd-search">
-            <div class="yd-search-input">
+        <div class="kom-search">
+            <div class="kom-search-input">
                 <form action="#" class="search-input" @submit.prevent="submit">
                     <i class="search-icon"></i>
-                    <yd-search-input
+                    <kom-search-input
                             type="search"
                             :placeholder="placeholder"
                             v-model="currentValue"
                             :readonly="fullpage"
                             @click.native="open"
                             ref="search"
-                    ></yd-search-input>
+                    ></kom-search-input>
                 </form>
                 <a href="javascript:;" class="cancel-text" v-show="currentValue !== '' && !fullpage" @click="close(false)">{{cancelText}}</a>
             </div>
         </div>
 
         <template v-if="fullpage">
-            <div class="yd-search yd-search-fly" :class="show ? 'yd-search-show' : ''" :style="{top: top}">
-                <div class="yd-search-input">
+            <div class="kom-search kom-search-fly" :class="show ? 'kom-search-show' : ''" :style="{top: top}">
+                <div class="kom-search-input">
                     <form action="#" class="search-input" @submit.prevent="submit">
                         <i class="search-icon"></i>
-                        <yd-search-input
+                        <kom-search-input
                                 type="search"
                                 :placeholder="placeholder"
                                 v-model="currentValue"
                                 ref="search"
-                        ></yd-search-input>
+                        ></kom-search-input>
                     </form>
                     <a href="javascript:;" class="cancel-text" @click="close(false)">{{cancelText}}</a>
                 </div>
-                <div class="yd-search-list" :style="{paddingBottom: top}">
-                    <p class="yd-search-list-item" v-for="item, key in result" @click="clickHandler(item)" :key="key">
+                <div class="kom-search-list" :style="{paddingBottom: top}">
+                    <p class="kom-search-list-item" v-for="item, key in result" @click="clickHandler(item)" :key="key">
                         {{item.label || item}}</p>
                     <slot></slot>
                 </div>
@@ -47,10 +47,10 @@
     import Input from '../../input/src/input.vue';
 
     export default {
-        name: 'yd-search',
+        name: 'kom-search',
         extends: Input,
         components: {
-            'yd-search-input': Input
+            'kom-search-input': Input
         },
         data() {
             return {

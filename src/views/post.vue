@@ -1,7 +1,6 @@
 <template>
 	<div class="kom-transition-box">
 		<button @click="goAction(3)">查看详情</button>
-		<i class="iconfont icon-search"></i>
 	</div>
 </template>
 
@@ -31,8 +30,6 @@ export default {
 }
 </script>
 
-<!-- 引入的外部CSS只在当前域有效 -->
-<style scoped src="../assets/iconfonts/iconfont.css"></style>
 <style scoped>
 	
 </style>

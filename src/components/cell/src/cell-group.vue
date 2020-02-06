@@ -1,7 +1,7 @@
 <template>
-    <div class="yd-cell-box">
-        <div class="yd-cell-title" v-if="title">{{title}}</div>
-        <div class="yd-cell">
+    <div class="kom-cell-box">
+        <div class="kom-cell-title" v-if="title">{{title}}</div>
+        <div class="kom-cell">
             <slot></slot>
         </div>
         <slot name="bottom"></slot>
@@ -10,7 +10,7 @@
 
 <script type="text/babel">
     export default{
-        name: 'yd-cell-group',
+        name: 'kom-cell-group',
         props: {
             title: String
         }

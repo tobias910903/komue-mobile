@@ -1,12 +1,12 @@
 <template>
-    <span class="yd-counter" :class="buttonStyle === 'circle' ? 'yd-spinner-circle' : 'yd-spinner-square'" :style="boxStyle">
+    <span class="kom-counter" :class="buttonStyle === 'circle' ? 'kom-spinner-circle' : 'kom-spinner-square'" :style="boxStyle">
         <span ref="minus" :style="btnStyle"><i></i></span>
         <input
                 type="number"
                 pattern="[0-9]*"
                 :style="{width: buttonStyle === 'circle' ? width : '50%'}"
                 ref="numInput"
-                class="yd-spinner-input"
+                class="kom-spinner-input"
                 :readonly="readonly"
                 v-model="counter"
                 placeholder=""
@@ -17,7 +17,7 @@
 
 <script type="text/babel">
     export default {
-        name: 'yd-counter',
+        name: 'kom-counter',
         data() {
             return {
                 counter: 0,
@@ -128,22 +128,22 @@
                 const min = ~~this.min;
 
                 if (max < unit && max !== 0) {
-                    console.error('[YDUI warn]: The parameter \'max\'(' + max + ') must be greater than or equal to \'unit\'(' + unit + ').');
+                    console.error('[KOM warn]: The parameter \'max\'(' + max + ') must be greater than or equal to \'unit\'(' + unit + ').');
                     return false;
                 }
 
                 if (max % unit !== 0) {
-                    console.error('[YDUI warn]: The parameter \'max\'(' + max + ') and \'unit\'(' + unit + ') must be multiple.');
+                    console.error('[KOM warn]: The parameter \'max\'(' + max + ') and \'unit\'(' + unit + ') must be multiple.');
                     return false;
                 }
 
                 if (min % unit !== 0 && min >= 0) {
-                    console.error('[YDUI warn]: The parameter \'min\'(' + min + ') and \'unit\'(' + unit + ') must be multiple.');
+                    console.error('[KOM warn]: The parameter \'min\'(' + min + ') and \'unit\'(' + unit + ') must be multiple.');
                     return false;
                 }
 
                 if (max < min && max !== 0) {
-                    console.error('[YDUI warn]: The parameter \'max\'(' + max + ') must be greater than to \'min\'(' + min + ').');
+                    console.error('[KOM warn]: The parameter \'max\'(' + max + ') must be greater than to \'min\'(' + min + ').');
                     return false;
                 }
 

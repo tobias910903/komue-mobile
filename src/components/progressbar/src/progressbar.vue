@@ -1,6 +1,6 @@
 <template>
-    <div class="yd-progressbar">
-        <div class="yd-progressbar-content" v-if="type != 'line'"><slot></slot></div>
+    <div class="kom-progressbar">
+        <div class="kom-progressbar-content" v-if="type != 'line'"><slot></slot></div>
         <svg :viewBox="viewBox" v-show="show" :preserveAspectRatio="type == 'line' ? 'none' : ''">
             <path :fill-opacity="!!fillColor ? 1 : 0"
                   :d="getPathString"
@@ -22,7 +22,7 @@
     import {isColor, getScrollview, checkInview} from '../../../utils/assist';
 
     export default {
-        name: 'yd-progressbar',
+        name: 'kom-progressbar',
         data() {
             return {
                 viewBox: '0 0 100 100',

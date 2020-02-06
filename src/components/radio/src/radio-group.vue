@@ -8,7 +8,7 @@
     import {isColor} from '../../../utils/assist';
 
     export default {
-        name: 'yd-radio-group',
+        name: 'kom-radio-group',
         data () {
             return {
                 currentValue: this.value
@@ -40,7 +40,7 @@
         methods: {
             updateValue() {
                 const value = this.value;
-                this.childrens = this.$children.filter(item => item.$options.name === 'yd-radio');
+                this.childrens = this.$children.filter(item => item.$options.name === 'kom-radio');
 
                 if (this.childrens) {
                     this.childrens.forEach(child => {

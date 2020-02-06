@@ -1,23 +1,23 @@
 <template>
-    <div class="yd-tab">
-        <div class="yd-tab-box" :class="horizontalScroll ? 'yd-tab-nav-scoll' : 'yd-tab-nav-nomal'" :style="{backgroundColor: bgColor}">
-            <ul class="yd-tab-nav" ref="navbox" :style="{color: borderColor, width: width, fontSize: fontSize}"
+    <div class="kom-tab">
+        <div class="kom-tab-box" :class="horizontalScroll ? 'kom-tab-nav-scoll' : 'kom-tab-nav-nomal'" :style="{backgroundColor: bgColor}">
+            <ul class="kom-tab-nav" ref="navbox" :style="{color: borderColor, width: width, fontSize: fontSize}"
                 v-show="navList.length > 0">
-                <li class="yd-tab-nav-item"
+                <li class="kom-tab-nav-item"
                     v-for="item, key in navList"
                     :key="key"
-                    :class="item._uid == activeIndex || key === activeIndex ? 'yd-tab-active' : ''"
+                    :class="item._uid == activeIndex || key === activeIndex ? 'kom-tab-active' : ''"
                     :style="{color: item._uid == activeIndex || key === activeIndex ? activeColor: color, lineHeight: height}"
                     @click="changeHandler(item.label, key, item._uid , item.tabkey)">
                     {{item.label}}
-                    <span class="yd-tab-badge" v-if="item.badge">
-                        <yd-badge :scale="item.badgeScale" :color="item.badgeColor" :bgcolor="item.badgeBgcolor">{{item.badge}}</yd-badge>
+                    <span class="kom-tab-badge" v-if="item.badge">
+                        <kom-badge :scale="item.badgeScale" :color="item.badgeColor" :bgcolor="item.badgeBgcolor">{{item.badge}}</kom-badge>
                     </span>
-                    <span class="yd-tab-dot" v-if="item.dot && !item.badge"><i :style="{backgroundColor: item.dotColor}"></i></span>
+                    <span class="kom-tab-dot" v-if="item.dot && !item.badge"><i :style="{backgroundColor: item.dotColor}"></i></span>
                 </li>
             </ul>
         </div>
-        <div class="yd-tab-panel">
+        <div class="kom-tab-panel">
             <slot></slot>
         </div>
     </div>
@@ -27,7 +27,7 @@
     import {isColor} from '../../../utils/assist';
 
     export default {
-        name: 'yd-tab',
+        name: 'kom-tab',
         data() {
             return {
                 navList: [],
@@ -92,7 +92,7 @@
         },
         watch: {
             value(val) {
-                const tabPanels = this.$children.filter(item => item.$options.name === 'yd-tab-panel');
+                const tabPanels = this.$children.filter(item => item.$options.name === 'kom-tab-panel');
 
                 if (val >= tabPanels.length - 1) {
                     val = tabPanels.length - 1;
@@ -121,7 +121,7 @@
         },
         methods: {
             init() {
-                const tabPanels = this.$children.filter(item => item.$options.name === 'yd-tab-panel');
+                const tabPanels = this.$children.filter(item => item.$options.name === 'kom-tab-panel');
 
                 this.navList = [];
 

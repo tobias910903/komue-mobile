@@ -1,10 +1,10 @@
 <template>
-    <div class="yd-rollnotice-item"><slot></slot></div>
+    <div class="kom-rollnotice-item"><slot></slot></div>
 </template>
 
 <script type="text/babel">
     export default {
-        name: 'yd-rollnotice-item',
+        name: 'kom-rollnotice-item',
         mounted() {
             this.$parent.init();
         }

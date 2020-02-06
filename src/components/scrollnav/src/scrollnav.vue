@@ -1,8 +1,8 @@
 <template>
-    <div class="yd-scrollnav">
-        <div class="yd-scrollnav-tab" :style="{color: color, backgroundColor: bgcolor}" ref="navbox">
-            <div class="yd-scrollnav-unfold" :class="toggle ? 'yd-scrollnav-unfold-active' : ''">
-                <div class="yd-scrollnav-unfold-header" :style="{height: height, borderColor: borderColor}">
+    <div class="kom-scrollnav">
+        <div class="kom-scrollnav-tab" :style="{color: color, backgroundColor: bgcolor}" ref="navbox">
+            <div class="kom-scrollnav-unfold" :class="toggle ? 'kom-scrollnav-unfold-active' : ''">
+                <div class="kom-scrollnav-unfold-header" :style="{height: height, borderColor: borderColor}">
                     <div v-html="toggleText" :style="{backgroundColor: bgcolor}"></div>
                     <span></span>
                 </div>
@@ -10,25 +10,25 @@
                     <li :style="{color: color}"
                         v-for="item, i in navList" :key="i"
                         @click.stop="scrollContent(i)"
-                        :class="activeIndex === i ? 'yd-scrollnav-current' : ''"
+                        :class="activeIndex === i ? 'kom-scrollnav-current' : ''"
                     >{{item.label}}
                     </li>
                 </ul>
             </div>
-            <ul class="yd-scrollnav-tab-item" ref="nav"
+            <ul class="kom-scrollnav-tab-item" ref="nav"
                 :style="{color: currentColor, height: height}">
                 <li :style="{color: color}"
                     v-for="item, i in navList" :key="i"
-                    :class="activeIndex === i  ? 'yd-scrollnav-current' : ''"
+                    :class="activeIndex === i  ? 'kom-scrollnav-current' : ''"
                     :ref="'navitem_' + i"
                     @click.stop="scrollContent(i)"
                 ><i></i><span>{{item.label}}</span>
                 </li>
             </ul>
-            <div class="yd-scrollnav-toggle" :class="toggle ? 'yd-scrollnav-toggle-active' : ''"
+            <div class="kom-scrollnav-toggle" :class="toggle ? 'kom-scrollnav-toggle-active' : ''"
                  @click="toggle = !toggle"></div>
         </div>
-        <div class="yd-scrollnav-content" ref="scrollView">
+        <div class="kom-scrollnav-content" ref="scrollView">
             <slot></slot>
         </div>
     </div>
@@ -38,7 +38,7 @@
     import {isColor, scrollTop} from '../../../utils/assist';
 
     export default {
-        name: 'yd-scrollnav',
+        name: 'kom-scrollnav',
         data() {
             return {
                 toggle: false,
@@ -128,7 +128,7 @@
                 window.addEventListener('resize', this.scrollHandler);
             },
             getPanels() {
-                return this.$children.filter(item => item.$options.name === 'yd-scrollnav-panel');
+                return this.$children.filter(item => item.$options.name === 'kom-scrollnav-panel');
             },
             scrollHandler() {
                 if (this.scrolling) return;

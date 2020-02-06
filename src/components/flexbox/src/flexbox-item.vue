@@ -1,12 +1,12 @@
 <template>
-    <div class="yd-flexbox-item" :class="classes">
+    <div class="kom-flexbox-item" :class="classes">
         <slot></slot>
     </div>
 </template>
 
 <script type="text/babel">
     export default {
-        name: 'yd-flexbox-item',
+        name: 'kom-flexbox-item',
         props: {
             align: {
                 validator(val) {
@@ -18,11 +18,11 @@
         computed: {
             classes() {
                 if (this.align === 'top') {
-                    return 'yd-flexbox-item-start';
+                    return 'kom-flexbox-item-start';
                 } else if (this.align === 'bottom') {
-                    return 'yd-flexbox-item-end';
+                    return 'kom-flexbox-item-end';
                 } else {
-                    return 'yd-flexbox-item-center';
+                    return 'kom-flexbox-item-center';
                 }
             }
         }

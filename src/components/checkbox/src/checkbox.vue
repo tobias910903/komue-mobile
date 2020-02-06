@@ -1,5 +1,5 @@
 <template>
-    <label class="yd-checkbox" :class="shape == 'circle' ? 'yd-checkbox-circle' : ''">
+    <label class="kom-checkbox" :class="shape == 'circle' ? 'kom-checkbox-circle' : ''">
         <template v-if="group">
             <input type="checkbox" v-model="model" :value="val" @change="changeHandler" :disabled="disabled" />
         </template>
@@ -13,13 +13,13 @@
             />
         </template>
 
-        <span class="yd-checkbox-icon" :style="iconStyles()"><i :style="checkIconStyles()"></i></span>
+        <span class="kom-checkbox-icon" :style="iconStyles()"><i :style="checkIconStyles()"></i></span>
 
         <template v-if="!$slots.default">
-            <span class="yd-checkbox-text">{{val}}</span>
+            <span class="kom-checkbox-text">{{val}}</span>
         </template>
         <template v-else>
-            <span class="yd-checkbox-text"><slot></slot></span>
+            <span class="kom-checkbox-text"><slot></slot></span>
         </template>
     </label>
 </template>
@@ -28,7 +28,7 @@
     import {isColor} from '../../../utils/assist';
 
     export default {
-        name: 'yd-checkbox',
+        name: 'kom-checkbox',
         data() {
             return {
                 model: [],
@@ -122,7 +122,7 @@
             }
         },
         created() {
-            if (this.$parent.$options && this.$parent.$options.name === 'yd-checkbox-group') {
+            if (this.$parent.$options && this.$parent.$options.name === 'kom-checkbox-group') {
                 this.group = true;
             }
         }

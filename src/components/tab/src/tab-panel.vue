@@ -1,5 +1,5 @@
 <template>
-    <div class="yd-tab-panel-item" :class="classes">
+    <div class="kom-tab-panel-item" :class="classes">
         <slot></slot>
     </div>
 </template>
@@ -8,7 +8,7 @@
     import {isColor} from '../../../utils/assist';
 
     export default {
-        name: 'yd-tab-panel',
+        name: 'kom-tab-panel',
         data() {
             return {
                 isCurrent: false
@@ -53,7 +53,7 @@
         },
         computed: {
             classes() {
-                return this.$parent.activeIndex === this._uid || this.isCurrent ? 'yd-tab-active' : '';
+                return this.$parent.activeIndex === this._uid || this.isCurrent ? 'kom-tab-active' : '';
             }
         },
         watch: {

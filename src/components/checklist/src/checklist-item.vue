@@ -1,14 +1,14 @@
 <template>
-    <div class="yd-checklist-item" @click="emitChangeHandler">
-        <div class="yd-checklist-item-icon" v-if="label">
+    <div class="kom-checklist-item" @click="emitChangeHandler">
+        <div class="kom-checklist-item-icon" v-if="label">
             <input type="checkbox" :disabled="disabled" :checked="checked">
-            <span class="yd-checklist-icon"><i></i></span>
+            <span class="kom-checklist-icon"><i></i></span>
         </div>
-        <label class="yd-checklist-item-icon" v-else>
+        <label class="kom-checklist-item-icon" v-else>
             <input type="checkbox" :disabled="disabled" :checked="checked" @change="changeHandler">
-            <span class="yd-checklist-icon"><i></i></span>
+            <span class="kom-checklist-icon"><i></i></span>
         </label>
-        <div class="yd-checklist-content">
+        <div class="kom-checklist-content">
             <slot></slot>
         </div>
     </div>
@@ -16,7 +16,7 @@
 
 <script type="text/babel">
     export default {
-        name: 'yd-checklist-item',
+        name: 'kom-checklist-item',
         data() {
             return {
                 checked: false,

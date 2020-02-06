@@ -1,30 +1,30 @@
 <template>
-    <router-link v-if="type === 'link'" :to="link" class="yd-tabbar-item" :class="classes"
+    <router-link v-if="type === 'link'" :to="link" class="kom-tabbar-item" :class="classes"
             :style="styles" :exact="$parent.exact" :active-class="$parent.activeClass" :tag="tag">
-        <span class="yd-tabbar-icon">
+        <span class="kom-tabbar-icon">
             <slot name="icon"></slot>
-            <span class="yd-tabbar-badge">
+            <span class="kom-tabbar-badge">
                 <slot name="badge"></slot>
             </span>
-            <span class="yd-tabbar-dot" v-if="dot"></span>
+            <span class="kom-tabbar-dot" v-if="dot"></span>
         </span>
-        <span class="yd-tabbar-txt" v-if="!!title">{{title}}</span>
+        <span class="kom-tabbar-txt" v-if="!!title">{{title}}</span>
     </router-link>
-    <a :href="link" class="yd-tabbar-item" :class="classes" :style="styles" v-else>
-        <span class="yd-tabbar-icon">
+    <a :href="link" class="kom-tabbar-item" :class="classes" :style="styles" v-else>
+        <span class="kom-tabbar-icon">
             <slot name="icon"></slot>
-            <span class="yd-tabbar-badge">
+            <span class="kom-tabbar-badge">
                 <slot name="badge"></slot>
             </span>
-            <span class="yd-tabbar-dot" v-if="dot"></span>
+            <span class="kom-tabbar-dot" v-if="dot"></span>
         </span>
-        <span class="yd-tabbar-txt" v-if="!!title">{{title}}</span>
+        <span class="kom-tabbar-txt" v-if="!!title">{{title}}</span>
     </a>
 </template>
 
 <script type="text/babel">
     export default {
-        name: 'yd-tabbar-item',
+        name: 'kom-tabbar-item',
         data() {
             return {
                 isCurrent: false
@@ -48,7 +48,7 @@
         },
         computed: {
             classes() {
-                return this.active || this.isCurrent ? 'yd-tabbar-active' : '';
+                return this.active || this.isCurrent ? 'kom-tabbar-active' : '';
             },
             styles() {
                 return {

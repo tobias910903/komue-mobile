@@ -1,7 +1,7 @@
 <template>
-    <div @click.stop="open" class="yd-datetime-input">
+    <div @click.stop="open" class="kom-datetime-input">
         <template v-if="!!value">{{value}}</template>
-        <template v-else><span class="yd-datetime-placeholder">{{placeholder}}</span></template>
+        <template v-else><span class="kom-datetime-placeholder">{{placeholder}}</span></template>
     </div>
 </template>
 
@@ -12,7 +12,7 @@
     import PickerComponent from './picker.vue';
 
     export default {
-        name: 'yd-datetime',
+        name: 'kom-datetime',
         data() {
             return {
                 picker: null,

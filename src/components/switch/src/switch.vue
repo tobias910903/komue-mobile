@@ -1,7 +1,7 @@
 <template>
     <input type="checkbox"
-           class="yd-switch"
-           :class="`yd-switch-${size}`"
+           class="kom-switch"
+           :class="`kom-switch-${size}`"
            :true-value="trueValue"
            :false-value="falseValue"
            :disabled="disabled"
@@ -17,7 +17,7 @@
      * 不兼容鸟包火狐
      */
     export default {
-        name: 'yd-switch',
+        name: 'kom-switch',
         data() {
             return {
                 checked: this.value

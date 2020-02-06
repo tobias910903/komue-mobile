@@ -1,18 +1,18 @@
 <template>
-    <router-link class="yd-grids-item" :to="link || ''" :style="styles" :class="$parent.itemHeight != 0 ? 'yd-grids-item-center' : ''" v-if="type == 'link'">
-        <div class="yd-grids-icon" v-if="checkIcon">
+    <router-link class="kom-grids-item" :to="link || ''" :style="styles" :class="$parent.itemHeight != 0 ? 'kom-grids-item-center' : ''" v-if="type == 'link'">
+        <div class="kom-grids-icon" v-if="checkIcon">
             <slot name="icon"></slot>
         </div>
-        <div class="yd-grids-txt" v-if="checkText">
+        <div class="kom-grids-txt" v-if="checkText">
             <slot name="text"></slot>
         </div>
         <slot name="else"></slot>
     </router-link>
-    <a class="yd-grids-item" :href="link || ''" :style="styles" :class="$parent.itemHeight != 0 ? 'yd-grids-item-center' : ''" v-else>
-        <div class="yd-grids-icon" v-if="checkIcon">
+    <a class="kom-grids-item" :href="link || ''" :style="styles" :class="$parent.itemHeight != 0 ? 'kom-grids-item-center' : ''" v-else>
+        <div class="kom-grids-icon" v-if="checkIcon">
             <slot name="icon"></slot>
         </div>
-        <div class="yd-grids-txt" v-if="checkText">
+        <div class="kom-grids-txt" v-if="checkText">
             <slot name="text"></slot>
         </div>
         <slot name="else"></slot>
@@ -21,7 +21,7 @@
 
 <script type="text/babel">
     export default {
-        name: "yd-grids-item",
+        name: "kom-grids-item",
         props: {
             type: {
                 validator(value) {

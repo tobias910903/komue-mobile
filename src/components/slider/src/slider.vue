@@ -1,18 +1,18 @@
 <template>
-    <div class="yd-slider" ref="slider">
-        <div class="yd-slider-wrapper" ref="warpper"
-             :class="direction === 'vertical' ? 'yd-slider-wrapper-vertical' : ''"
+    <div class="kom-slider" ref="slider">
+        <div class="kom-slider-wrapper" ref="warpper"
+             :class="direction === 'vertical' ? 'kom-slider-wrapper-vertical' : ''"
              :style="dragStyleObject"
         >
-            <div class="yd-slider-item" v-if="loop" :style="itemHeight" v-html="lastItem"></div>
+            <div class="kom-slider-item" v-if="loop" :style="itemHeight" v-html="lastItem"></div>
             <slot></slot>
-            <div class="yd-slider-item" v-if="loop" :style="itemHeight" v-html="firstItem"></div>
+            <div class="kom-slider-item" v-if="loop" :style="itemHeight" v-html="firstItem"></div>
         </div>
-        <div class="yd-slider-pagination" v-if="itemsArr.length > 1 && showPagination"
-             :class="direction === 'vertical' ? 'yd-slider-pagination-vertical' : ''">
-            <span class="yd-slider-pagination-item"
+        <div class="kom-slider-pagination" v-if="itemsArr.length > 1 && showPagination"
+             :class="direction === 'vertical' ? 'kom-slider-pagination-vertical' : ''">
+            <span class="kom-slider-pagination-item"
                   v-for="t, i in itemNums" :key="i"
-                  :class="paginationIndex === i ? 'yd-slider-pagination-item-active': ''"
+                  :class="paginationIndex === i ? 'kom-slider-pagination-item-active': ''"
                   :style="{backgroundColor: paginationIndex === i ? paginationActiveColor : paginationColor}"
             ></span>
         </div>
@@ -23,7 +23,7 @@
     import {isColor} from '../../../utils/assist';
 
     export default {
-        name: 'yd-slider',
+        name: 'kom-slider',
         data() {
             return {
                 firstItem: '',
@@ -129,7 +129,7 @@
 
                 this.isVertical = this.direction === 'vertical';
 
-                this.itemsArr = this.$children.filter(item => item.$options.name === 'yd-slider-item');
+                this.itemsArr = this.$children.filter(item => item.$options.name === 'kom-slider-item');
 
                 this.itemNums = this.itemsArr.length;
 

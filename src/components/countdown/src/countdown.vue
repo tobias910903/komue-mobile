@@ -7,7 +7,7 @@
 
 <script type="text/babel">
     export default {
-        name: 'yd-countdown',
+        name: 'kom-countdown',
         data() {
             return {
                 str: '',

@@ -1,6 +1,6 @@
 <template>
-    <div class="yd-timeline">
-        <ul class="yd-timeline-content">
+    <div class="kom-timeline">
+        <ul class="kom-timeline-content">
             <slot></slot>
         </ul>
     </div>
@@ -8,7 +8,7 @@
 
 <script type="text/babel">
     export default {
-        name: 'yd-timeline',
+        name: 'kom-timeline',
     }
 </script>
 

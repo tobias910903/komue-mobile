@@ -1,5 +1,5 @@
 <template>
-    <div class="yd-checklist" :style="{color: color}" :class="align == 'right' ? 'yd-checklist-alignright' : ''">
+    <div class="kom-checklist" :style="{color: color}" :class="align == 'right' ? 'kom-checklist-alignright' : ''">
         <slot></slot>
     </div>
 </template>
@@ -8,7 +8,7 @@
     import {isColor} from '../../../utils/assist';
 
     export default {
-        name: 'yd-checklist',
+        name: 'kom-checklist',
         data() {
             return {
                 isCheckAll: false
@@ -41,7 +41,7 @@
         },
         methods: {
             checkItem() {
-                const childrens = this.$children.filter(item => item.$options.name === 'yd-checklist-item');
+                const childrens = this.$children.filter(item => item.$options.name === 'kom-checklist-item');
                 childrens.forEach(item => {
                     item.checked = this.contains(this.value, item.val);
                     item.label = this.label;
@@ -56,7 +56,7 @@
             },
             emitInput(setValue, check) {
                 const arr = [];
-                const childrens = this.$children.filter(item => item.$options.name === 'yd-checklist-item');
+                const childrens = this.$children.filter(item => item.$options.name === 'kom-checklist-item');
                 let disabledNum = 0;
                 childrens.forEach(item => {
                     if (item.disabled) {
@@ -80,7 +80,7 @@
             }
         },
         mounted() {
-            this.$on('ydui.checklist.checkall', this.checkAll);
+            this.$on('KOM.checklist.checkall', this.checkAll);
         }
     }
 </script>

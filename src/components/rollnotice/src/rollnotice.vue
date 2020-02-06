@@ -1,16 +1,16 @@
 <template>
-    <div class="yd-rollnotice" :style="{height: height + 'px'}">
-        <div class="yd-rollnotice-box" :style="styles" :class="'yd-rollnotice-align-' + align">
-            <div class="yd-rollnotice-item" v-html="lastItem"></div>
+    <div class="kom-rollnotice" :style="{height: height + 'px'}">
+        <div class="kom-rollnotice-box" :style="styles" :class="'kom-rollnotice-align-' + align">
+            <div class="kom-rollnotice-item" v-html="lastItem"></div>
             <slot></slot>
-            <div class="yd-rollnotice-item" v-html="firtstItem"></div>
+            <div class="kom-rollnotice-item" v-html="firtstItem"></div>
         </div>
     </div>
 </template>
 
 <script type="text/babel">
     export default {
-        name: 'yd-rollnotice',
+        name: 'kom-rollnotice',
         data() {
             return {
                 timer: null,
@@ -60,7 +60,7 @@
             init() {
                 this.destroy();
 
-                this.items = this.$children.filter(item => item.$options.name === 'yd-rollnotice-item');
+                this.items = this.$children.filter(item => item.$options.name === 'kom-rollnotice-item');
 
                 this.totalNum = this.items.length;
 

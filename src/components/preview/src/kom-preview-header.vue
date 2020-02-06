@@ -1,5 +1,5 @@
 <template>
-    <div class="yd-preview-item">
+    <div class="kom-preview-header">
         <slot name="left"></slot>
         <slot name="right"></slot>
     </div>
@@ -7,6 +7,6 @@
 
 <script type="text/babel">
     export default {
-        name: 'yd-preview-item'
+        name: 'kom-preview-header'
     }
 </script>

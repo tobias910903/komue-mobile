@@ -1,12 +1,12 @@
 <template>
-    <div class="yd-flexbox" :class="direction == 'vertical' ? 'yd-flexbox-vertical' : 'yd-flexbox-horizontal'">
+    <div class="kom-flexbox" :class="direction == 'vertical' ? 'kom-flexbox-vertical' : 'kom-flexbox-horizontal'">
         <slot></slot>
     </div>
 </template>
 
 <script type="text/babel">
     export default {
-        name: 'yd-flexbox',
+        name: 'kom-flexbox',
         props: {
             direction: {
                 validator(value) {
