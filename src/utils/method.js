@@ -27,5 +27,5 @@ export default methodFun;
 function resizehandler(){
       console.log(++n);
 }
-window.onresize = this.$method.debounce(resizehandler, 500);
+window.onresize = this.$utils.method.debounce(resizehandler, 500);
 */

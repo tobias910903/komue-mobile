@@ -11,10 +11,7 @@ import "@/assets/styles/base.less"
 import ajax from '@/api'
 
 // utils
-import arrayFun from '@/utils/array'
-import timeFun from '@/utils/time'
-import methodFun from '@/utils/method'
-import {regexp, validatorFun} from '@/utils/validator'
+import utils from '@/utils'
 
 // directive
 import '@/directive/touch/index.js' // 触摸手势
@@ -83,6 +80,9 @@ export default function install(Vue) {
 
     // axios
     Vue.prototype.$ajax = ajax;
+
+    // unitls
+    Vue.prototype.$utils = utils;
 
     // components
     Vue.component('KomAccordion', Accordion);
@@ -160,13 +160,6 @@ export default function install(Vue) {
     Vue.use(Loading);
     Vue.use(Messagebox);
     Vue.use(Picker);
-
-    // unitls
-    Vue.prototype.$array = arrayFun;
-    Vue.prototype.$time = timeFun;
-    Vue.prototype.$method = methodFun;
-    Vue.prototype.$regexp = regexp;
-    Vue.prototype.$validator = validatorFun;
 
     /* 对于ios 10，即使网站在视窗中设置了user scalable=no，用户现在也可以收缩缩放 */
     document.documentElement.addEventListener('touchstart', (e) => {

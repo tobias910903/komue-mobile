@@ -95,9 +95,9 @@ function validatorRegexp(obj) {
     return false;
 }
 
-export {regexp, validatorFun};
+export default validatorFun;
 
 /*
-* this.$validator({require: false, value: "admin@lihuyong.com", type:"email", name: '邮箱'});
-* this.$validator({require: true, value: "ddd", type:"mobile", name: '手机号'});
+* this.$utils.validator({require: false, value: "admin@lihuyong.com", type:"email", name: '邮箱'});
+* this.$utils.validator({require: true, value: "ddd", type:"mobile", name: '手机号'});
 * */
