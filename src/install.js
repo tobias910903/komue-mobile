@@ -62,16 +62,16 @@ import {TabBar, TabBarItem, TabBarOther} from '@/components/tabbar';
 import {TextArea} from '@/components/textarea';
 import {TimeLine, TimeLineItem} from '@/components/timeline';
 
-import KomDiveditable from "@/components/kom-diveditable"
-import komPicker from '@/components/kom-picker'
-import KomScroll from '@/components/kom-scroll'
-import KomScroller from '@/components/kom-scroller'
-import KomSpinner from '@/components/kom-spinner'
+import Diveditable from "@/components/diveditable"
+import Picker from '@/components/picker'
+import Scroll from '@/components/scroll'
+import Scroller from '@/components/scroller'
+import Spinner from '@/components/spinner'
 
-import {Alert, Confirm, Toast, Loading} from '@/components/kom-messagebox'
-import wxAlert from '@/components/kom-messagebox/wechat/Alert' // 自定义样式的 messagebox
-import wxConfirm from '@/components/kom-messagebox/wechat/Confirm' // 自定义样式的 messagebox
-import komMessagebox from '@/components/kom-messagebox'
+import {Alert, Confirm, Toast, Loading} from '@/components/messagebox'
+import wxAlert from '@/components/messagebox/wechat/Alert' // 自定义样式的 messagebox
+import wxConfirm from '@/components/messagebox/wechat/Confirm' // 自定义样式的 messagebox
+import Messagebox from '@/components/messagebox'
 
 // 干掉的组件 CitySelect、Dialog
 // 改名的组件 spinner => counter
@@ -81,6 +81,9 @@ const is_ios = () =>{
 }
 
 export default function install(Vue) {
+
+    // axios
+    Vue.prototype.$ajax = ajax;
 
     // components
     Vue.component('KomAccordion', Accordion);
@@ -149,20 +152,18 @@ export default function install(Vue) {
     Vue.component('KomTimeline', TimeLine);
     Vue.component('KomTimelineItem', TimeLineItem);
 
-    Vue.component('KomDiveditable', KomDiveditable);
-    Vue.component('KomScroll', KomScroll);
-    Vue.component('KomScroller', KomScroller);
-    Vue.component('KomSpinner', KomSpinner);
-
+    Vue.component('KomDiveditable', Diveditable);
+    Vue.component('KomScroll', Scroll);
+    Vue.component('KomScroller', Scroller);
+    Vue.component('KomSpinner', Spinner);
     Vue.use(Alert);
     Vue.use(Confirm);
     Vue.use(Toast);
     Vue.use(Loading);
-    Vue.use(komMessagebox);
-    Vue.use(komPicker);
+    Vue.use(Messagebox);
+    Vue.use(Picker);
 
     // unitls
-    Vue.prototype.$ajax = ajax;
     Vue.prototype.$array = arrayFun;
     Vue.prototype.$time = timeFun;
     Vue.prototype.$method = methodFun;
