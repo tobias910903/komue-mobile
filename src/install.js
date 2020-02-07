@@ -57,7 +57,8 @@ import {TabBar, TabBarItem, TabBarOther} from '@/components/tabbar';
 import {TextArea} from '@/components/textarea';
 import {TimeLine, TimeLineItem} from '@/components/timeline';
 
-import Diveditable from "@/components/diveditable"
+import {Diveditable} from "@/components/diveditable"
+import {Icon} from "@/components/icon"
 import Picker from '@/components/picker'
 import Scroll from '@/components/scroll'
 import Scroller from '@/components/scroller'
@@ -70,7 +71,6 @@ import Messagebox from '@/components/messagebox'
 
 // 干掉的组件 CitySelect、Dialog、Icon
 // 改名的组件 spinner => counter
-// 需新增组件 Icon
 
 const is_ios = () =>{
     return /iPad|iPhone|iPod/.test(navigator.userAgent);
@@ -151,6 +151,7 @@ export default function install(Vue) {
     Vue.component('KomTimelineItem', TimeLineItem);
 
     Vue.component('KomDiveditable', Diveditable);
+    Vue.component('KomIcon', Icon);
     Vue.component('KomScroll', Scroll);
     Vue.component('KomScroller', Scroller);
     Vue.component('KomSpinner', Spinner);
