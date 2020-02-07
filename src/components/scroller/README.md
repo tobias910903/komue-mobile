@@ -1,3 +1,5 @@
+### 下拉刷新 上拉加载
+
 ```
 <template>
     <kom-scroller :on-refresh="refresh" :on-infinite="infinite" ref="my_scroller">
