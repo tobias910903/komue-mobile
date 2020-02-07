@@ -1,3 +1,7 @@
+### 阿里巴巴图标库
+
+> 目前只做 Font class 类型
+
 ```
 <template>
     <kom-icon icon="kicondingwei" @click="testClick"></kom-icon>
@@ -13,5 +17,3 @@
     }
 </script>
 ```
-
-> 目前只做 Font class 类型
