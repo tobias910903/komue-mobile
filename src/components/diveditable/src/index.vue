@@ -42,25 +42,6 @@
     }
 </script>
 
-<style lang="less" scoped>
-    .kom-edit-div {
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        word-break: break-all;
-        outline: none;
-        user-select: text;
-        white-space: pre-wrap;
-        text-align: left;
-        
-        &[contenteditable=true] {
-            user-modify: read-write-plaintext-only;
-            
-            &:empty:before {
-                content: attr(placeholder);
-                display: block;
-                color: #ccc;
-            }
-        }
-    }
+<style lang="less">
+    @import "../../../assets/styles/components/diveditable.less";
 </style>
