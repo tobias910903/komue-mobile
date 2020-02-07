@@ -11,7 +11,7 @@
             <div v-if="onRefresh" class="pull-to-refresh-layer"
                  :class="{'active': state == 1, 'active refreshing': state == 2}">
         <span class="spinner-holder">
-           <img class="arrow" v-if="state != 2" src="@/assets/svg/loading.svg">
+           <img class="arrow" v-if="state != 2" src="./loading.svg">
           <span class="text" v-if="state != 2">{{ refreshText }}</span>
           <spinner class="spinner" v-if="state == 2"></spinner>
         </span>
