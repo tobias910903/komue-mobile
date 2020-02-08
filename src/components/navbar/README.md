@@ -3,44 +3,44 @@
 ```
 <template>
     <div>
-        <yd-navbar title="NavBar"></yd-navbar>
+        <kom-navbar title="NavBar"></kom-navbar>
         
-        <yd-navbar title="NavBar">
+        <kom-navbar title="NavBar">
             <router-link to="#" slot="left">
-                <yd-navbar-back-icon></yd-navbar-back-icon>
+                <kom-navbar-back-icon></kom-navbar-back-icon>
             </router-link>
             <router-link to="#" slot="right">
-                <yd-navbar-next-icon></yd-navbar-next-icon>
+                <kom-navbar-next-icon></kom-navbar-next-icon>
             </router-link>
-        </yd-navbar>
+        </kom-navbar>
         
-        <yd-navbar>
+        <kom-navbar>
             <router-link to="#" slot="left">
-                <yd-navbar-back-icon>返回</yd-navbar-back-icon>
+                <kom-navbar-back-icon>返回</kom-navbar-back-icon>
             </router-link>
     
             <img slot="center" src="path/img/logo.png"/>
     
             <router-link to="#" slot="right">
-                <yd-navbar-next-icon>前进</yd-navbar-next-icon>
+                <kom-navbar-next-icon>前进</kom-navbar-next-icon>
             </router-link>
-        </yd-navbar>
+        </kom-navbar>
         
-        <yd-navbar title="什么鬼，这个标题怎么那么长啊">
+        <kom-navbar title="什么鬼，这个标题怎么那么长啊">
             <router-link to="#" slot="left">
-                <yd-icon name="shopcart-outline" size="25px" color="#777"></yd-icon>
+                <kom-icon name="shopcart-outline" size="25px" color="#777"></kom-icon>
             </router-link>
     
             <router-link to="#" slot="right">
-                <yd-icon name="ucenter-outline" size="25px" color="#777"></yd-icon>
+                <kom-icon name="ucenter-outline" size="25px" color="#777"></kom-icon>
             </router-link>
             <router-link to="#" slot="right">
-                <yd-icon name="ucenter-outline" size="25px" color="#777"></yd-icon>
+                <kom-icon name="ucenter-outline" size="25px" color="#777"></kom-icon>
             </router-link>
             <router-link to="#" slot="right">
-                <yd-icon name="ucenter-outline" size="25px" color="#777"></yd-icon>
+                <kom-icon name="ucenter-outline" size="25px" color="#777"></kom-icon>
             </router-link>
-        </yd-navbar>
+        </kom-navbar>
     </div>
 </template>
 
@@ -54,7 +54,7 @@
 <br/>
 
 <h2>API</h2>
-<h3><strong>yd-navbar</strong>【slot】</h3>
+<h3><strong>kom-navbar</strong>【slot】</h3>
 <div class="table">
     <table>
         <thead>
@@ -79,7 +79,7 @@
         </tbody>
     </table>
 </div>
-<h3><strong>yd-navbar</strong>【props】</h3>
+<h3><strong>kom-navbar</strong>【props】</h3>
 <div class="table">
     <table>
         <thead>
@@ -144,7 +144,7 @@
         </tbody>
     </table>
 </div>
-<h3><strong>yd-navbar-back-icon || yd-navbar-next-icon</strong>【slot】</h3>
+<h3><strong>kom-navbar-back-icon || kom-navbar-next-icon</strong>【slot】</h3>
 <div class="table">
     <table>
         <thead>
@@ -161,7 +161,7 @@
         </tbody>
     </table>
 </div>
-<h3><strong>yd-navbar-back-icon || yd-navbar-next-icon</strong>【props】</h3>
+<h3><strong>kom-navbar-back-icon || kom-navbar-next-icon</strong>【props】</h3>
 <div class="table">
     <table>
         <thead>

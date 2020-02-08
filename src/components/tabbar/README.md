@@ -2,21 +2,21 @@
 
 ```
 <template>
-    <yd-tabbar>
-        <yd-tabbar-item title="首页" link="#" active>
-            <yd-icon icon="home" slot="icon"></yd-icon>
-        </yd-tabbar-item>
-        <yd-tabbar-item title="购物车" link="#">
-            <yd-icon icon="shopcart-outline" slot="icon"></yd-icon>
-        </yd-tabbar-item>
-        <yd-tabbar-item title="个人中心" link="#">
-            <yd-icon icon="ucenter-outline" slot="icon"></yd-icon>
-            <yd-badge slot="badge" type="danger">2</yd-badge>
-        </yd-tabbar-item>
-        <yd-tabbar-item title="图片" link="#">
+    <kom-tabbar>
+        <kom-tabbar-item title="首页" link="#" active>
+            <kom-icon icon="home" slot="icon"></kom-icon>
+        </kom-tabbar-item>
+        <kom-tabbar-item title="购物车" link="#">
+            <kom-icon icon="shopcart-outline" slot="icon"></kom-icon>
+        </kom-tabbar-item>
+        <kom-tabbar-item title="个人中心" link="#">
+            <kom-icon icon="ucenter-outline" slot="icon"></kom-icon>
+            <kom-badge slot="badge" type="danger">2</kom-badge>
+        </kom-tabbar-item>
+        <kom-tabbar-item title="图片" link="#">
             <img slot="icon" style="height: 25px;" src="path/img/logo.png">
-        </yd-tabbar-item>
-    </yd-tabbar>
+        </kom-tabbar-item>
+    </kom-tabbar>
 </template>
 
 <script type="text/babel">
@@ -29,7 +29,7 @@
 <br/>
 
 <h2>API</h2>
-<h3><strong>yd-tabbar</strong>【slot】</h3>
+<h3><strong>kom-tabbar</strong>【slot】</h3>
 <div class="table">
     <table>
         <thead>
@@ -46,7 +46,7 @@
         </tbody>
     </table>
 </div>
-<h3><strong>yd-tabbar</strong>【props】</h3>
+<h3><strong>kom-tabbar</strong>【props】</h3>
 <div class="table">
     <table>
         <thead>
@@ -125,7 +125,7 @@
         </tbody>
     </table>
 </div>
-<h3><strong>yd-tabbar-item</strong>【slot】</h3>
+<h3><strong>kom-tabbar-item</strong>【slot】</h3>
 <div class="table">
     <table>
         <thead>
@@ -146,7 +146,7 @@
         </tbody>
     </table>
 </div>
-<h3><strong>yd-tabbar-item</strong>【props】</h3>
+<h3><strong>kom-tabbar-item</strong>【props】</h3>
 <div class="table">
     <table>
         <thead>
@@ -204,7 +204,7 @@
         </tbody>
     </table>
 </div>
-<h3><strong>yd-tabbar-other</strong>【slot】</h3>
+<h3><strong>kom-tabbar-other</strong>【slot】</h3>
 <div class="table">
     <table>
         <thead>
@@ -221,7 +221,7 @@
         </tbody>
     </table>
 </div>
-<h3><strong>yd-tabbar-other</strong>【props】</h3>
+<h3><strong>kom-tabbar-other</strong>【props】</h3>
 <div class="table">
     <table>
         <thead>

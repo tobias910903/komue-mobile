@@ -5,9 +5,9 @@
 ```
 <template>
     <div>
-        <yd-button @click.native="show1 = true" size="large">带取消</yd-button>
+        <kom-button @click.native="show1 = true" size="large">带取消</kom-button>
     
-        <yd-actionsheet :items="myItems1" v-model="show1" cancel="取消"></yd-actionsheet>
+        <kom-actionsheet :items="myItems1" v-model="show1" cancel="取消"></kom-actionsheet>
     </div>
 </template>
 
@@ -36,7 +36,7 @@
     }
 </script>
 ```
-- 将yd-actionsheet组件的 v-model 绑定到一个本地变量show1，通过操作这个变量即可控制 actionsheet 的显示与隐藏
+- 将kom-actionsheet组件的 v-model 绑定到一个本地变量show1，通过操作这个变量即可控制 actionsheet 的显示与隐藏
 
 <br/>
 
@@ -44,9 +44,9 @@
 ```
 <template>
     <div>
-        <yd-button @click.native="show2 = true" size="large" type="warning">不带取消</yd-button>
+        <kom-button @click.native="show2 = true" size="large" type="warning">不带取消</kom-button>
 
-        <yd-actionsheet :items="myItems2" v-model="show2"></yd-actionsheet>
+        <kom-actionsheet :items="myItems2" v-model="show2"></kom-actionsheet>
     </div>
 </template>
 
@@ -88,7 +88,7 @@
 <br/>
 
 <h2>API</h2>
-<h3><strong>yd-actionsheet</strong>【props】</h3>
+<h3><strong>kom-actionsheet</strong>【props】</h3>
 <div class="table">
     <table>
         <thead>

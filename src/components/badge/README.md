@@ -5,18 +5,18 @@
 ```
 <template>
     <div>
-        <yd-badge>1</yd-badge>
-        <yd-badge type="primary">321</yd-badge>
-        <yd-badge type="danger">333</yd-badge>
-        <yd-badge type="warning">4444</yd-badge>
-        <yd-badge type="hollow">55555</yd-badge>
-        <yd-badge bgcolor="#000" color="#FFF">666666</yd-badge>
-        <yd-badge shape="square">2</yd-badge>
-        <yd-badge shape="square" type="primary">321</yd-badge>
-        <yd-badge shape="square" type="danger">333</yd-badge>
-        <yd-badge shape="square" type="warning">4444</yd-badge>
-        <yd-badge shape="square" type="hollow">55555</yd-badge>
-        <yd-badge shape="square" bgcolor="#000" color="#FFF">666666</yd-badge>
+        <kom-badge>1</kom-badge>
+        <kom-badge type="primary">321</kom-badge>
+        <kom-badge type="danger">333</kom-badge>
+        <kom-badge type="warning">4444</kom-badge>
+        <kom-badge type="hollow">55555</kom-badge>
+        <kom-badge bgcolor="#000" color="#FFF">666666</kom-badge>
+        <kom-badge shape="square">2</kom-badge>
+        <kom-badge shape="square" type="primary">321</kom-badge>
+        <kom-badge shape="square" type="danger">333</kom-badge>
+        <kom-badge shape="square" type="warning">4444</kom-badge>
+        <kom-badge shape="square" type="hollow">55555</kom-badge>
+        <kom-badge shape="square" bgcolor="#000" color="#FFF">666666</kom-badge>
     </div>
 </template>
 ```
@@ -24,7 +24,7 @@
 <br/>
 
 <h2>API</h2>
-<h3><strong>yd-badge</strong>【slot】</h3>
+<h3><strong>kom-badge</strong>【slot】</h3>
 <div class="table">
     <table>
         <thead>
@@ -41,7 +41,7 @@
         </tbody>
     </table>
 </div>
-<h3><strong>yd-badge</strong>【props】</h3>
+<h3><strong>kom-badge</strong>【props】</h3>
 <div class="table">
     <table>
         <thead>

@@ -5,27 +5,27 @@
 ```
 <template>
     <div>
-        <yd-cell-group>
-            <yd-cell-item>
+        <kom-cell-group>
+            <kom-cell-item>
                 <span slot="left">左边内容一</span>
                 <span slot="right">右边内容一</span>
-            </yd-cell-item>
-            <yd-cell-item>
+            </kom-cell-item>
+            <kom-cell-item>
                 <span slot="left">左边内容二</span>
                 <span slot="right">右边内容二</span>
-            </yd-cell-item>
-        </yd-cell-group>
+            </kom-cell-item>
+        </kom-cell-group>
 
-        <yd-cell-group>
-            <yd-cell-item>
+        <kom-cell-group>
+            <kom-cell-item>
                 <span slot="left">左边内容一</span>
                 <span slot="right">右边内容一</span>
-            </yd-cell-item>
-            <yd-cell-item>
+            </kom-cell-item>
+            <kom-cell-item>
                 <span slot="left">左边内容二</span>
                 <span slot="right">右边内容二</span>
-            </yd-cell-item>
-        </yd-cell-group>
+            </kom-cell-item>
+        </kom-cell-group>
     </div>
 </template>
 
@@ -41,12 +41,12 @@
 > 添加箭头标识
 ```
 <template>
-    <yd-cell-group>
-        <yd-cell-item arrow>
+    <kom-cell-group>
+        <kom-cell-item arrow>
             <span slot="left">左边内容一</span>
             <span slot="right">右边内容一</span>
-        </yd-cell-item>
-    </yd-cell-group>
+        </kom-cell-item>
+    </kom-cell-group>
 </template>
 ```
 
@@ -56,22 +56,22 @@
 
 ```
 <template>
-    <yd-cell-group>
-        <yd-cell-item arrow type="a" href="tel:400-888-8888">
+    <kom-cell-group>
+        <kom-cell-item arrow type="a" href="tel:400-888-8888">
             <span slot="left">这里是一个A链接</span>
             <span slot="right">href不会解析</span>
-        </yd-cell-item>
-        <yd-cell-item arrow type="link" href="#">
+        </kom-cell-item>
+        <kom-cell-item arrow type="link" href="#">
             <span slot="left">这里是一个Router-Link链接</span>
             <span slot="right">href会解析为路由</span>
-        </yd-cell-item>
-        <yd-cell-item arrow type="label">
+        </kom-cell-item>
+        <kom-cell-item arrow type="label">
             <span slot="left">这里是一个Label</span>
-        </yd-cell-item>
-        <yd-cell-item arrow>
+        </kom-cell-item>
+        <kom-cell-item arrow>
             <span slot="left">这里是一个普通DIV</span>
-        </yd-cell-item>
-    </yd-cell-group>
+        </kom-cell-item>
+    </kom-cell-group>
 </template>
 ```
 
@@ -81,25 +81,25 @@
 
 ```
 <template>
-    <yd-cell-group title="这里是一个标题">
-        <yd-cell-item arrow href="#" type="link">
+    <kom-cell-group title="这里是一个标题">
+        <kom-cell-item arrow href="#" type="link">
             <span slot="left">我的订单</span>
             <span slot="right">查看全部订单</span>
-        </yd-cell-item>
-        <yd-cell-item arrow href="#" type="link">
+        </kom-cell-item>
+        <kom-cell-item arrow href="#" type="link">
             <span slot="left">我的收藏</span>
-        </yd-cell-item>
-    </yd-cell-group>
+        </kom-cell-item>
+    </kom-cell-group>
     
-    <yd-cell-group title="这里是另外一个标题">
-        <yd-cell-item arrow href="#" type="link">
+    <kom-cell-group title="这里是另外一个标题">
+        <kom-cell-item arrow href="#" type="link">
             <span slot="left">我的订单</span>
             <span slot="right">查看全部订单</span>
-        </yd-cell-item>
-        <yd-cell-item arrow href="#" type="link">
+        </kom-cell-item>
+        <kom-cell-item arrow href="#" type="link">
             <span slot="left">我的收藏</span>
-        </yd-cell-item>
-    </yd-cell-group>
+        </kom-cell-item>
+    </kom-cell-group>
 </template>
 ```
 
@@ -109,22 +109,22 @@
 
 ```
 <template>
-    <yd-cell-group>
-        <yd-cell-item>
+    <kom-cell-group>
+        <kom-cell-item>
             <span slot="left">手机号：</span>
             <input slot="right" type="number" placeholder="请输入手机号">
-        </yd-cell-item>
+        </kom-cell-item>
         
-        <yd-cell-item arrow type="label">
+        <kom-cell-item arrow type="label">
             <select slot="right">
                 <option value="">支付方式</option>
                 <option value="1">支付宝</option>
                 <option value="2">微信</option>
                 <option value="3">财付通</option>
             </select>
-        </yd-cell-item>
+        </kom-cell-item>
         
-        <yd-cell-item arrow type="label">
+        <kom-cell-item arrow type="label">
             <span slot="left">性别：</span>
             <select slot="right">
                 <option value="">请选择性别</option>
@@ -132,8 +132,8 @@
                 <option value="2">女</option>
                 <option value="3">未知</option>
             </select>
-        </yd-cell-item>
-    </yd-cell-group>
+        </kom-cell-item>
+    </kom-cell-group>
 </template>
 ```
 
@@ -143,27 +143,27 @@
 
 ```
 <template>
-    <yd-cell-group title="多选">
-        <yd-cell-item type="checkbox">
+    <kom-cell-group title="多选">
+        <kom-cell-item type="checkbox">
             <span slot="left">多选一</span>
             <input slot="right" type="checkbox" value="Han MeiMei" v-model="checkedNames"/>
-        </yd-cell-item>
+        </kom-cell-item>
 
-        <yd-cell-item type="checkbox">
+        <kom-cell-item type="checkbox">
             <span slot="left">多选二</span>
             <input slot="right" type="checkbox" value="Li Lei" v-model="checkedNames"/>
-        </yd-cell-item>
+        </kom-cell-item>
 
-        <yd-cell-item type="checkbox">
+        <kom-cell-item type="checkbox">
             <span slot="left">多选三</span>
             <input slot="right" type="checkbox" value="Jim Green" v-model="checkedNames"/>
-        </yd-cell-item>
+        </kom-cell-item>
 
-        <yd-cell-item>
+        <kom-cell-item>
             <span slot="left">选中的值：</span>
             <span slot="right">{{checkedNames}}</span>
-        </yd-cell-item>
-    </yd-cell-group>
+        </kom-cell-item>
+    </kom-cell-group>
 </template>
 
 <script type="text/babel">
@@ -183,22 +183,22 @@
 
 ```
 <template>
-    <yd-cell-group title="单选">
-        <yd-cell-item type="radio">
+    <kom-cell-group title="单选">
+        <kom-cell-item type="radio">
             <span slot="left">单选一</span>
             <input slot="right" type="radio" value="Lili" v-model="picked"/>
-        </yd-cell-item>
+        </kom-cell-item>
 
-        <yd-cell-item type="radio">
+        <kom-cell-item type="radio">
             <span slot="left">单选二</span>
             <input slot="right" type="radio" value="Lucy" v-model="picked"/>
-        </yd-cell-item>
+        </kom-cell-item>
 
-        <yd-cell-item>
+        <kom-cell-item>
             <span slot="left">选中的值：</span>
             <span slot="right">{{picked}}</span>
-        </yd-cell-item>
-    </yd-cell-group>
+        </kom-cell-item>
+    </kom-cell-group>
 </template>
 
 <script type="text/babel">
@@ -218,19 +218,19 @@
 
 ```
 <template>
-    <yd-cell-group>
-        <yd-cell-item type="label">
-            <div slot="left">设为默认地址 - {{ydswitch}}</div>
-            <yd-switch slot="right" v-model="ydswitch"></yd-switch>
-        </yd-cell-item>
-    </yd-cell-group>
+    <kom-cell-group>
+        <kom-cell-item type="label">
+            <div slot="left">设为默认地址 - {{komswitch}}</div>
+            <kom-switch slot="right" v-model="komswitch"></kom-switch>
+        </kom-cell-item>
+    </kom-cell-group>
 </template>
 
 <script type="text/babel">
     export default {
         data() {
             return {
-                ydswitch: false
+                komswitch: false
             }
         }
     }
@@ -243,11 +243,11 @@
 
 ```
 <template>
-    <yd-cell-group title="文本域">
-        <yd-cell-item>
-            <yd-textarea slot="right" placeholder="请输入您的银行卡卡号和密码" maxlength="100"></yd-textarea>
-        </yd-cell-item>
-    </yd-cell-group>
+    <kom-cell-group title="文本域">
+        <kom-cell-item>
+            <kom-textarea slot="right" placeholder="请输入您的银行卡卡号和密码" maxlength="100"></kom-textarea>
+        </kom-cell-item>
+    </kom-cell-group>
 </template>
 
 <script type="text/babel">
@@ -260,7 +260,7 @@
 <br />
 
 <h2>API</h2>
-<h3><strong>yd-cell-group</strong>【slot】</h3>
+<h3><strong>kom-cell-group</strong>【slot】</h3>
 <div class="table">
     <table>
         <thead>
@@ -277,7 +277,7 @@
         </tbody>
     </table>
 </div>
-<h3><strong>yd-cell-group</strong>【props】</h3>
+<h3><strong>kom-cell-group</strong>【props】</h3>
 <div class="table">
     <table>
         <thead>
@@ -300,7 +300,7 @@
         </tbody>
     </table>
 </div>
-<h3><strong>yd-cell-item</strong>【props】</h3>
+<h3><strong>kom-cell-item</strong>【props】</h3>
 <div class="table">
     <table>
         <thead>
@@ -339,7 +339,7 @@
         </tbody>
     </table>
 </div>
-<h3><strong>yd-cell-item</strong>【slot】</h3>
+<h3><strong>kom-cell-item</strong>【slot】</h3>
 <div class="table">
     <table>
         <thead>

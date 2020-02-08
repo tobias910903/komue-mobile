@@ -4,19 +4,19 @@
 
 ```
 <template>
-    <yd-list theme="3"> /* 这里可选1/2/3/4/5五种样式 */
-        <yd-list-item v-for="item, key in list" :key="key">
+    <kom-list theme="3"> /* 这里可选1/2/3/4/5五种样式 */
+        <kom-list-item v-for="item, key in list" :key="key">
             <img slot="img" :src="item.img">
             <span slot="title">{{item.title}}</span>
-            <yd-list-other slot="other">
+            <kom-list-other slot="other">
                 <div>
                     <span class="demo-list-price"><em>¥</em>{{item.price}}</span>
                     <span class="demo-list-del-price">¥{{item.w_price}}</span>
                 </div>
                 <div>content</div>
-            </yd-list-other>
-        </yd-list-item>
-    </yd-list>
+            </kom-list-other>
+        </kom-list-item>
+    </kom-list>
 </template>
 
 <script type="text/babel">
@@ -40,7 +40,7 @@
 <br/>
 
 <h2>API</h2>
-<h3><strong>yd-list</strong>【slot】</h3>
+<h3><strong>kom-list</strong>【slot】</h3>
 <div class="table">
     <table>
         <thead>
@@ -57,7 +57,7 @@
         </tbody>
     </table>
 </div>
-<h3><strong>yd-list</strong>【props】</h3>
+<h3><strong>kom-list</strong>【props】</h3>
 <div class="table">
     <table>
         <thead>
@@ -80,7 +80,7 @@
         </tbody>
     </table>
 </div>
-<h3><strong>yd-list-item</strong>【slot】</h3>
+<h3><strong>kom-list-item</strong>【slot】</h3>
 <div class="table">
     <table>
         <thead>
@@ -105,7 +105,7 @@
         </tbody>
     </table>
 </div>
-<h3><strong>yd-list-item</strong>【props】</h3>
+<h3><strong>kom-list-item</strong>【props】</h3>
 <div class="table">
     <table>
         <thead>
@@ -135,7 +135,7 @@
         </tbody>
     </table>
 </div>
-<h3><strong>yd-list-other</strong>【slot】</h3>
+<h3><strong>kom-list-other</strong>【slot】</h3>
 <div class="table">
     <table>
         <thead>

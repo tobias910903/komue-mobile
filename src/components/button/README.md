@@ -1,28 +1,26 @@
 ### 按钮
 
-> 按钮样式
-
 ```
 <template>
     <div>
-        <yd-button type="primary">primary</yd-button>
-        <yd-button type="danger">danger</yd-button>
-        <yd-button type="warning">warning</yd-button>
-        <yd-button type="hollow">hollow</yd-button>
-        <yd-button type="disabled" disabled>disabled</yd-button>
-        <yd-button size="large" type="primary">primary</yd-button>
-        <yd-button size="large" type="danger">danger</yd-button>
-        <yd-button size="large" type="warning">warning</yd-button>
-        <yd-button size="large" type="disabled" disabled>disabled</yd-button>
-        <yd-button size="large" type="hollow">hollow</yd-button>
-        <yd-button size="large" bgcolor="#000" color="#FFF">Custom Color</yd-button>
-        <yd-button size="large" type="primary" shape="circle">shape="circle"</yd-button>
-        <yd-button size="large" type="primary" shape="angle">shape="angle"</yd-button>
-        <yd-button size="large" type="primary" loading loading-txt="缓慢加载中">primary</yd-button>
-        <yd-button-group>
-            <yd-button size="large" type="primary">Block Button</yd-button>
-        </yd-button-group>
-        <yd-button size="large" @click.native="handleClick" type="danger">Bind Click</yd-button>
+        <kom-button type="primary">primary</kom-button>
+        <kom-button type="danger">danger</kom-button>
+        <kom-button type="warning">warning</kom-button>
+        <kom-button type="hollow">hollow</kom-button>
+        <kom-button type="disabled" disabled>disabled</kom-button>
+        <kom-button size="large" type="primary">primary</kom-button>
+        <kom-button size="large" type="danger">danger</kom-button>
+        <kom-button size="large" type="warning">warning</kom-button>
+        <kom-button size="large" type="disabled" disabled>disabled</kom-button>
+        <kom-button size="large" type="hollow">hollow</kom-button>
+        <kom-button size="large" bgcolor="#000" color="#FFF">Custom Color</kom-button>
+        <kom-button size="large" type="primary" shape="circle">shape="circle"</kom-button>
+        <kom-button size="large" type="primary" shape="angle">shape="angle"</kom-button>
+        <kom-button size="large" type="primary" loading loading-txt="缓慢加载中">primary</kom-button>
+        <kom-button-group>
+            <kom-button size="large" type="primary">Block Button</kom-button>
+        </kom-button-group>
+        <kom-button size="large" @click.native="handleClick" type="danger">Bind Click</kom-button>
     </div>
 </template>
 
@@ -36,19 +34,20 @@
     }
 </script>
 ```
+
 - 设置type属性改变按钮组件颜色
 - 设置size属性为large即为块级按钮
 - 设置bgcolor(背景颜色)和color(字体颜色)即可自定义按钮颜色
 - 圆角 shape="circle"
 - 直角 shape="angle"
-- 实际上分组只是将按钮间隔屏幕两边的距离，否则按钮将贴至屏幕边缘，在块级按钮外部添加yd-button-group即可
+- 实际上分组只是将按钮间隔屏幕两边的距离，否则按钮将贴至屏幕边缘，在块级按钮外部添加kom-button-group即可
 - 添加参数loading 或 :loading="true"即可。添加loading-text="缓慢加载中"即可自定义显示文字
 注意：只有 size="large" 中 loading-text 才生效。
 
 <br/>
 
 <h2>API</h2>
-<h3><strong>yd-button-group</strong>【slot】</h3>
+<h3><strong>kom-button-group</strong>【slot】</h3>
 <div class="table">
     <table>
         <thead>
@@ -65,7 +64,7 @@
         </tbody>
     </table>
 </div>
-<h3><strong>yd-button</strong>【props】</h3>
+<h3><strong>kom-button</strong>【props】</h3>
 <div class="table">
     <table>
         <thead>

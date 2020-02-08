@@ -4,16 +4,16 @@
 
 ```
 <template>
-    <yd-grids-group :rows="2">
-        <yd-grids-item>
+    <kom-grids-group :rows="2">
+        <kom-grids-item>
             <img slot="icon" src="path/img/logo.png">
             <span slot="text">image</span>
-        </yd-grids-item>
-        <yd-grids-item>
-            <yd-icon slot="icon" name="home" color="#FF685D"></yd-icon>
+        </kom-grids-item>
+        <kom-grids-item>
+            <kom-icon slot="icon" name="home" color="#FF685D"></kom-icon>
             <span slot="text">iconfont</span>
-        </yd-grids-item>
-    </yd-grids-group>
+        </kom-grids-item>
+    </kom-grids-group>
 </template>
 
 <script type="text/babel">
@@ -22,18 +22,18 @@
     }
 </script>
 ```
-- 在 yd-grids-group 组件上添加 rows="2"即为两列表格；通过 slot="icon" 自定义图标，slot="text" 自定义显示文字。
+- 在 kom-grids-group 组件上添加 rows="2"即为两列表格；通过 slot="icon" 自定义图标，slot="text" 自定义显示文字。
 
 <br/>
 
 > 等分三列（添加标题）
 ```
 <template>
-    <yd-grids-group :rows="3" title="等分3列">
-        <yd-grids-item v-for="n in 6">
+    <kom-grids-group :rows="3" title="等分3列">
+        <kom-grids-item v-for="n in 6">
             <span slot="text">grids-3</span>
-        </yd-grids-item>
-    </yd-grids-group>
+        </kom-grids-item>
+    </kom-grids-group>
 </template>
 
 <script type="text/babel">
@@ -49,26 +49,26 @@
 
 ```
 <template>
-    <yd-grids-group :rows="3" item-height="130px">
-        <yd-grids-item>
+    <kom-grids-group :rows="3" item-height="130px">
+        <kom-grids-item>
             <div slot="else" style="text-align: center;">
                 <img src="../img/img.jpg" style="height: 50px;">
             </div>
-        </yd-grids-item>
-        <yd-grids-item>
+        </kom-grids-item>
+        <kom-grids-item>
             <div slot="else" style="text-align: center;">
                 <p style="padding: 5px;color:#F00;">当页面内容高度不一致时，设置item的高度就不会导致页面错乱</p>
             </div>
-        </yd-grids-item>
+        </kom-grids-item>
         ......
-    </yd-grids-group>
+    </kom-grids-group>
 </template>
 ```
 
 <br/>
 
 <h2>API</h2>
-<h3><strong>yd-grids-group</strong>【slot】</h3>
+<h3><strong>kom-grids-group</strong>【slot】</h3>
 <div class="table">
     <table>
         <thead>
@@ -85,7 +85,7 @@
         </tbody>
     </table>
 </div>
-<h3><strong>yd-grids-group</strong>【props】</h3>
+<h3><strong>kom-grids-group</strong>【props】</h3>
 <div class="table">
     <table>
         <thead>
@@ -114,7 +114,7 @@
         </tr>
         <tr>
             <td>item-height</td>
-            <td>设置 yd-grids-item 的高度（防止页面内容高度不一致时导致页面错乱），默认0为不限制</td>
+            <td>设置 kom-grids-item 的高度（防止页面内容高度不一致时导致页面错乱），默认0为不限制</td>
             <td>String &amp;&amp; (px或rem)</td>
             <td>-</td>
             <td>0</td>
@@ -122,7 +122,7 @@
         </tbody>
     </table>
 </div>
-<h3><strong>yd-grids-item</strong>【slot】</h3>
+<h3><strong>kom-grids-item</strong>【slot】</h3>
 <div class="table">
     <table>
         <thead>
@@ -147,7 +147,7 @@
         </tbody>
     </table>
 </div>
-<h3><strong>yd-grids-item</strong>【props】</h3>
+<h3><strong>kom-grids-item</strong>【props】</h3>
 <div class="table">
     <table>
         <thead>
