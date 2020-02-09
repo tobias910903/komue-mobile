@@ -15,6 +15,8 @@
         <div>乱七八糟的内容在这里，超出容器，将出现滚动条。</div>
         <div>乱七八糟的内容在这里，超出容器，将出现滚动条。</div>
 
+        <slot name="bottom"></slot>
+
         <kom-tabbar slot="tabbar">
             <kom-tabbar-item title="首页" link="#" active>
                 <kom-icon name="home" slot="icon"></kom-icon>
@@ -88,7 +90,7 @@
         </tr>
         <tr>
             <td>top</td>
-            <td>上部内容</td>
+            <td>上部内容 &lt;slot name="top"&gt;&lt;/slot&gt;</td>
         </tr>
         <tr>
             <td>-</td>
@@ -96,7 +98,7 @@
         </tr>
         <tr>
             <td>bottom</td>
-            <td>下部内容</td>
+            <td>下部内容 &lt;slot name="bottom"&gt;&lt;/slot&gt;</td>
         </tr>
         <tr>
             <td>tabbar</td>
