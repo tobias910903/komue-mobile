@@ -69,9 +69,6 @@ import wxAlert from '@/components/messagebox/wechat/Alert' // 自定义样式的
 import wxConfirm from '@/components/messagebox/wechat/Confirm' // 自定义样式的 messagebox
 import Messagebox from '@/components/messagebox'
 
-// 干掉的组件 CitySelect、Dialog、Icon
-// 改名的组件 spinner => counter
-
 const is_ios = () =>{
     return /iPad|iPhone|iPod/.test(navigator.userAgent);
 }
