@@ -13,3 +13,5 @@
 * <a href="https://www.lodashjs.com/docs/latest" target="_blank">lodash</a>
 * <a href="http://ustbhuangyi.github.io/better-scroll/doc/api.html" target="_blank">better-scroll</a>
 * <a href="http://vue.ydui.org/demo/#/" target="_blank">vue-ydui</a>
+* <a href="https://github.com/wangdahoo/vue-scroller" target="_blank">vue-scroller</a>
+* <a href="https://github.com/ftlabs/fastclick/" target="_blank">fastclick</a>
