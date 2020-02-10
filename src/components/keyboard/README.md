@@ -23,7 +23,7 @@
 
                 /* 模拟异步验证密码 */
                 setTimeout(() => {
-                    this.$refs.keyboardDemo1.$emit('ydui.keyboard.error', '对不起，您的支付密码不正确，请重新输入。');
+                    this.$refs.keyboardDemo1.$emit('KOM.keyboard.error', '对不起，您的支付密码不正确，请重新输入。');
                     this.$dialog.loading.close();
                 }, 2000);
             }
@@ -35,7 +35,7 @@
 
 - 将kom-keyboard组件的 v-model 绑定到一个本地变量show1，通过操作这个变量即可控制 keyboard 的显示与隐藏
 - 同时给:callback绑定一个本地方法，当6位密码输入完全后将会调用调用
-- 通过自定义事件this.$refs.keyboardDemo1.$emit('ydui.keyboard.error', '错误信息'); 提示错误信息
+- 通过自定义事件this.$refs.keyboardDemo1.$emit('KOM.keyboard.error', '错误信息'); 提示错误信息
 - 在kom-keyboard组件上设置disorder或:disorder="true"即可打乱键盘顺序
 
 <br/>
@@ -59,7 +59,7 @@
             <td>键盘提示标题</td>
             <td>String</td>
             <td>-</td>
-            <td>YDUI安全键盘</td>
+            <td>KOM安全键盘</td>
         </tr>
         <tr>
             <td>cancel-text</td>

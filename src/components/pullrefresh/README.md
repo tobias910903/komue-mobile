@@ -68,7 +68,7 @@
         },
         methods: {
             loadList() {
-                const url = 'http://list.ydui.org/getdata.php';
+                const url = 'http://list.KOM.org/getdata.php';
 
                 this.$http.jsonp(url, {params: {type: 'pulldown', page: this.page}}).then((response) => {
 
@@ -80,7 +80,7 @@
                         mes: _list.length > 0 ? '为您更新了' + _list.length + '条内容' : '已是最新内容'
                     });
 
-                    this.$refs.pullrefreshDemo.$emit('ydui.pullrefresh.finishLoad');
+                    this.$refs.pullrefreshDemo.$emit('KOM.pullrefresh.finishLoad');
 
                     this.page++;
                 });
@@ -93,7 +93,7 @@
 - 在kom-pullrefresh组件上绑定:callback="loadList"方法，当拖动列表达到一定位置后将会调用loadList方法，从而获取最新的数据；
   
   单次请求数据加载完毕后，需手动调用自定义事件（通知组件做出相应处理）：
-  this.$refs.pullrefreshDemo.$emit('ydui.pullrefresh.finishLoad');
+  this.$refs.pullrefreshDemo.$emit('KOM.pullrefresh.finishLoad');
 
 <br/>
 

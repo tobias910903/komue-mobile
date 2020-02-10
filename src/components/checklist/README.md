@@ -97,7 +97,7 @@
             },
             checkAll() {
                 this.isCheckAll = !this.isCheckAll;
-                this.$refs.checklistDemo.$emit('ydui.checklist.checkall', this.isCheckAll);
+                this.$refs.checklistDemo.$emit('KOM.checklist.checkall', this.isCheckAll);
             }
         }
     }
@@ -108,7 +108,7 @@
 
   ① 给kom-checklist添加属性ref="checklistDemo"；  
   ② 将kom-checkbox绑定到一个本地变量isCheckAll，通过设置其值判定是否选中；  
-  ③ 给kom-checkbox添加一个方法:change="checkAll"，通过自定义方法this.$refs.checklistDemo.$emit('ydui.checklist.checkall', true|false)实现全选|反选。
+  ③ 给kom-checkbox添加一个方法:change="checkAll"，通过自定义方法this.$refs.checklistDemo.$emit('KOM.checklist.checkall', true|false)实现全选|反选。
 
 - 第二步，监听多选列表是否全选：
 

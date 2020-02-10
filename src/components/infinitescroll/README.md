@@ -75,7 +75,7 @@
         },
         methods: {
             loadList() {
-                this.$http.jsonp('http://list.ydui.org/getdata.php?type=backposition', {
+                this.$http.jsonp('http://list.KOM.org/getdata.php?type=backposition', {
                     params: {
                         page: this.page,
                         pagesize: this.pageSize
@@ -87,12 +87,12 @@
 
                     if (_list.length < this.pageSize || this.page == 3) {
                         /* 所有数据加载完毕 */
-                        this.$refs.infinitescrollDemo.$emit('ydui.infinitescroll.loadedDone');
+                        this.$refs.infinitescrollDemo.$emit('KOM.infinitescroll.loadedDone');
                         return;
                     }
 
                     /* 单次请求数据完毕 */
-                    this.$refs.infinitescrollDemo.$emit('ydui.infinitescroll.finishLoad');
+                    this.$refs.infinitescrollDemo.$emit('KOM.infinitescroll.finishLoad');
 
                     this.page++;
                 });
@@ -110,9 +110,9 @@
 
 - 三个自定义事件（目的通知组件做出相应处理）：
 
-  单次请求数据加载完毕后：this.$refs.infinitescrollDemo.$emit('ydui.infinitescroll.finishLoad');
-  所有数据加载完毕后：this.$refs.infinitescrollDemo.$emit('ydui.infinitescroll.loadedDone');
-  重新初始化：this.$refs.infinitescrollDemo.$emit('ydui.infinitescroll.reInit');
+  单次请求数据加载完毕后：this.$refs.infinitescrollDemo.$emit('KOM.infinitescroll.finishLoad');
+  所有数据加载完毕后：this.$refs.infinitescrollDemo.$emit('KOM.infinitescroll.loadedDone');
+  重新初始化：this.$refs.infinitescrollDemo.$emit('KOM.infinitescroll.reInit');
 
 <br/>
 
