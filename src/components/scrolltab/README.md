@@ -125,13 +125,6 @@
             <td>-</td>
             <td>-</td>
         </tr>
-        <tr style="text-decoration: line-through;">
-            <td>active</td>
-            <td>是否激活当前选项卡（v1.1.8已废除，使用 kom-scrolltab 的 index 替代）</td>
-            <td>Boolean</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
         </tbody>
     </table>
 </div>
