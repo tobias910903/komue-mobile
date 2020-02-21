@@ -1,8 +1,6 @@
 <template>
     <div class="kom-scroll" ref="scroll">
-        <div class="content">
-            <slot></slot>
-        </div>
+        <slot></slot>
     </div>
 </template>
 
@@ -38,9 +36,5 @@
         bottom: 0;
         height: auto;
         -webkit-overflow-scrolling: touch;
-        
-        .content {
-        
-        }
     }
 </style>
