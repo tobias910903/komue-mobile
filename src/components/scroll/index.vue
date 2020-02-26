@@ -1,6 +1,8 @@
 <template>
     <div class="kom-scroll" ref="scroll">
-        <slot></slot>
+        <div>
+            <slot></slot>
+        </div>
     </div>
 </template>
 
