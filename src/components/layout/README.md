@@ -19,13 +19,13 @@
 
         <kom-tabbar slot="tabbar">
             <kom-tabbar-item title="首页" link="#" active>
-                <kom-icon name="home" slot="icon"></kom-icon>
+                <kom-icon icon="home" slot="icon"></kom-icon>
             </kom-tabbar-item>
             <kom-tabbar-item title="购物车" link="#">
-                <kom-icon name="shopcart-outline" slot="icon"></kom-icon>
+                <kom-icon icon="shopcart-outline" slot="icon"></kom-icon>
             </kom-tabbar-item>
             <kom-tabbar-item title="个人中心" link="#">
-                <kom-icon name="ucenter-outline" slot="icon"></kom-icon>
+                <kom-icon icon="ucenter-outline" slot="icon"></kom-icon>
             </kom-tabbar-item>
         </kom-tabbar>
 
@@ -52,13 +52,13 @@
 
         <kom-tabbar slot="tabbar">
             <kom-tabbar-item title="首页" link="#">
-                <kom-icon name="home" slot="icon"></kom-icon>
+                <kom-icon icon="home" slot="icon"></kom-icon>
             </kom-tabbar-item>
             <kom-tabbar-item title="购物车" link="#" active>
-                <kom-icon name="shopcart" slot="icon"></kom-icon>
+                <kom-icon icon="shopcart" slot="icon"></kom-icon>
             </kom-tabbar-item>
             <kom-tabbar-item title="个人中心" link="#">
-                <kom-icon name="ucenter-outline" slot="icon"></kom-icon>
+                <kom-icon icon="ucenter-outline" slot="icon"></kom-icon>
             </kom-tabbar-item>
         </kom-tabbar>
 

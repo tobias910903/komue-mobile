@@ -10,7 +10,7 @@
             <span slot="text">image</span>
         </kom-grids-item>
         <kom-grids-item>
-            <kom-icon slot="icon" name="home" color="#FF685D"></kom-icon>
+            <kom-icon slot="icon" icon="kicondingwei" color="#FF685D"></kom-icon>
             <span slot="text">iconfont</span>
         </kom-grids-item>
     </kom-grids-group>

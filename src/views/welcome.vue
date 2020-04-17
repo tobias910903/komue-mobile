@@ -1,18 +1,13 @@
 <template>
-    <div>欢迎页，判断页面是否登录，或者其他情况来进行页面跳转</div>
+    <kom-icon icon="kicondingwei" @click="testClick" color="#ff0000" size="50px"></kom-icon>
 </template>
 
 <script>
     export default {
-        data() {
-            return {}
-        },
-        mounted() {
-            console.log(this);
+        methods: {
+            testClick() {
+                alert(213)
+            }
         }
     }
 </script>
-
-<style lang="less" scoped>
-
-</style>

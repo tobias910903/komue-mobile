@@ -6,7 +6,7 @@
 <template>
     <kom-cell-group>
         <kom-cell-item>
-            <kom-icon slot="icon" name="phone3" size=".45rem"></kom-icon>
+            <kom-icon slot="icon" icon="phone3" size=".45rem"></kom-icon>
             <input type="text" slot="right" placeholder="请输入手机号码">
 
             <!-- ↓↓关键代码是这里↓↓ -->

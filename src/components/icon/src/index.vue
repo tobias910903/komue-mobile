@@ -1,5 +1,5 @@
 <template>
-    <i class="kiconfont" :class="icon" @click="sendHandler"></i>
+    <i class="kiconfont" :class="icon" @click="sendHandler" :style="{'color': color, 'font-size': size}"></i>
 </template>
 
 <script>
@@ -7,6 +7,14 @@
         name: 'KomIcon',
         props: {
             icon: {
+                type: String,
+                default: ''
+            },
+            color: {
+                type: String,
+                default: ''
+            },
+            size: {
                 type: String,
                 default: ''
             }

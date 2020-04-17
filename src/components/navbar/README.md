@@ -28,17 +28,17 @@
         
         <kom-navbar title="什么鬼，这个标题怎么那么长啊">
             <router-link to="#" slot="left">
-                <kom-icon name="shopcart-outline" size="25px" color="#777"></kom-icon>
+                <kom-icon icon="shopcart-outline" size="25px" color="#777"></kom-icon>
             </router-link>
     
             <router-link to="#" slot="right">
-                <kom-icon name="ucenter-outline" size="25px" color="#777"></kom-icon>
+                <kom-icon icon="ucenter-outline" size="25px" color="#777"></kom-icon>
             </router-link>
             <router-link to="#" slot="right">
-                <kom-icon name="ucenter-outline" size="25px" color="#777"></kom-icon>
+                <kom-icon icon="ucenter-outline" size="25px" color="#777"></kom-icon>
             </router-link>
             <router-link to="#" slot="right">
-                <kom-icon name="ucenter-outline" size="25px" color="#777"></kom-icon>
+                <kom-icon icon="ucenter-outline" size="25px" color="#777"></kom-icon>
             </router-link>
         </kom-navbar>
     </div>
