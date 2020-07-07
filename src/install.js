@@ -58,6 +58,7 @@ import {TextArea} from '@/components/textarea';
 import {TimeLine, TimeLineItem} from '@/components/timeline';
 
 import {Diveditable} from "@/components/diveditable"
+import {WangEditor} from "@/components/wangeditor"
 import {Icon} from "@/components/icon"
 import Picker from '@/components/picker'
 import Scroll from '@/components/scroll'
@@ -148,6 +149,7 @@ export default function install(Vue) {
     Vue.component('KomTimelineItem', TimeLineItem);
 
     Vue.component('KomDiveditable', Diveditable);
+    Vue.component('KomWangEditor', WangEditor);
     Vue.component('KomIcon', Icon);
     Vue.component('KomScroll', Scroll);
     Vue.component('KomScroller', Scroller);
