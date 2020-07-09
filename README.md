@@ -15,3 +15,4 @@
 * <a href="http://vue.ydui.org/demo/#/" target="_blank">vue-ydui</a>
 * <a href="https://github.com/wangdahoo/vue-scroller" target="_blank">vue-scroller</a>
 * <a href="https://github.com/ftlabs/fastclick/" target="_blank">fastclick</a>
+* <a href="https://github.com/wangfupeng1988/wangEditor" target="_blank">wangEditor</a>
