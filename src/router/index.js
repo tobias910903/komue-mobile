@@ -2,43 +2,38 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import Router from 'vue-router'
 
-Vue.use(Vuex)
-Vue.use(Router)
+Vue.use(Vuex);
+Vue.use(Router);
 
 /* 配置路由 */
-import welcome from '@/views/welcome'
-import post from '@/views/post'
-import postDetail from '@/views/postDetail'
-import notfound from '@/views/404'
-
 let router = new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'welcome',
-      component: welcome
-    },
-    {
-      path: '/post',
-      name: 'post',
-      component: post
-    },
-    {
-      path: '/post/:id',
-      name: 'postDetail',
-      component: postDetail
-    },
-    {
-      path: '*',
-      name: 'notfound',
-      component: notfound
-    }
-  ]
-})
+    routes: [
+        {
+            path: '/',
+            name: 'welcome',
+            component: resolve => require(['@/views/welcome'], resolve),
+        },
+        {
+            path: '/post',
+            name: 'post',
+            component: resolve => require(['@/views/post'], resolve),
+        },
+        {
+            path: '/post/:id',
+            name: 'postDetail',
+            component: resolve => require(['@/views/postDetail'], resolve),
+        },
+        {
+            path: '*',
+            name: 'notfound',
+            component: resolve => require(['@/views/404'], resolve),
+        }
+    ]
+});
 
 // 导航守卫
 router.beforeEach((to, from, next) => {
-  next();
+    next();
 });
 
 export default router;
