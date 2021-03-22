@@ -436,7 +436,7 @@
         width: 20px;
         height: 20px;
     
-    / / svg style fill: #444;
+    /*/ / svg style fill: #444;*/
         stroke: #69717d;
     }
     

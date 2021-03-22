@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import Alert from './alert'
-import Confirm from './confirm'
-import Toast from './toast'
+import Alert from './Alert'
+import Confirm from './Confirm'
+import Toast from './Toast'
 import Loading from './loading'
 
 import wcThen from './directives/wc-then'
