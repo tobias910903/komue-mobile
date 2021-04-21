@@ -1,9 +1,14 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import Router from 'vue-router'
-
 Vue.use(Vuex);
 Vue.use(Router);
+
+const originalPush = Router.prototype.push
+Router.prototype.push = function push(location, onResolve, onReject) {
+    if (onResolve || onReject) return originalPush.call(this, location, onResolve, onReject)
+    return originalPush.call(this, location).catch(err => err)
+}
 
 /* 配置路由 */
 let router = new Router({

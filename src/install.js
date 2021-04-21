@@ -1,8 +1,10 @@
 import Vue from 'vue'
+import router from './router'
 
 // Plugin
 import _ from 'lodash'
 import fastClick from 'fastclick'
+import Navigation from 'vue-navigation'
 
 // style
 import "@/assets/styles/base.less"
@@ -75,6 +77,12 @@ const is_ios = () =>{
 }
 
 export default function install(Vue) {
+    
+    Vue.use(Navigation, {
+        router,
+        moduleName: 'navigation',
+        keyName: 'KOMUE'
+    });
 
     // axios
     Vue.prototype.$ajax = ajax;

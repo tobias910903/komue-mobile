@@ -10,13 +10,12 @@
 export default {
 	data () {
 		return {
-			
+		
 		}
 	},
 	methods: {
 		backAction() {
-		  this.$store.commit("setTransition", "turn-off");
-		  this.$router.back(-1);
+		  this.$router.go(-1);
 		}
 	},
 	mounted: function(){

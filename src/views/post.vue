@@ -8,7 +8,7 @@
 export default {
 	data(){
 		return {
-		
+
 		}
 	},
 	methods: {
@@ -20,8 +20,6 @@ export default {
 				id: id
 			  }
 			});
-
-			this.$store.commit("setTransition", "turn-on");
 		}
 	},
 	mounted(){
@@ -31,5 +29,5 @@ export default {
 </script>
 
 <style scoped>
-	
+
 </style>
