@@ -5,15 +5,11 @@ import router from './router'
 import _ from 'lodash'
 import fastClick from 'fastclick'
 import Navigation from 'vue-navigation'
+import ajax from '@/api'
+import utils from '@/utils'
 
 // style
 import "@/assets/styles/base.less"
-
-// axios
-import ajax from '@/api'
-
-// utils
-import utils from '@/utils'
 
 // directive
 import '@/directive/touch/index.js' // 触摸手势
@@ -77,18 +73,16 @@ const is_ios = () =>{
 }
 
 export default function install(Vue) {
-    
+
     Vue.use(Navigation, {
         router,
         moduleName: 'navigation',
         keyName: 'KOMUE'
     });
 
-    // axios
     Vue.prototype.$ajax = ajax;
-
-    // unitls
     Vue.prototype.$utils = utils;
+    Vue.prototype._ = _
 
     // components
     Vue.component('KomAccordion', Accordion);
