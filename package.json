@@ -23,7 +23,7 @@
     "wangeditor": "^3.1.1"
   },
   "devDependencies": {
-    "@vue/cli-service": "~4.5.0",
+    "@vue/cli-service": "~5.0.8",
     "vue-template-compiler": "^2.6.11"
   },
   "postcss": {
