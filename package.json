@@ -14,7 +14,7 @@
     "better-scroll": "^1.15.2",
     "fastclick": "^1.0.6",
     "less": "^3.9.0",
-    "less-loader": "^5.0.0",
+    "less-loader": "^11.1.0",
     "lodash": "^4.17.11",
     "vue": "^2.6.11",
     "vue-navigation": "^1.1.4",
@@ -23,7 +23,7 @@
     "wangeditor": "^3.1.1"
   },
   "devDependencies": {
-    "@vue/cli-service": "~4.5.0",
+    "@vue/cli-service": "~5.0.8",
     "vue-template-compiler": "^2.6.11"
   },
   "postcss": {
